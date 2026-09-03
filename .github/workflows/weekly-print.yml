@@ -1,0 +1,48 @@
+# The Friday print, with no server: this job re-runs the whole pipeline on a schedule,
+# commits the refreshed data + built site, and Vercel's Git integration deploys the commit.
+name: Friday print
+
+on:
+  schedule:
+    - cron: "5 20 * * 5"      # Fridays 20:05 UTC — five minutes after the official print time
+  workflow_dispatch:          # manual re-run from the Actions tab (e.g. after a data fix)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: friday-print
+  cancel-in-progress: false
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Compute the index (36 live sources)
+        run: python3 ingest.py
+
+      - name: Inject the data into the page
+        run: python3 build_page.py site/src/page.html
+
+      - name: Build the site (SEO head, subpages, social card, icons, sitemap)
+        run: python3 site/build_site.py
+
+      - name: Commit the print
+        run: |
+          git config user.name  "friday-print[bot]"
+          git config user.email "friday-print@users.noreply.github.com"
+          git add data/gci_data.json site/src/page.html site/public
+          if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
+          READING=$(python3 -c "import json;d=json.load(open('data/gci_data.json'));print(f\"{d['gci']} {d['band']} as of {d['asof']}\")")
+          git commit -m "print: GCI $READING"
+          git push

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scorecard — the gauge graded against every crisis since 1990 | GlobalCrash.finance</title>
+<meta name="description" content="What the Global Crisis Index read six months before and at the peak of every verified crisis since 1990 — hits and misses, base rates and false-alarm rates, re-graded at every print.">
+<meta name="keywords" content="global crisis index, financial crisis index, recession indicator, market crash index, financial stress index, systemic risk gauge, fear gauge, credit spreads, yield curve, VIX, CAPE, economic fragility, recession probability">
+<meta name="author" content="GlobalCrash.finance">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://globalcrash.finance/scorecard">
+<link rel="alternate" hreflang="en" href="https://globalcrash.finance/scorecard">
+<link rel="alternate" hreflang="x-default" href="https://globalcrash.finance/scorecard">
+<link rel="alternate" type="application/json" title="Global Crisis Index — latest print (JSON)" href="/gci.json">
+<meta name="language" content="en">
+<meta name="coverage" content="Worldwide">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0B0F14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F1F3F5" media="(prefers-color-scheme: light)">
+<meta name="application-name" content="GlobalCrash.finance">
+<meta name="apple-mobile-web-app-title" content="GlobalCrash">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GlobalCrash.finance">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://globalcrash.finance/scorecard">
+<meta property="og:title" content="Scorecard — GlobalCrash.finance">
+<meta property="og:description" content="What the Global Crisis Index read six months before and at the peak of every verified crisis since 1990 — hits and misses, base rates and false-alarm rates, re-graded at every print.">
+<meta property="og:image" content="https://globalcrash.finance/og.png">
+<meta property="og:image:secure_url" content="https://globalcrash.finance/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GlobalCrash.finance — Global Crisis Index gauge reading 51.9 (Elevated) as of 2026-09-04">
+<meta property="og:updated_time" content="2026-09-04T20:00:00Z">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Scorecard — GlobalCrash.finance">
+<meta name="twitter:description" content="What the Global Crisis Index read six months before and at the peak of every verified crisis since 1990 — hits and misses, base rates and false-alarm rates, re-graded at every print.">
+<meta name="twitter:image" content="https://globalcrash.finance/og.png">
+<meta name="twitter:image:alt" content="GlobalCrash.finance — Global Crisis Index gauge reading 51.9 (Elevated)">
+<meta name="twitter:label1" content="Latest print">
+<meta name="twitter:data1" content="51.9 · Elevated">
+<meta name="twitter:label2" content="As of">
+<meta name="twitter:data2" content="2026-09-04">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Geist+Mono:wght@400;500;700&display=swap">
+<style>
+/* =====================================================================
+   GlobalCrash.finance — stylesheet v2 (rewritten from scratch)
+   Principles: content-sized everything · no viewport-height sizing ·
+   no negative margins · nothing hidden by opacity · one grid per screen size
+   ===================================================================== */
+
+/* ---------- tokens ---------- */
+:root{
+  --ground:#0B0F14; --panel:#121924; --panel2:#17202C; --ink:#F3F7FB; --muted:#A6B4C2;
+  --hair:#27323F; --hair2:#3A4856;
+  --b1:#37C4AC; --b2:#7E92A6; --b3:#E0A83C; --b4:#E5763C; --b5:#E14434;
+  --b1s:rgba(55,196,172,.14); --b3s:rgba(224,168,60,.13);
+  --accent:var(--b3); --accent-soft:var(--b3s);
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 40px rgba(0,0,0,.35);
+  --chart-fill:rgba(126,146,166,.12);
+  --glass:rgba(11,15,20,.8);
+  --sans:"Familjen Grotesk",system-ui,sans-serif;
+  --serif:"Fraunces","Familjen Grotesk",serif;
+  --mono:"Geist Mono",ui-monospace,monospace;
+  --r:12px; --r-lg:16px;
+  --hdr:64px;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --ground:#F1F3F5; --panel:#FAFBFC; --panel2:#FFFFFF; --ink:#141E28; --muted:#5A6B78;
+    --hair:#E0E6EB; --hair2:#C9D2D9;
+    --b1:#0F8273; --b2:#51687C; --b3:#93690E; --b4:#B14E17; --b5:#B32014;
+    --b1s:rgba(15,130,115,.10); --b3s:rgba(147,105,14,.10);
+    --shadow:0 1px 2px rgba(20,30,40,.06), 0 10px 30px rgba(20,30,40,.08);
+    --chart-fill:rgba(81,104,124,.12);
+    --glass:rgba(241,243,245,.85);
+  }
+}
+:root[data-theme="light"]{
+  --ground:#F1F3F5; --panel:#FAFBFC; --panel2:#FFFFFF; --ink:#141E28; --muted:#5A6B78;
+  --hair:#E0E6EB; --hair2:#C9D2D9;
+  --b1:#0F8273; --b2:#51687C; --b3:#93690E; --b4:#B14E17; --b5:#B32014;
+  --b1s:rgba(15,130,115,.10); --b3s:rgba(147,105,14,.10);
+  --shadow:0 1px 2px rgba(20,30,40,.06), 0 10px 30px rgba(20,30,40,.08);
+  --chart-fill:rgba(81,104,124,.12);
+  --glass:rgba(241,243,245,.85);
+}
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{color-scheme:dark light; -webkit-text-size-adjust:100%}
+body{margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden}
+[hidden]{display:none!important}
+h1,h2,h3,h4,p{margin:0}
+button{font:inherit; color:inherit; background:none; border:0; padding:0; cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px}
+.wrap{max-width:1120px; margin:0 auto; padding:0 20px}
+.mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--mono); font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted)}
+.hspace{flex:1}
+b{font-weight:600}
+
+/* wallpaper canvas (mood-reactive Washington) */
+#bgfx{position:fixed; inset:0; z-index:-1; pointer-events:none; width:100vw; height:100vh}
+
+/* ---------- header ---------- */
+header{position:sticky; top:0; z-index:50; background:var(--glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--hair)}
+.hbar{display:flex; align-items:center; gap:12px; min-height:var(--hdr)}
+.brand{display:flex; align-items:center; gap:11px; color:inherit; text-decoration:none; cursor:pointer}
+.brand:hover .wordmark{opacity:.85}
+.brand .logo{flex:none; display:block; width:40px; height:40px}
+.brand .logo .lg-eyes circle{filter:drop-shadow(0 0 2.5px #ff3b2d); animation:eyeflash 2.4s steps(1,end) infinite}
+.brandtext{display:flex; flex-direction:column; gap:3px; min-width:0}
+.wordmark{font-weight:800; font-size:19px; letter-spacing:-.01em; line-height:1; display:flex; align-items:center}
+.wordmark .tld{color:var(--accent); font-weight:600}
+.tagline{font-family:var(--mono); font-size:9px; letter-spacing:.2em; color:var(--ink); opacity:.82; font-weight:500; white-space:nowrap}
+.seg{display:flex; border:1px solid var(--hair2); border-radius:999px; overflow:hidden; background:var(--panel); flex:none}
+.seg button{font-family:var(--mono); font-size:9.5px; letter-spacing:.1em; padding:8px 14px; color:var(--muted); transition:background .15s,color .15s}
+.seg button.on{background:var(--ink); color:var(--ground)}
+.tbtn{width:34px; height:34px; border:1px solid var(--hair2); border-radius:999px; display:grid; place-items:center;
+  font-size:15px; color:var(--muted); background:var(--panel); flex:none}
+
+/* ---------- hero grid ---------- */
+main{display:block}
+.hero{display:grid; grid-template-columns:minmax(0,1fr); gap:20px; padding:20px 0 6px; align-items:start}
+.hcopy{min-width:0}
+
+/* ---------- gauge ---------- */
+.gaugebox{position:relative; width:min(92vw,520px); margin:0 auto}
+.gcanvas{position:relative; line-height:0}
+#gauge{display:block; width:100%; height:auto}
+.greadout{position:absolute; left:0; right:0; bottom:9%; text-align:center; pointer-events:none; line-height:1}
+.gnum{font-family:var(--mono); font-weight:700; font-size:clamp(52px,10vw,80px); letter-spacing:-.03em;
+  filter:drop-shadow(0 0 26px var(--accent-soft))}
+.gmeta{text-align:center; margin-top:6px; display:grid; justify-items:center; gap:6px}
+.gband{display:inline-block; font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.26em;
+  padding:7px 16px 7px 19px; border-radius:4px; color:var(--ground); background:var(--accent)}
+.grange{font-family:var(--mono); font-size:10px; letter-spacing:.06em; color:var(--muted)}
+.gcusp{font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; color:var(--b4)}
+.ghist{font-family:var(--mono); font-size:10.5px; color:var(--accent); letter-spacing:.14em}
+body.history .grange, body.history .gcusp{display:none}
+.ctlgroup{display:inline-flex; gap:4px; margin-top:4px}
+.printline{position:relative; overflow:hidden; display:inline-flex; font-family:var(--mono); font-size:9px; letter-spacing:.1em;
+  color:var(--muted); border:1px solid var(--hair2); border-radius:999px 0 0 999px; background:var(--panel)}
+.plc{display:inline-flex; align-items:center; gap:8px; padding:9px 16px 9px 18px; white-space:nowrap}
+.plfill{position:absolute; inset:0; background:var(--accent); color:var(--ground);
+  clip-path:inset(0 calc(100% - var(--pfill,0%)) 0 0); transition:clip-path .8s ease}
+.ttbtn{display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:9px; letter-spacing:.1em;
+  color:var(--muted); border:1px solid var(--hair2); border-radius:0 999px 999px 0; padding:9px 18px 9px 16px;
+  background:var(--panel); transition:color .2s,background .2s,border-color .2s}
+.ttbtn:hover,.printline:hover{color:var(--ink)}
+body.history .ttbtn{color:var(--ground); background:var(--accent); border-color:var(--accent)}
+body.history .ctlgroup .ttbtn svg{color:var(--ground)}
+
+/* ---------- hero copy ---------- */
+.hcopy h1{font-family:var(--serif); font-size:clamp(30px,4.6vw,46px); font-weight:600; line-height:1.06; letter-spacing:-.01em;
+  margin:0 0 12px; text-wrap:balance}
+.honest{color:var(--muted); font-size:15px; line-height:1.55; margin:0 0 16px}
+.honest b{color:var(--ink); font-weight:600}
+.honest a.scorelink,.scorelink{color:var(--accent); text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px; cursor:pointer}
+.honest a.scorelink:hover{opacity:.75}
+body.history .honest{color:var(--ink)}
+/* crisis card (replaces the verdict while time-travelling) */
+.hcard{display:grid; gap:8px; text-align:left}
+.hcard .hkind{font-family:var(--mono); font-size:8.5px; letter-spacing:.16em; color:var(--muted); justify-self:start;
+  border-bottom:1px solid var(--hair2); padding-bottom:1px}
+.hcard .hname{font-family:var(--serif); font-size:clamp(22px,3.2vw,30px); line-height:1.1; color:var(--ink); letter-spacing:-.01em}
+.hcard .hcause{font-size:14px; color:var(--muted); line-height:1.55; max-width:56ch; margin:0}
+.hcard .hstats{display:flex; flex-wrap:wrap; gap:6px; margin-top:2px}
+.hcard .hstats span{font-family:var(--mono); font-size:9px; letter-spacing:.1em; color:var(--muted);
+  border:1px solid var(--hair2); border-radius:8px; padding:6px 9px; background:var(--panel2)}
+.hcard .hstats b{color:var(--ink); font-size:11px; margin-left:5px; letter-spacing:0}
+
+/* ---------- time-travel panel ---------- */
+.ttpanel{background:var(--panel); border:1px solid var(--hair); border-radius:var(--r-lg); padding:14px 16px 12px;
+  box-shadow:var(--shadow); margin:0 0 18px; animation:ttdrop .28s cubic-bezier(.22,1,.36,1)}
+.tthint{display:none}
+#ttSpark{display:block; width:100%; height:104px}
+#ttSlider{display:none}   /* navigation is by crisis chip + replay; the slider remains as internal state only */
+#ttSpark{margin-bottom:6px}
+.ttrow{display:flex; align-items:center; gap:8px; margin-top:6px; flex-wrap:wrap}
+.ttdate{font-family:var(--mono); font-size:14px; font-weight:700; letter-spacing:.08em; white-space:nowrap}
+.ttact{display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:9px; letter-spacing:.12em;
+  border:1px solid var(--hair2); border-radius:999px; padding:8px 14px; color:var(--muted); background:var(--panel2);
+  transition:color .15s,background .15s,transform .15s; white-space:nowrap}
+.ttact:hover{color:var(--ink); transform:translateY(-1px)}
+.ttact.primary{background:var(--accent); color:var(--ground); border-color:var(--accent)}
+.livedot{width:7px; height:7px; border-radius:50%; background:var(--b1); flex:none; box-shadow:0 0 8px var(--b1);
+  animation:breathe 2.6s ease-in-out infinite}
+.evchips{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:7px; margin-top:14px}
+.evchip{display:inline-flex; align-items:center; gap:9px; font-family:var(--mono); font-size:10.5px; letter-spacing:.06em;
+  padding:10px 15px; border:1px solid var(--hair2); border-radius:10px; color:var(--ink); background:var(--panel2); font-weight:500;
+  transition:color .2s,background .2s,border-color .2s,transform .15s; text-align:left}
+.evchip i{width:7px; height:7px; border-radius:50%; flex:none}
+.evchip .dd{margin-left:auto; opacity:.75; font-size:9px; color:var(--muted)}
+.evchip:hover{border-color:var(--muted); transform:translateY(-1px)}
+.evchip.near{color:var(--ground); background:var(--accent); border-color:var(--accent)}
+.evchip.near .dd{opacity:.85; color:var(--ground)}
+.evchip.shock{border-style:dashed}
+.shockmark{width:auto; height:auto; color:var(--muted); display:inline-flex}
+.chiplegend{display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:12px; font-family:var(--mono); font-size:8px;
+  letter-spacing:.12em; color:var(--muted)}
+.chiplegend span{display:inline-flex; align-items:center; gap:7px}
+.lg-dot{width:7px; height:7px; border-radius:50%; background:var(--b4)}
+.lg-ring{width:7px; height:7px; border-radius:50%; border:1.6px solid var(--muted)}
+
+/* ---------- stat tiles ---------- */
+.statrow{display:flex; gap:12px; flex-wrap:wrap; margin:0 0 20px}
+.stat{flex:1 1 126px; display:flex; flex-direction:column; background:var(--panel); border:1px solid var(--hair);
+  border-left:3px solid var(--accent); border-radius:10px; padding:12px 14px; box-shadow:var(--shadow)}
+.stat.wide{flex:1.6 1 230px}
+.stat .eyebrow{font-size:8.5px; letter-spacing:.14em; white-space:nowrap; display:flex; align-items:center; gap:6px}
+.stat .v{font-family:var(--mono); font-weight:700; font-size:20px; margin:8px 0 10px; letter-spacing:-.02em; white-space:nowrap}
+.stat .v.word{font-family:var(--sans); letter-spacing:-.01em}
+.vrow{display:flex; align-items:center; gap:8px}
+.varrow{flex:none; transition:transform 1.1s cubic-bezier(.22,1,.36,1)}
+.stat .bar{height:6px; border-radius:99px; background:var(--hair); margin-top:auto; overflow:hidden; position:relative}
+.stat .bar i{display:block; height:100%; border-radius:99px; background:var(--accent); width:0; transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.vbar i{position:absolute; top:0; left:50%}
+.vbar em{position:absolute; left:50%; top:0; width:2px; height:100%; background:var(--muted); opacity:.6}
+.stat .s{font-size:11.5px; color:var(--muted); margin-top:8px}
+.tup{color:var(--b4); font-weight:700} .tdn{color:var(--b1); font-weight:700}
+.crashbar{position:relative; height:8px; border-radius:99px; background:var(--hair); margin-top:auto}
+.crashbar .zone{position:absolute; top:0; bottom:0; border-radius:99px; background:var(--b4); opacity:.75}
+.crashbar .me{position:absolute; top:-3px; width:3px; height:14px; border-radius:2px; background:var(--ink);
+  box-shadow:0 0 0 2px var(--panel); transform:translateX(-50%)}
+.crashv small{font-size:12px; color:var(--muted); font-weight:500; margin-left:8px; letter-spacing:.04em}
+.trsel{margin-left:auto; display:inline-flex; gap:3px; letter-spacing:0}
+.trsel button{font-family:var(--mono); font-size:8px; padding:3px 7px; border:1px solid var(--hair2); border-radius:999px; color:var(--muted)}
+.trsel button.on{background:var(--ink); color:var(--ground); border-color:var(--ink)}
+.tspark{display:block; width:100%; flex:1 1 44px; min-height:44px; margin-top:8px; color:var(--ink)}
+
+/* ---------- show the math ---------- */
+.mathbtn{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; color:var(--accent); border:1px solid var(--accent);
+  border-radius:999px; padding:9px 16px; background:var(--accent-soft)}
+.math{margin-top:14px; background:var(--panel); border:1px solid var(--hair); border-radius:var(--r); overflow:auto; box-shadow:var(--shadow)}
+.math table{width:100%; border-collapse:collapse; font-size:12.5px}
+.math th,.math td{text-align:left; padding:10px 14px; border-top:1px solid var(--hair)}
+.math thead th{border-top:0; font-family:var(--mono); font-size:8.5px; letter-spacing:.14em; color:var(--muted); font-weight:400; background:var(--panel2)}
+.math td.n{font-family:var(--mono); text-align:right; white-space:nowrap}
+.math tfoot td{font-weight:700}
+.math .fresh{font-family:var(--mono); font-size:10px; color:var(--muted)}
+.stale td{opacity:.45}
+
+/* ---------- sections ---------- */
+section{padding:36px 0; border-top:1px solid var(--hair)}
+.shead{display:flex; align-items:baseline; gap:14px; margin-bottom:18px; flex-wrap:wrap}
+.shead h2{font-family:var(--serif); font-size:24px; font-weight:600; letter-spacing:-.01em}
+.sub{font-size:12.5px; color:var(--muted)}
+.adv{display:none!important}
+body:not(.view-simple) .adv{display:revert!important}
+
+/* ---------- the Pulse ---------- */
+.pulsecard{background:var(--panel); border:1px solid var(--hair); border-radius:var(--r-lg); padding:22px; box-shadow:var(--shadow)}
+.phead{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:6px}
+.pbig{display:flex; align-items:center; gap:11px}
+.pbig b{font-family:var(--mono); font-size:24px; font-weight:700; letter-spacing:-.02em}
+.pdot{width:9px; height:9px; border-radius:50%; background:var(--b1); box-shadow:0 0 12px var(--b1); animation:breathe 5s ease-in-out infinite}
+.pbreath{font-family:var(--mono); font-size:9px; letter-spacing:.16em; color:var(--muted); border:1px solid var(--hair2); border-radius:999px; padding:6px 11px}
+#ekg{display:block; width:100%; height:80px; margin:10px 0 12px}
+.ticks{list-style:none; margin:0; padding:0; font-family:var(--mono); font-size:11px}
+.ticks li{display:grid; grid-template-columns:78px 120px 1fr auto; gap:14px; align-items:baseline; padding:8px 0; border-top:1px solid var(--hair); animation:tin .35s both}
+.ticks li:first-child{border-top:0}
+.ticks .d{color:var(--muted)} .ticks .tsrc{font-weight:700}
+.pnote{margin-top:14px; font-size:11.5px; color:var(--muted); line-height:1.6}
+.pnote a{color:var(--accent); text-decoration:none}
+
+/* ---------- pillars ---------- */
+.pillars{display:grid; gap:10px}
+.pill{background:var(--panel); border:1px solid var(--hair); border-radius:var(--r); box-shadow:var(--shadow); overflow:hidden}
+.prow{display:grid; grid-template-columns:150px minmax(0,1fr) 52px; gap:14px; align-items:center; width:100%; padding:15px 16px; text-align:left}
+.pname{font-size:13.5px; font-weight:500; display:flex; flex-direction:column; gap:3px}
+.pw{font-family:var(--mono); font-size:8px; letter-spacing:.12em; color:var(--muted)}
+.ptrack{position:relative; display:block; height:8px; border-radius:99px; background:var(--hair); overflow:hidden}
+.pfill{position:absolute; inset:0 auto 0 0; border-radius:99px; transition:width .9s cubic-bezier(.22,1,.36,1)}
+.pscore{font-family:var(--mono); font-weight:700; font-size:14px; text-align:right}
+.pdetail{padding:0 16px 15px; font-size:13px; color:var(--muted); display:grid; gap:6px; border-top:1px dashed var(--hair)}
+.pdetail b{color:var(--ink)}
+.shimmer .ptrack::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent); animation:sh .7s ease-out 1}
+
+/* ---------- what changed ---------- */
+.feed{display:grid; gap:10px}
+.fcard{background:var(--panel); border:1px solid var(--hair); border-radius:var(--r); padding:15px 18px; display:flex; gap:18px; align-items:baseline; flex-wrap:wrap; box-shadow:var(--shadow)}
+.fdelta{font-family:var(--mono); font-weight:700; font-size:16px; min-width:64px; letter-spacing:-.02em}
+.fbody{flex:1 1 260px; font-size:14.5px; font-weight:500}
+.fmove{font-family:var(--mono); font-size:10px; color:var(--muted); margin-top:4px; font-weight:400}
+.endcard{text-align:center; padding:18px; border:1px dashed var(--hair2); border-radius:var(--r); color:var(--muted); font-size:12.5px}
+
+/* ---------- history chart ---------- */
+.chartcard{background:var(--panel); border:1px solid var(--hair); border-radius:var(--r-lg); padding:22px; box-shadow:var(--shadow)}
+.chartscroll{overflow-x:auto}
+#history{display:block; width:100%; min-width:640px; height:420px}
+.tip{position:fixed; z-index:60; pointer-events:none; background:var(--panel2); border:1px solid var(--hair2); border-radius:8px;
+  padding:8px 11px; font-family:var(--mono); font-size:11px; box-shadow:var(--shadow); transform:translate(-50%,calc(-100% - 12px)); white-space:nowrap}
+.tip .tb{font-size:16px; font-weight:700} .tip .tm{color:var(--muted); font-size:9.5px; letter-spacing:.08em}
+
+/* ---------- case files ---------- */
+.cases{display:grid; grid-auto-flow:column; grid-auto-columns:min(78vw,280px); gap:12px; overflow-x:auto; padding-bottom:10px; scroll-snap-type:x mandatory}
+.case{scroll-snap-align:start; display:flex; flex-direction:column; background:var(--panel); border:1px solid var(--hair); border-top:3px solid var(--hair2);
+  border-radius:var(--r); padding:18px; box-shadow:var(--shadow)}
+.case .yr{font-family:var(--mono); font-size:9.5px; color:var(--muted); letter-spacing:.18em}
+.case h4{margin:7px 0 10px; font-size:16.5px; font-weight:600}
+.kindtag{display:inline-block; font-family:var(--mono); font-size:8px; letter-spacing:.14em; padding:3px 8px; border-radius:4px; margin:0 0 8px; justify-self:start; width:max-content}
+.kindtag.frag{background:var(--b4); color:var(--ground)}
+.kindtag.shock{border:1px dashed var(--hair2); color:var(--muted)}
+.kindnote{font-size:11px; color:var(--muted); font-style:italic; margin:0 0 10px; line-height:1.5}
+.case dl{margin:0 0 4px; font-size:12px; display:grid; grid-template-columns:1fr auto; gap:5px 10px}
+.case dt{color:var(--muted)} .case dd{margin:0; font-family:var(--mono); text-align:right}
+.case dd.peak{color:var(--b5); font-weight:700}
+.casejump{margin-top:auto; padding-top:14px; font-family:var(--mono); font-size:8.5px; letter-spacing:.14em; color:var(--accent); text-align:left}
+
+/* ---------- footer ---------- */
+footer{margin-top:24px; border-top:1px solid var(--hair); padding:40px 0 28px; background:var(--glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px)}
+.fgrid{display:grid; gap:30px}
+.fbrand p{margin:14px 0 0; font-size:13px; max-width:34ch; line-height:1.6; color:var(--muted)}
+.fhonest{font-family:var(--mono); font-size:9px; letter-spacing:.16em; color:var(--accent)}
+.fcol h4{font-family:var(--mono); font-size:9px; letter-spacing:.2em; color:var(--muted); font-weight:400; margin:4px 0 12px}
+.fcol a{display:block; color:var(--ink); text-decoration:none; font-size:13.5px; padding:5px 0; transition:color .15s}
+.fcol a:hover{color:var(--accent)}
+.fbar{display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between; margin-top:36px; padding-top:18px;
+  border-top:1px solid var(--hair); font-family:var(--mono); font-size:8.5px; letter-spacing:.1em; color:var(--muted)}
+
+/* ---------- pages (single-file build) ---------- */
+.pagev{background:var(--ground)}
+.pwrap{max-width:740px; margin:0 auto; padding:36px 20px 80px}
+.pback{font-family:var(--mono); font-size:9px; letter-spacing:.14em; color:var(--muted); border:1px solid var(--hair2); border-radius:999px; padding:9px 16px; background:var(--panel); margin-bottom:28px}
+.pwrap h2{font-family:var(--serif); font-size:clamp(28px,4.2vw,38px); margin:10px 0 18px; letter-spacing:-.01em; text-wrap:balance}
+.pwrap h3{font-size:17px; margin:30px 0 10px}
+.pwrap p{font-size:14.5px; color:var(--muted); line-height:1.7; margin:0 0 12px; max-width:64ch}
+.pwrap p b{color:var(--ink)}
+.ptablewrap{overflow-x:auto}
+.ptable{width:100%; border-collapse:collapse; font-size:11.5px; margin:14px 0 8px; font-family:var(--mono)}
+.ptable th,.ptable td{text-align:left; padding:9px 12px; border-top:1px solid var(--hair)}
+.ptable thead th{border-top:0; font-size:8.5px; letter-spacing:.14em; color:var(--muted); font-weight:400; background:var(--panel2)}
+.ptable td.n{text-align:right; white-space:nowrap; font-weight:700}
+.ptable .warn{color:var(--b4)} .ptable .hot{color:var(--b5)} .ptable .cool{color:var(--b1)}
+
+/* ---------- modal ---------- */
+.modal{position:fixed; inset:0; z-index:90; display:grid; place-items:center; padding:20px; background:rgba(0,0,0,.55); backdrop-filter:blur(6px)}
+.mbox{width:min(94vw,500px); background:var(--panel); border:1px solid var(--hair); border-radius:var(--r-lg); padding:28px; box-shadow:var(--shadow)}
+.mbox h3{font-family:var(--serif); font-size:24px; margin:0 0 14px}
+.mbox p{font-size:14px; color:var(--muted); line-height:1.6; margin:0 0 12px}
+.mbox p b{color:var(--ink)}
+.lockbtn{width:100%; margin-top:8px; background:var(--accent); color:var(--ground); border-radius:var(--r); padding:15px; font-weight:700; font-size:15px}
+.pm-note{font-family:var(--mono); font-size:10px; letter-spacing:.08em; color:var(--accent); border-top:1px solid var(--hair); padding-top:14px}
+
+/* ---------- replay countdown ---------- */
+.replaycd{position:fixed; top:calc(var(--hdr) + 10px); right:20px; z-index:70; display:flex; align-items:center; gap:11px;
+  background:var(--glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid var(--hair2);
+  border-radius:999px; padding:8px 16px 8px 8px; box-shadow:var(--shadow); animation:rcin .3s cubic-bezier(.22,1,.36,1)}
+.rc-ring{position:relative; flex:none; width:30px; height:30px; display:grid; place-items:center}
+.rc-ring svg{position:absolute; inset:0}
+.rc-ring circle{stroke:var(--accent); stroke-dasharray:94; stroke-dashoffset:0; transform:rotate(-90deg); transform-origin:center; animation:rcring 5s linear}
+.rc-n{position:relative; font-family:var(--mono); font-size:13px; font-weight:700; color:var(--accent)}
+.rc-label{font-family:var(--mono); font-size:9px; letter-spacing:.14em; color:var(--muted)}
+
+/* ---------- view modes ---------- */
+body.view-simple .hero{text-align:center; gap:16px}
+body.view-simple .hcopy h1{display:none}
+body.view-simple .honest{margin:0 auto 16px; max-width:70ch}
+body.view-simple .statrow{justify-content:center}
+body.view-simple .hcard{text-align:center; justify-items:center}
+body.view-simple .hcard .hkind{justify-self:center}
+body.view-simple .hcard .hstats{justify-content:center}
+body.view-simple .shead{justify-content:center; text-align:center}
+/* history mode: the crisis card replaces headline + verdict; today's tiles leave */
+body.history .hcopy h1{display:none}
+body.history .honest:not(.hascard){display:none}
+body.history .statrow, body.history .mathbtn, body.history .math{display:none!important}
+
+/* ---------- keyframes ---------- */
+@keyframes breathe{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes eyeflash{0%,44%{opacity:.35}48%,60%{opacity:1}64%,100%{opacity:.35}}
+@keyframes ttdrop{from{opacity:0; transform:translateY(-6px)}to{opacity:1; transform:none}}
+@keyframes tin{from{opacity:0; transform:translateX(-8px)}to{opacity:1; transform:none}}
+@keyframes sh{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+@keyframes rcin{from{opacity:0; transform:translateY(-10px)}to{opacity:1; transform:none}}
+@keyframes rcring{from{stroke-dashoffset:0}to{stroke-dashoffset:94}}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important; transition:none!important}
+}
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+/* desktop: dial left, copy right, both top-aligned */
+@media(min-width:880px){
+  .hero{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr); gap:44px; padding:26px 0 16px}
+  body:not(.view-simple) .hero .gaugebox{grid-column:1; grid-row:1; margin-top:2px}
+  body:not(.view-simple) .hero .hcopy{grid-column:2; grid-row:1}
+  .gaugebox{width:min(92vw,540px)}
+  body.view-simple .hero{grid-template-columns:minmax(0,1fr); gap:18px}
+  .pillars{grid-template-columns:1fr 1fr; gap:12px}
+  .fgrid{grid-template-columns:1.6fr 1fr 1fr; gap:48px}
+}
+/* phones */
+@media(max-width:720px){
+  :root{--hdr:48px}
+  .hbar{gap:8px; padding-top:0; padding-bottom:0}
+  .brand{gap:8px} .brand .logo{width:30px; height:30px} .wordmark{font-size:15px} .tagline{display:none}
+  .seg button{padding:6px 8px; font-size:7.5px; letter-spacing:.06em}
+  .tbtn{width:30px; height:30px}
+  .hero{gap:14px; padding-top:12px}
+  .gaugebox{width:min(94vw,470px)}
+  .gnum{font-size:clamp(48px,14vw,64px)}
+  .ctlgroup{margin-top:2px}
+  .plc{padding:8px 12px 8px 14px; font-size:8.5px} .ttbtn{padding:8px 14px 8px 12px; font-size:8.5px}
+  section{padding:28px 0}
+  .shead h2{font-size:22px}
+  #ttSpark{height:72px} #ttSpark .spl{display:none}
+  .ttpanel{padding:12px 14px 10px}
+  .ttrow{flex-wrap:nowrap} .ttdate{font-size:13px} .ttact{padding:8px 10px; font-size:8.5px; gap:5px}
+  .evchips{display:flex; overflow-x:auto; flex-wrap:nowrap; gap:6px; margin:10px -14px 0; padding:0 14px 4px; scrollbar-width:none; scroll-snap-type:x proximity}
+  .evchips::-webkit-scrollbar{display:none}
+  .evchip{flex:none; scroll-snap-align:start; padding:8px 11px; font-size:9.5px; border-radius:999px}
+  .evchip .dd{margin-left:6px}
+  .chiplegend{display:none}
+  .prow{grid-template-columns:1fr; gap:8px}
+  .pscore{text-align:left}
+  .ticks li{grid-template-columns:64px 1fr auto; gap:10px}
+  .ticks li span:nth-child(4){grid-column:1/-1; font-size:10px}
+  .pulsecard,.chartcard{padding:14px}
+  .fgrid{grid-template-columns:1fr 1fr; gap:22px 18px}
+  .fbrand{grid-column:1/-1} .fbrand p{max-width:none}
+  .fbar{flex-direction:column; align-items:center; text-align:center; gap:8px; margin-top:26px}
+  .fbar .fsrc{max-width:32ch; line-height:1.7}
+  .replaycd{right:10px}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"GlobalCrash.finance","url":"https://globalcrash.finance/","description":"The Global Crisis Index scores the financial system's fragility from 0 to 100 across 36 free, public indicators — credit, macro, valuation, housing, crypto, sentiment and geopolitics. Printed every Friday, graded in public against every crisis since 1990. Measures fragility, not timing.","inLanguage":"en","publisher":{"@type":"Organization","name":"GlobalCrash.finance","url":"https://globalcrash.finance/","logo":{"@type":"ImageObject","url":"https://globalcrash.finance/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"GlobalCrash.finance","item":"https://globalcrash.finance/"},{"@type":"ListItem","position":2,"name":"Scorecard","item":"https://globalcrash.finance/scorecard"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The gauge, graded in public","url":"https://globalcrash.finance/scorecard","publisher":{"@type":"Organization","name":"GlobalCrash.finance"},"dateModified":"2026-09-04"}</script>
+<script>window.ROUTES={"methodology": "/methodology", "scorecard": "/scorecard", "friday-print": "/friday-print"}</script>
+
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body>
+
+<style>
+/* subpages: same shell, article layout */
+.subpage{max-width:760px; margin:0 auto; padding:44px 20px 72px}
+.subpage .crumbs{font-family:"Geist Mono",monospace; font-size:9px; letter-spacing:.16em; color:var(--muted); margin:0 0 18px}
+.subpage .crumbs a{color:var(--muted); text-decoration:none} .subpage .crumbs a:hover{color:var(--accent)}
+.subpage h1{font-family:"Fraunces","Familjen Grotesk",serif; font-size:clamp(32px,5vw,46px); line-height:1.06; margin:6px 0 18px; letter-spacing:-.01em; text-wrap:balance}
+.subpage h3{font-size:17px; margin:30px 0 10px}
+.subpage p{font-size:15px; color:var(--muted); line-height:1.7; margin:0 0 12px; max-width:66ch}
+.subpage p b{color:var(--ink); font-weight:600}
+.subpage .lede{font-size:17px; color:var(--ink); line-height:1.6}
+.subpage .ptable{font-size:12px}
+.subnav{max-width:760px; margin:0 auto; padding:0 20px 80px; display:grid; gap:12px}
+@media(min-width:640px){.subnav{grid-template-columns:repeat(3,1fr)}}
+.subnav a{display:block; padding:16px 18px; border:1px solid var(--hair); border-radius:12px; background:var(--panel);
+  color:var(--ink); text-decoration:none; transition:border-color .15s, transform .15s; box-shadow:var(--shadow)}
+.subnav a:hover{border-color:var(--accent); transform:translateY(-1px)}
+.subnav .k{display:block; font-family:"Geist Mono",monospace; font-size:8.5px; letter-spacing:.16em; color:var(--muted); margin-bottom:6px}
+.subnav .t{display:block; font-weight:600; font-size:14px}
+.subnav a.primary{border-color:var(--accent); background:var(--accent-soft)}
+.printline-now{display:inline-flex; align-items:center; gap:10px; font-family:"Geist Mono",monospace; font-size:11px;
+  letter-spacing:.08em; color:var(--ink); border:1px solid var(--hair2); border-radius:10px; padding:10px 14px; margin:6px 0 22px}
+.printline-now i{width:8px; height:8px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft)}
+</style>
+<header>
+  <div class="wrap hbar">
+    <a class="brand" href="/" id="brandHome" aria-label="GlobalCrash.finance — home">
+      <svg class="logo" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+        <defs><clipPath id="lgClip"><circle cx="20" cy="20" r="18.5"/></clipPath>
+        <radialGradient id="lgEye"><stop offset="0" stop-color="#ff4d3d"/><stop offset="1" stop-color="#c01608"/></radialGradient></defs>
+        <circle cx="20" cy="20" r="19.2" fill="none" stroke="var(--hair2)" stroke-width="1.4"/>
+        <image href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBUODAsLDBkSEw8VHhsgHx4bHR0hJTApISMtJB0dKjkqLTEzNjY2ICg7Pzo0PjA1NjP/2wBDAQkJCQwLDBgODhgzIh0iMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzP/wAARCACgAKADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD1N7YooeQIzMekhPH4AgD6cmoWFxBIDHMdh6/NJgfmau3txHc27eS8UijnPBH196wBC5kD/a4Eyedr8ke2QcUAa5ZiA7s83Py4UgE/j1qvK7EtICpCnIJG4Z/2VH3j71LGbZEEYZpifm56fUsR0rPe5Bn3Ald54kA+dx0/djsB60AaiKwdA3yMSdpk+aTkfwjoPofSryoxCs6nsVMvXP07Vm2c37wx4WFnyGWEl346Fn6Dj19aui5UYG1EYgkLnewI68fT0oAuKgZAw37SpyMYFM8gAjYseAcsS55Hb9aZFISQqRyMpG5Sxxwe34VaAG0/6vA9TxxQBX+zQ7AGWM44wGPBzlvyp0b/AHsOhdsuSknUHj/JpZTuYbXjByMHGeT1/MVCGjKY3wsDlnOONnp/nigC7Hy/WVsHPUEcCnEFwflyw9RVVXBAJ8nzRhuG7/w/pUqMRlQpwMBdrfmaAHgYyM56cZxT1CkjBIFRghuWLZ7huelIGwxAySOuD/SgDnfFWhm9h+2QLvuIATGrhWT3JVuM4+lcAiIi7wr20Vx84kkSS3UMOAFEe5D68ivYJWSUBcZU8H2Nef8AiLQRpl+ZLZfKW5LOkkNqxZHxyN0ZyOB1waAMWCYzyrdZeTHyPMuIgD6loTn6bkrT0+6neOYj94YXz5kSh8d/9YuH+uVrnyr3V07QvHJcyLvMigXUylep3DY6Y6Dg81NHML3U8SOZXaLgTOLphge5R1HtzzQB07SW0k5uGKHzEAZzKZgpHYhcMAPcGt7Tb5mMD93XHCbR9d3Q/Tg1wdtdSXMcaukjSK27YuCUGfu5yJQeMnr1ratL2IzsfOg353F/NNwSw6g9MfRh+NAFBby7tWdCwAjYli0w2D3PXGfoPrW1aS3Vyq5t2llYbi0BXCnuCwPSs2aNbq4XY6SnGHK2oYvgcdOUPsQD700O9nO63WUhwQPtMrIAfbacn3BzQBpC8WGN3m+zxtjJZGLgHPU8/MeOlZt7dSR3KxMWZ2G90LBXdevmOw+4B2UEZqzFci382QvbKFGPOcs7/SONuc/hj61jZDuzyeUYYpQ0kcyfLG+Mh5W/ic5GB0GaAOksbnzozIqvNGwDAwnybcnjucH69a0odQDvshbeFd/3drGTnHGN/TOfcVycDg2nmzeU8W4EXN0dqkg5wkfGDk9+vat6O4mkhCYvJQWLZfFtH8voOoyfrxQBseYsYDSIqqCBumm5OOSfqKuQXcXlqWlh7sSgOMHpj+tc/byxNta2ksUyC48qNpm/2yD0bnitOKeYBWzdlVIcKIQo2/3cdT6n0oA05J2Mm1SRjClUTIz16/SojcqNjfMBksR5RB2jt9R+tVGnk2gYvC4LA/MvIPTn37Go4mmwQUvV2KORIrEnPb/a9TQBcM4Tc3nwfIgJDKRyehPtU48uRuBCxDbcg4IyOfxql9pZQ6n7QpWQH5oc8nsOOnvTo51O3bcQHLNw0W0s3t9KALRzGpYRufl6JJ6dBTJJMMTIp6gDzB1J9CPyqKCQMAAbbiMkYYgA55+in1qbaVXaok4ARGV93Hrg/wBaAEUl35+QEbeecgdMHv8ASl1Gyj1Kw8q4gVlB3LuJ4YdCMc1TecGd1VssM5AGOM917jryOa04iJ4BjncOO9AHjl9Cbe+W0upkuJbSVkaNgJ1IbusTbX/EE1B5f/HjZyu88kE20wTEO2CT0tpACPbDcCug8YWhi1q981XWGYAblbaGJHGWkBQd+FK1zjsDaKieXHDMNyxn5I2ZeOkhO7P+w4JoA0RFgLZHa+yUutoYsnB4H+jtyO/3WzV+1MkSbzI++1k5VVx+AP8ArIx7NkfWqUOF8yIx7I5UD+Wo8qNivYLLyc/7DdqtRzeZKTGC6BFdhGkhI9csSJFHX+8KAMQXt8gE7XMnnD7kcgKlsHHynG7HUZ4H1NbtrPcSx/aGvre0cY3qEadz67mCnB/UYrn7GwcW322aNYIGf5WcnGRwADnLH8Sfp0rSF1BBaRW6WSPKj+WUu1kl2k9mRcKpPZAM+uKAJ7t8t9pguXzuCGVEcyN6Kgc8ue3AAwTWfAFGWiZ4oEf5N372KMg8jnPmseSTyFJqtf3E0kkjNGzIQRFHGPLyM/MFK8KBxvcem0cZqCwuBFPFJaupAkZRNZ8kgDgRL/CmOrdyRQB0ttHFkySMpd8Ye5+edumMDt3wcD6VrMkb8SROgLt5Ut9MeWxjhB36+n6VlWzFdyIXEjPtMMY3T4zyHlOQpHXjtWhZzIkrXI2BQclo185n7BhI3AYc569KAN2G4leAmO4uJI2jyjQQBQAp5ALdWJB4ParsZlaXc5uB+93KTKvII5/4CPSsT7ZEYgjOJBt27pJwxc5+8cN68/SpLbWLMvHIURnDFhgkbnI64Gc8Y/OgDaeJvKKnzQAu3MirJ05DE/yquzQRyB3UIPmbc0jxjLcDrwD9elSi4Qw4jkcbQQuJS2O5yD6dutPmebgB7lAVKgtCHUEc7jjpketAFdFKMzhZi2wKdt3y3tz3HqeTVvM8mSzzKDIoBKKwI/oPc1mmdWZQWhyu2UlrZgVB6f8AAvfHFSo4tX/cJalvMZRhymCRkgZ6n1NAFwY5MkgYEsWLwEHYP4f/AK/ekdVCvlbd22KzDcVy2flx+VKGkMA2LtQKBxcjuemf5Gom85zuWQtFnIAUSLge3UZ/HmgCOZWV/L+Zhu3BJeR65DjoeeM1Z0+YG5MTOS2MhSMfXj+Y/wAapu/kZaNl3dH8kEgtnksh7dORzzRp2ILwBioLqSO+cc4B+nI9R7igCHxlYi40dpcv5lufMTZuz6dFzn8QRmvOJYxKsslvKpEZEhZUEh9wTHlAD0+ZBXsV8IJrdoJlJif5SVOM/j2rzDVdLfT9SaK45jWRhGAwlOxumFUrL+RPegDP0+RIhLtWNzGfNBx5p2nt8m6Ic8DKitGN0Hlq6qUQkxJI4z83dVU/h8jfhVBIFiWN0aYrC3luzMYsKTzkLiUenzBqtWuAXVLf5Y38lpLeJSDnpufG04/2lB96AC0ikGLvdcGccbYUJmZu6hmB2e+3JHtTPszNJDk27vEXMVs07MkRI5LY49c7iWPt0q/Y2BtLfz7lDHbMu1E+ZXlGehIIyvTjqeuKbq10kqG2iMaRxKDP5kZ8tV7M4HbsFHU8HigDDni85JTm5limhyPKYKJFHG8/884ByQOrc1WtV8y78yaVSgUFzcwtG5GMKx28hDn5UHJHJqa5aIMybICw3SSGQMkpbjDSj+Jj/DCOBwapOHa5Ji86GXzCzJI/mMrdG3OCAXOSTz8oG0UAdE7JZRxxXLTPHGuHgkAk7Z4RflXGepJNTw3EsiLukaIMnJCOC31IiIH4Vz0sRBRGYPuQgb2iAIx14l74+lVhrBkl+z26BiQq/KpGD7fMaANTVdTjtIiftJDZAVVeXH/oAGfSuSfXtRgJeK9kZdxOHGVPduPUV6Dpuk3jQxu628eWGVkUAADoxJ5z7detS3GkR2VrtW0RYgAzyrAGzx1bPt1HGT9KAOf0vxsCscdzHEJif4okOcDBx8vvjOefzrstL15po42jlRQSFJJRf4e25j3A6CvPL/QkbNzHcR3CAAspzlTknPJ56kk4/rnU8I6qEuShZi27apEjLnkcYAJP/wBagD1S3kmkhEsctyFZQvZsb+d4Y88dOmPaoJ5ZVOZjLw4+d4llVQvGBt5y3Xv/AEp8bedCzPGiP8pJYSZJBAXJ7nr9eDWNr2qWulWEkxjED7WVFEOSoPUAg9c4Y+1AE58S2VnEsbmAfwt8uRx25ww5PcHFVL7xdaCQKhdzwCkZyeOQcDr+YrzF3fXdQaS+llW1LBYyzE+Ye+3OePzrp08D2uoRefDJdRAdJSC+Rg4wOP6fhQB0z+J4rmdEaVC4ICFl3beOx4OfYEn0BxV6xvW/tW2iSXk/Kx4YHJPfv9f8SK4a10qXQb7ybmQMHcgSBgC3tg8jv2zj1rWWySx1i2uLOULG86gKHw2e5A5Y/U9f5AHpLsSkiyIrL0xnHPp7f1rl9dsTqFqyqkjvHIQFjjRmx2Pz49OxB5rrJY4ULPIQVddrBjww9DXMawpijkiLMVOCrlA5yOgIPXjj34oA5ExD7UkcuyOeTCBCrTzKw4XhiJFwO6sRUqRSzySSy+fJLGPLkkkkxwOpO3Eg7feU/lUj2r3BlhV7q6D4kWOMCMfTy5MN3/hbtQkm2TDpayb12tGQ9xIrewOJF/AkUALHNczyRTyKysVY+cxLSbe5Utyq46sAOOBkmql1KVlAtkbcr/K0RwcnuqngvgEDPAAz6VduftE1mGimkEUpB3FvmkI9zjcemP4R3J6VlTISqWwMbkI0hDLnC8cseqr/AHmHOCoFAFD7Pc3NxGqzTRBGZUSUeYu5uGCsOWbGcyH3C88065UW0SvHblZI1+ZYV2pxwoHHXr36VasEidlKtEDEScqxQZ52kjsDyFjHPfvXdWKh7RA5VUZQu0xgE9wAvYen40AeaGw1Ce2ae6WS2jK/O5c+YyYBChScLnkDPpXNyahcrcTf2fCdpAUyspKopPXPXkmvVPEFrPMwijCrHj5c8Ft3t1J/DmuY/sHU9P8AMms5/NjlB3I5wXA4bHqfUUAcTHJ4iudejttWkurWz3/vZ4YwgKddwOMHr0969FsNEvX8Oyahpd3M9tGzfJfnJuIxj5hjp0PHertvpYBi87R43h6hJ3YhSf8AZzgdfTtWwIbhrhTJK6RoMfu8BcdMZJH5UAcrHanUkW3ubG6tZpBhZo8ENxnJ7AfkfrXGojW+p+T5pAjYqrKgAdfQ4HTB7Zx9MEe0XE1tbQSTxxRJNjaWfG9sdunJ59a86n06IwPdfZSh52sTjPfBycZ59yOwFAHV+HrhFtylzPKVI6RBRjC46k/qe1TeMLQXlj5KKZXQ4Uvjn5h1wenP1rF8MTtB5rO525YIWbbuxnIyQT3HAUe4rs5wZIlZyXEbBclix4A/vAZ5PY+lAHl8ltd6NcC3Sykur24fYrnowxwSf4R3x+hrO0zxd4lumnMc9pYPAwWK3e3LtO5OCvPPc59q9oOm2V1busduo3HcrKuCGHcehGfxrHOgWUMjXrWcs94hPlmdshT6/wD66AOXtNR1G+uZtL1yCOIqnmxvCCQ4Bxnnp+ldDomnTXGp2a3LGSBG3ZAwGIGRnj+ealsdDY3j3N1cmSeQYIUkAA87fXr3qSwtzo+oRF53kRW2gtg4z2z1/PHSgDuZUjMBV9pU8EEZArMvLNHtzGE2NjCA/MrewP8AQ065nUZEk3liQYVuwNMjupTbBTlc+qhg3+eDxQBgXlmY2SV081cYk3jzVUdyFPIPuCDWZOXlilhE800cQ3RtFbmUIPTOPMQ/nXTX7K1rIrY3sONyllyOc461zLM8kUF08s0vlZUSyTbVHbO9cMv0YGgDEur6O3cu8byRo/lRwbgXuHxxuPQL/sjoOOCaw7u/EM5mbBd5llkkQFinzLhiO6cEKo6nnpW49qlzPHbWymW7xtLSKESBfRV7D1J+b9a5/U4Ut7lossWxtiI5cH5Nu0j+Mj+E/dFAGjp84lQzySOXB4j2l/nYITsb/noS3J6LXW29ykSTRM5Rjy0e/wCRARu+eUc54P06YrzfR7lYN8EpRlZWQxRE8gtESsXoxzyfY12MM9uEjCYiii3DKHMMBK9FH/LViOe3IIoA6Fz9ohG6MIi7/LbhVZtuQQzHnPPI4pYbOORWZYcgJsUIHbnGR0ABHJ7n61TTzI5LfzQ0EvltIhkQSyOMc7V6Rc/hzitqEIsaLOAmFWUCVjNIdoyw2jhSPb16UAQohY+TEyxru/2M89/4ieeDxWh9nNuwmkL7c4JK85z05y3rg8DBqxbQJBGTtlRAgZvLRYgf4sjH5EVBInmFE3wwcsAow53H5uR05Az7UAc9qvmzhZXZjDISg3Nge33vcdAD3rMktI2VXmJjVmIaZlEYx2wzA7uD2A6cYrp5bbaySRLIH8tWZ4RvYDJPLv8AnwMjNZjxyC48siDzcZYQr50q4GMsx+Ue/rQBzlg6WskkiSnyum8zbA2Rxh2yx9hx7HFd5pZNxYMRuJYHkGbHGD1YcVx0kJjlSW3iVpXI3qoVmbOfvOSVGfQZFdj4eKzDc5Zj7NJJgdODwO/bPtQBoWDBYmBGCejYzt59R1GSfpUV3HP5j7HGeMhmx3wPoMZ57062dDdyIJGZ4+wf+efpj/OanklAQbpMFMjGCzA47Dv15B/CgDJiBRiFIO8Z2lcnHHY9f+A1n6qNu8nLKu4YXd1z3U/MoyOvI6dK05WVmHlhJHUg4Q+YBkkD5Oo9SV9KxtcZngdIgWXafLd2DKcdSjnpxnKHrzQBtQzfabaJbjZJHKQQScAnsc9m7Y6EVMmNPUo7fu+gaXK8fTBrmdI1CFrdbUBWZ1GFU52nAJUqfvccjHIwa11vdtlL9km2ODkJGxI+o68fhQAtzLbGZJLe/iLD/lmJVZT+HHT25rHS3MjSXEhjlYy8O+RMCOwzgN/usM/WqF8dZnSSa5eOdFAKMqqAB6Zx8369elbegXcesaSY54QjIRHkDG4AcEe4PH40AcVFLcExysDiPpGhCKqDjAHbJYDuecn0FDxHLa+bAEYAyoSNj9VY5/AEcluoGBV0Xbxebb3CxrdiFSoJA+YMJGGO2BgfhWNrkaQxxzp5TkF03Y5Cx/LnH907eR3OR2oAyzblgkkUS+dKpiC7c+aFLDbGO65iUbuvNdRpV4pdmMkELRgmOby8pACWACDne/3eRxzj2OTptukxMkkZZW+YkOEUjz35dz/qlGBhRya0/wB5FEtnHy0XlyQ7DhIk5BJU/eZgOnp09wDrLRwrPbl5bf7QQDbglnlPQM7jHljjGBjqPpW7BceVI0UjLp++1aVoYR5kjEdSpHoBg8c1xmnyrc26vG1zaSMsf7uM73kbg5kY/dXPHOOv4V0kE4ia/hWZLItbkJDp/wC98thy5LngNngg4oA2WYSWHnfZMRSxbxLPJhcuRlCrZIBHX0qysoTUEEcyEJKsTJbx5KccI3t33cY6VmR2QEcMktpbQPLAgb7VJv2yA4QGPkY75B6mtd45vOcytK6k8McIqgr93aOWGex5FAFa6j8yGUz7cqjIzyndIBnPzYwoBAzzg1yFzfza6TcW1uPsasVSZyI0I7EDIz09+ma0vHM5GnRWiNwdo+U/Kw9CByeg4wTXOadqsEN2Yiyo6YHmI4LqMcKC3yxAY7bm9eTQBNZQTKs8U+yR42+VQQ+0Hp1wijknjp1rqdNud5aN7qJiqMNv2l3xgDPKADGPxFcvflGvcjaIz+8Kf6wZ6k/NhR6nOfbiul8P6vZwl4ppHdACdqsJNpznogxjg9+2KALcl2UvU2SxuS5AjWbccnthgCP5VM07hWjAOSudocghcgZU9sf3Tz6VkanqcZK/PjewKhySD35DgHHI5BNXRtXT4rjepTYWw/zINvOSezDGAT6YNAD7qQy3Sx5DyBmKK6eVIuDjcG6YAPHqT71h6zJNLFKFR2eQbCZSFZtq/dde0g+8PUZrRkS5aWCAq8iELss7shvN43Md+eeoAB6EVhaph0kcmTBLDc7lpsZ/jxwJEbA/3TQBxbXbW9xJMZAcKGm5zkKMZIHIwT95eVPsQR0Om6u5tyGd/tAYMkrZAGeME/iMkHuD61zEbQXN1cwSp5i7lX90F3Y6KcHHIPAYf7rDBBrY06w/s75ZysUjyKVjxkHORjZngHsPRv8AZoA3rrVA5dbi5MFyDsIeJtwI+gOfxqrFqAsra1SB+DcbpHkbhM989yev5eoqwLuBrRrfVtPZAiDY5j3AjoNrZBI9BuP4VYtbKKd4EhgmSzt2WTCx/MpByrY9M89yccnjFAHC3V8/nXNxKFN3K7AAADYzY3bv9rGFx/Du556NngjuLWSbzEMhywfYWGP4nYHqBubbjvU1tpsEckl7fgR28ZwkaYG5wGyAR0AweevzZ6tkIpWEXEcRU+Q4iKDGx2RQW+X+4oaT9KAKmj3ZW4ZmMKyAPMTOM+WQ6uWYdHYlmAB6YrqtRgadRcWzSC4R1MCSKXkZmwd5UDoFztB6Z7VyQs2t5UuIljliRmc7xuDqGZWkfnud2O/StnTdZR4lRmkMzLtALnzbtxgHc/BVCpBA9P1ANayvzJN5TRS75VBkRnA84fxGaQHKDI6ew+lbts8aKHQmBLmVgoRvItHBXjB+8+fUdznFYMskjODMqhFYk4IFqjLn+IffOOmMcg8dq1bKLZtmCzRZH+vGcyA87lGC6jPIAC9cZ4oA6nSHRIYpIYkRFKL5kFv8rIM5Xe/JAOTk8gfWr11dx2dkhYhTtIX94GHc5DEEk4HYdDWPDM6KyEb5njdwsmZXKkjogO0J9Tn9anuQzJMWbaHLKVMwT5uAEwgJOAOMHNAHnXjaXVZNVV7OKXcxJAKPtZuAfdv8OlcZLPdTLuW3mgkQ7SHAYHt8pGMZOeBgYxwete0JbR7yEBhjAfpGkCcnJBZst7Z96S40uG5jInjSZN5BLKXAyeQXYqPyHbvQB4+msO8+yaUbl2uQ8mfmGTkP7YHGc9evStO38ZwhsXFxCRGpAOWf5hjoASDyT26flXoVz4C0m7hGLWLzduGZWXnnkjDcHkk9etM0H4Y6Rpt0906GTGAN+MKO3Qnvn8vxoAj0fT9U1mOCaeI21uVVkUnce+DtXBAxxz+IrufsUKaUI4iCAP8AWH5uuc5X+Lr90iqksnkybEclRgFRiQZJ4Hy4YcgH6U5pzDcoHGfM+XzScoRgk7XHT8fSgDMu8JESYv3Ejnck0x8mTjYBuB/dk8cVymphhHM3Pl7uQw+YHJ+9x1AJQ+q7SK7G+ihRg0cbfNhvub9656gfdcdSf4q5rWcw6OxlLABASqDnGflAOcspGccZH1FAHH2NxC0smwNlATlyMkjjIdsfTnkADPQVtaUgurlLtoIFhClpPkLKmeMgfxD1x19TzjBsLTdEZGiZ0cDCx5UsQcfe6enr9F6V2umQC22QKgtpc58pfnnHH3kbo+e4PQUAaKAzFpVuoxFKCuYod1vL/vA52t+lSxLLHKI5FvS0S5CM48yP3V/4x7duKikuGt3aUGfBypmWECKQ9MOvG09iaEgmCxxG1kVh8wg+0ZMY/vQtnn3/AKUAeZ2csl9bLCp/e+cEYnjbuI656DhD9BTc/aLaSG2MhhhQR4IKeZvIUMSe5JJPsKqQlLBPOHBDiK52J87DsRxhSyOcDJJI5xS3d08weH5j525DCjZDMMkKPo0eCRwAcUAPsbqIzAyyF/OZNzOuA5LIW3jsg3nBHXFaH2PyohcQKzwu+ChPzXOCeBj7qAb1yD2Wse5h3yLLZlZInxEmzoSc4jVv7ih0znriumsJ0uYiJUV2nZ0Gw7WnOQ/lxjqi5bk//roAtQTzpJGzSLtViiFk3quQRiFOB2yWPrW3pqyW80hWGaJooVV5beUOXIbo0nRQMg4HY9eKx4UZbUSCaJ02BJJQCEBGMIBnLKMLkKMnvW1p7pI8QKDMjuy4++yr3WEHCdMfNmgC1O/k5gxEI+R5MaMEY5+YBc7pWzz1wPeppNWXyHSSZgUcx/M4ErY5ySOFX0A5/lTdSjkukNum/wA5tu9WILMBjBZFHAznuBxzWdH4btr61Y3sgnC/wQnEYJ65x0BOenAoAl0vWLVpz5RUZbaxSJctnjJaQ5zn8+9aH9tWaN5k8sZYnAEreYwHfrhQMc8ViHwf4eVvMWxEaYztEjBSR/dbOD/Onx+CrIbJYbaElpACDL5mc465J6ACgDpNP8X6dMxTzXZxwWkwN2MjoB346VJe+MdKtAqJcEt0CxqzNknGePbNUJPh/ozL5y2Ukci/LtidgD68A1nHwDYzo0j206SRkkB8gN+OfagC/J4os7t45IrhHmUk4Xh14xw+ARwD1zzxUum6pFI43SBpWyNyKI93IOMchRnIOe54OCKyrTwFpz+Wt3YQEFcDaTubI65BzjB5xWpaeF7K1+WKWZY4z8iSOWAXGPT/AB64oAfdyySQSeXLIQDkSIuBlOu0HOx17j+LHFYut2cWoxRRSRPJEFZ9lu33hjrGT6kHIPQ5Heuhuba3t7dkhQt8ww+clm7IT1Vx1XOfSucvGhSJ2uLiFpZSeJ8qjEkc5XARjwc45+tAECQxRo9xEqy7VCvNt80jIxtkjwCAOmR09qtwrthgiP2h425hto1AVh6wyHoP9k+4pmZPtBjT7Y0ygNuSIJdRL0Ge0y8dO3FI8zSIN6sY55Pm3ShIJiOmccxP6D1oA1FnZo/MWa5lMZCvMo2svH3ZI+Mr746UxTGJWQW8MispZYRKDuH9+FscAf3faqQkRpJHdX82DAaaWfM0Hs4H+sT6f/Xp8PlK4WGHTw0vRYoyUufRkbGFYDPy/T60Aecwu2fK8lwUPloAB3ztXjO3B3JheeQSaq6hbpBBCsMYk8xQVkxtD4IGD6RowUE8ZJNaV5G0UjRqDJ5Y2qruQXB4MbY5ySMbVHLKGJ5qLdG8L7surMCd/OXPAL4HJP3fLXhWGTQA3TZYnt1glbzI3TaFkG0mIEFV3HiKMAnnknaaeivb3ilQssE6FUeJzGkiA4wHPSIHbkjk/pVeRp4Vmm2hnVvNYSciN8nmTj5pM5+QdMmpbm8jubZp7ZEVw3mP5gDSsCOC7E4LHkKigYIGaAOjt72aeaKVpv8ASigEW1QkpXGD5QPCR/7Tdcn2q5ZMkUpRGAmRmaSKOYxAA9TJP0kOcZA65B4rk4L5rm3ZZyjBSJJt5wW+XIeSTqAR8wRc9CtbNjqKGOM3MsKQYZI5JIjsOeAIoB7ngnswoA6WxudtjaREs8EUeSqpsjBDY6H5pCOnB5z71tWmqWyJHH9n/eYBjLOqqy5PAPTj0PNcyJWE6wSC4WcIqMk0vmTYzk/P92PGCeuR6VJbICXuoLgQ+aNx3bdx+YnDFhiTaO4x16mgDZuL7cfMMAtEOWAZWQvzjAK5HI701blUfy/NjkjD8+XOhwDwOOGJ9/eqRs7xmP2aNoGQgOVfZnjv8zADJB49qtW+n3suT5jMVztHnZPXHGG7kd/WgDQS5OSVch8dip/EbWH1/GpP7VuYbZ3LyCNc5xCVx6cyNiqH2DUZY1j8ltnQDgkDGOMqarTxXEDlWt3jfna2xSecZPCHI9utAGxFdRSRsFcDK4aRiXUjGMlzywzjISpBdyKjs8LieNQ/3sEEKSDtHO3noM8VmWqvvhmiLGMqzRtkklV6lCeQST93AyBike4SSYASqoAGJFy+wknEiHrweGXooNADru7aQyoWQTAAEMcuQwzjPdTyVPUbcVlSNcMjQxCdVgbY/lupQf3t8fXb/tDsam1FwbRWljjWJ+HRmMccZJ53EchdwODnjdVBYxFd7ZPL+0bgyA7pZ0/65y5xJ7IenNAEjwK7xKzWakgeVDJcM6OPWGXrGfY9eKR2fa5M8Ym2bZJltTuX0E8fTb/tikZnNpcFN5WQ7JSLVUiLekqHlW/2hwMg1c2zllhJvBLDFuQfaA80Y7sjAYlTpkHkflQBTtWeBAwknjES71WKLMkKY+8hx88Xt1wa0IZDI6gS3TK+XKxcLIuOJYePlx1K+5/GBj/qpI4nKnMkbW1wTvYgZaHI+96oagiCkJvjldQTKPJmIIbvLED/ABc4ZO38wD//2Q==" x="1.5" y="1.5" width="37" height="37" clip-path="url(#lgClip)" preserveAspectRatio="xMidYMid slice"/>
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="#000" stroke-width="1" opacity=".25"/>
+        <g class="lg-eyes"><circle cx="13.84" cy="17.45" r="1.55" fill="url(#lgEye)"/><circle cx="26.23" cy="17.45" r="1.55" fill="url(#lgEye)"/></g>
+      </svg>
+      <div class="brandtext">
+        <span class="wordmark">GlobalCrash<span class="tld">.finance</span></span>
+        <span class="tagline mono">GLOBAL CRISIS INDEX · 36 INDICATORS · ONE NUMBER · WEEKLY</span>
+      </div>
+    </a>
+    <span class="hspace"></span>
+    <span class="seg" role="group" aria-label="View mode">
+      <button id="segSimple">SIMPLE</button>
+      <button id="segAdv" class="on">ADVANCED</button>
+    </span>
+    <button class="tbtn" id="themeBtn" aria-label="Toggle color theme" title="Theme">◐</button>
+  </div>
+</header>
+<main><article class="subpage"><p class="crumbs"><a href="/">GLOBALCRASH</a> · SCORECARD</p>
+    <h1>The gauge, graded in public</h1>
+    <p class="lede">For every verified crisis since 1990: what this index read <b>six months before</b> the peak of the episode, and at the peak itself — computed from the same reconstructed series shown on the chart. No cherry-picking; misses included.</p>
+    <div class="ptablewrap"><table class="ptable mono" id="scoreTable"><thead>
+      <tr><th>Episode</th><th>6M before</th><th>At peak</th><th>S&amp;P</th></tr>
+    </thead><tbody><tr><td>Gulf War '90</td><td class="n warn">50.8</td><td class="n">59.0</td><td class="n">-19.9%</td></tr><tr><td>Asia '97</td><td class="n warn">50.4</td><td class="n">53.6</td><td class="n">-10.8%</td></tr><tr><td>LTCM<span style="color:var(--muted)"> '98</span></td><td class="n warn">51.9</td><td class="n">69.2</td><td class="n">-19.3%</td></tr><tr><td>Dot-com<span style="color:var(--muted)"> '02</span></td><td class="n hot">64.8</td><td class="n">66.5</td><td class="n">-49.1%</td></tr><tr><td>9/11<span style="color:var(--muted)"> '01</span></td><td class="n hot">79.1</td><td class="n">73.8</td><td class="n">-11.6%</td></tr><tr><td>Lehman<span style="color:var(--muted)"> '08</span></td><td class="n hot">65.5</td><td class="n">63.1</td><td class="n">-56.8%</td></tr><tr><td>Flash Crash<span style="color:var(--muted)"> '10</span></td><td class="n cool">46.3</td><td class="n">42.9</td><td class="n">-16.0%</td></tr><tr><td>Euro debt<span style="color:var(--muted)"> '11</span></td><td class="n cool">38.0</td><td class="n">44.9</td><td class="n">-19.4%</td></tr><tr><td>China '15</td><td class="n cool">37.8</td><td class="n">41.6</td><td class="n">-14.2%</td></tr><tr><td>Volmageddon<span style="color:var(--muted)"> '18</span></td><td class="n cool">46.7</td><td class="n">44.7</td><td class="n">-10.2%</td></tr><tr><td>Q4 2018<span style="color:var(--muted)"> '18</span></td><td class="n cool">43.3</td><td class="n">48.0</td><td class="n">-19.8%</td></tr><tr><td>Repo '19</td><td class="n cool">46.8</td><td class="n">50.8</td><td class="n">-4.1%</td></tr><tr><td>COVID<span style="color:var(--muted)"> '20</span></td><td class="n warn">50.8</td><td class="n">56.0</td><td class="n">-33.9%</td></tr><tr><td>Terra<span style="color:var(--muted)"> '22</span></td><td class="n cool">43.4</td><td class="n">58.7</td><td class="n">-18.7%</td></tr><tr><td>2022 bear<span style="color:var(--muted)"> '22</span></td><td class="n warn">55.6</td><td class="n">63.3</td><td class="n">-25.4%</td></tr><tr><td>FTX<span style="color:var(--muted)"> '22</span></td><td class="n warn">58.7</td><td class="n">61.4</td><td class="n">-22.4%</td></tr><tr><td>SVB<span style="color:var(--muted)"> '23</span></td><td class="n hot">60.8</td><td class="n">59.2</td><td class="n">-7.8%</td></tr><tr><td>Yen carry<span style="color:var(--muted)"> '24</span></td><td class="n hot">60.2</td><td class="n">58.8</td><td class="n">-8.5%</td></tr><tr><td>Tariffs '25</td><td class="n hot">60.9</td><td class="n">61.4</td><td class="n">-18.9%</td></tr><tr><td>AI scare<span style="color:var(--muted)"> '25</span></td><td class="n hot">60.3</td><td class="n">59.1</td><td class="n">-5.1%</td></tr><tr><td>Iran '26</td><td class="n warn">58.2</td><td class="n">60.3</td><td class="n">-9.1%</td></tr></tbody></table></div>
+    <p id="scoreSummary"><b>7 of the 9 bear-market episodes</b> since 1990 had this index at 50 or higher six months before peak stress — computed from the same series on the chart, re-graded at every print.</p>
+    <p id="scoreStats"><b>Base rates, against ourselves.</b> 53% of ALL months since 1990 read 50 or higher — so "above 50" alone is weak evidence, and the table above should be read with that in mind. Of the 112 months at 60+, 46% were false alarms — no anchored episode within the following 12 months. That is the noise-to-signal trade-off (Kaminsky &amp; Reinhart) every early-warning system pays; we publish ours instead of hiding it. Monthly granularity.</p>
+    <p><b>The honest miss:</b> COVID-19. The index read low into January 2020 — a pandemic is invisible to financial data until it hits. What the gauge measures is how much fragility a shock lands on, not the shock itself.</p>
+  </article><nav class="subnav" aria-label="More"><a href="/" class="primary"><span class="k">THE GAUGE</span><span class="t">Back to the live index</span></a><a href="/methodology"><span class="k">METHODOLOGY</span><span class="t">How the number is made</span></a><a href="/friday-print"><span class="k">THE FRIDAY PRINT</span><span class="t">One official reading a week</span></a></nav></main>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <span class="wordmark">GlobalCrash<span class="tld">.finance</span></span>
+        <p>One number for how much dry tinder is stacked under the global economy — 36 indicators, seven pillars, printed every Friday at 20:00 UTC.</p>
+        <p class="mono fhonest">MEASURES FRAGILITY, NOT TIMING.</p>
+      </div>
+      <nav class="fcol" aria-label="The index">
+        <h4>THE INDEX</h4>
+        <a href="/#pillars-sec">Seven pillars</a>
+        <a href="/#changed">What changed this week</a>
+        <a href="/#historySection">Three decades of stress</a>
+        <a href="/methodology" id="linkMethod">Methodology</a>
+        <a href="/scorecard" id="linkScore">Scorecard</a>
+      </nav>
+      <nav class="fcol" aria-label="Product">
+        <h4>PRODUCT</h4>
+        <a href="/#pulse">The Pulse</a>
+        <a href="/friday-print" id="linkPrintExplain">The Friday print</a>
+        <a href="/#casefiles">Case files</a>
+      </nav>
+    </div>
+    <div class="fbar mono">
+      <span>© 2026 GLOBALCRASH</span>
+      <span class="fsrc">DATA · FRED · OFR · ECB · CBOE · NBER · DEFILLAMA · COIN METRICS</span>
+      <span>NOT INVESTMENT ADVICE</span>
+    </div>
+  </div>
+</footer>
+<script>
+"use strict";
+// theme (same behaviour as the gauge page)
+(function(){
+  let t=null; try{ t=localStorage.getItem('dg-theme'); }catch(e){}
+  if(t) document.documentElement.setAttribute('data-theme',t);
+  const b=document.getElementById('themeBtn');
+  if(b) b.addEventListener('click',()=>{
+    const a=document.documentElement.getAttribute('data-theme');
+    const light = a ? a==='light' : matchMedia('(prefers-color-scheme: light)').matches;
+    const n = light ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme',n); try{ localStorage.setItem('dg-theme',n); }catch(e){}
+  });
+  // view switch: remember the choice and go to the gauge
+  const seg=(v)=>{ try{ localStorage.setItem('dg-view',v); }catch(e){} location.href='/'; };
+  const ss=document.getElementById('segSimple'), sa=document.getElementById('segAdv');
+  if(ss) ss.addEventListener('click',()=>seg('simple')); if(sa) sa.addEventListener('click',()=>seg('adv'));
+  // next-print countdown, if the page shows one
+  const cd=document.getElementById('nextPrint');
+  if(cd){ const tick=()=>{ const n=new Date(); const d=new Date(Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),n.getUTCDate(),20,0,0));
+      while(d.getUTCDay()!==5||d<=n) d.setUTCDate(d.getUTCDate()+1);
+      const ms=d-n, D=Math.floor(ms/864e5), H=Math.floor(ms%864e5/36e5), M=Math.floor(ms%36e5/6e4);
+      cd.textContent=`NEXT PRINT IN ${D}D ${H}H ${M}M · FRIDAY 20:00 UTC`; }; tick(); setInterval(tick,30000); }
+})();
+</script>
+</body>
+</html>

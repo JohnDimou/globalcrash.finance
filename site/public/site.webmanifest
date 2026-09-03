@@ -1,0 +1,22 @@
+{
+ "name": "GlobalCrash.finance",
+ "short_name": "GlobalCrash",
+ "description": "The Global Crisis Index scores the financial system's fragility from 0 to 100 across 36 free, public indicators \u2014 credit, macro, valuation, housing, crypto, sentiment and geopolitics. Printed every Friday, graded in public against every crisis since 1990. Measures fragility, not timing.",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#0B0F14",
+ "theme_color": "#0B0F14",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}

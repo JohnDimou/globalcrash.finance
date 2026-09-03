@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GlobalCrash.finance — Global Crisis Index, the fragility gauge that grades itself</title>
+<meta name="description" content="The Global Crisis Index scores the financial system's fragility from 0 to 100 across 36 free, public indicators — credit, macro, valuation, housing, crypto, sentiment and geopolitics. Printed every Friday, graded in public against every crisis since 1990. Measures fragility, not timing.">
+<meta name="keywords" content="global crisis index, financial crisis index, recession indicator, market crash index, financial stress index, systemic risk gauge, fear gauge, credit spreads, yield curve, VIX, CAPE, economic fragility, recession probability">
+<meta name="author" content="GlobalCrash.finance">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://globalcrash.finance/">
+<link rel="alternate" hreflang="en" href="https://globalcrash.finance/">
+<link rel="alternate" hreflang="x-default" href="https://globalcrash.finance/">
+<link rel="alternate" type="application/json" title="Global Crisis Index — latest print (JSON)" href="/gci.json">
+<meta name="language" content="en">
+<meta name="coverage" content="Worldwide">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0B0F14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F1F3F5" media="(prefers-color-scheme: light)">
+<meta name="application-name" content="GlobalCrash.finance">
+<meta name="apple-mobile-web-app-title" content="GlobalCrash">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GlobalCrash.finance">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://globalcrash.finance/">
+<meta property="og:title" content="Global Crisis Index: 51.9 · Elevated — GlobalCrash.finance">
+<meta property="og:description" content="The Global Crisis Index scores the financial system's fragility from 0 to 100 across 36 free, public indicators — credit, macro, valuation, housing, crypto, sentiment and geopolitics. Printed every Friday, graded in public against every crisis since 1990. Measures fragility, not timing.">
+<meta property="og:image" content="https://globalcrash.finance/og.png">
+<meta property="og:image:secure_url" content="https://globalcrash.finance/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GlobalCrash.finance — Global Crisis Index gauge reading 51.9 (Elevated) as of 2026-09-04">
+<meta property="og:updated_time" content="2026-09-04T20:00:00Z">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Global Crisis Index: 51.9 · Elevated — GlobalCrash.finance">
+<meta name="twitter:description" content="The Global Crisis Index scores the financial system's fragility from 0 to 100 across 36 free, public indicators — credit, macro, valuation, housing, crypto, sentiment and geopolitics. Printed every Friday, graded in public against every crisis since 1990. Measures fragility, not timing.">
+<meta name="twitter:image" content="https://globalcrash.finance/og.png">
+<meta name="twitter:image:alt" content="GlobalCrash.finance — Global Crisis Index gauge reading 51.9 (Elevated)">
+<meta name="twitter:label1" content="Latest print">
+<meta name="twitter:data1" content="51.9 · Elevated">
+<meta name="twitter:label2" content="As of">
+<meta name="twitter:data2" content="2026-09-04">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preload" as="image" href="/img/mood-7ac4230e57.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Geist+Mono:wght@400;500;700&display=swap">
+<style>
+/* =====================================================================
+   GlobalCrash.finance — stylesheet v2 (rewritten from scratch)
+   Principles: content-sized everything · no viewport-height sizing ·
+   no negative margins · nothing hidden by opacity · one grid per screen size
+   ===================================================================== */
+
+/* ---------- tokens ---------- */
+:root{
+  --ground:#0B0F14; --panel:#121924; --panel2:#17202C; --ink:#F3F7FB; --muted:#A6B4C2;
+  --hair:#27323F; --hair2:#3A4856;
+  --b1:#37C4AC; --b2:#7E92A6; --b3:#E0A83C; --b4:#E5763C; --b5:#E14434;
+  --b1s:rgba(55,196,172,.14); --b3s:rgba(224,168,60,.13);
+  --accent:var(--b3); --accent-soft:var(--b3s);
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 40px rgba(0,0,0,.35);
+  --chart-fill:rgba(126,146,166,.12);
+  --glass:rgba(11,15,20,.8);
+  --sans:"Familjen Grotesk",system-ui,sans-serif;
+  --serif:"Fraunces","Familjen Grotesk",serif;
+  --mono:"Geist Mono",ui-monospace,monospace;
+  --r:12px; --r-lg:16px;
+  --hdr:64px;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --ground:#F1F3F5; --panel:#FAFBFC; --panel2:#FFFFFF; --ink:#141E28; --muted:#5A6B78;
+    --hair:#E0E6EB; --hair2:#C9D2D9;
+    --b1:#0F8273; --b2:#51687C; --b3:#93690E; --b4:#B14E17; --b5:#B32014;
+    --b1s:rgba(15,130,115,.10); --b3s:rgba(147,105,14,.10);
+    --shadow:0 1px 2px rgba(20,30,40,.06), 0 10px 30px rgba(20,30,40,.08);
+    --chart-fill:rgba(81,104,124,.12);
+    --glass:rgba(241,243,245,.85);
+  }
+}
+:root[data-theme="light"]{
+  --ground:#F1F3F5; --panel:#FAFBFC; --panel2:#FFFFFF; --ink:#141E28; --muted:#5A6B78;
+  --hair:#E0E6EB; --hair2:#C9D2D9;
+  --b1:#0F8273; --b2:#51687C; --b3:#93690E; --b4:#B14E17; --b5:#B32014;
+  --b1s:rgba(15,130,115,.10); --b3s:rgba(147,105,14,.10);
+  --shadow:0 1px 2px rgba(20,30,40,.06), 0 10px 30px rgba(20,30,40,.08);
+  --chart-fill:rgba(81,104,124,.12);
+  --glass:rgba(241,243,245,.85);
+}
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{color-scheme:dark light; -webkit-text-size-adjust:100%}
+body{margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden}
+[hidden]{display:none!important}
+h1,h2,h3,h4,p{margin:0}
+button{font:inherit; color:inherit; background:none; border:0; padding:0; cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px}
+.wrap{max-width:1120px; margin:0 auto; padding:0 20px}
+.mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--mono); font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted)}
+.hspace{flex:1}
+b{font-weight:600}
+
+/* wallpaper canvas (mood-reactive Washington) */
+#bgfx{position:fixed; inset:0; z-index:-1; pointer-events:none; width:100vw; height:100vh}
+
+/* ---------- header ---------- */
+header{position:sticky; top:0; z-index:50; background:var(--glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--hair)}
+.hbar{display:flex; align-items:center; gap:12px; min-height:var(--hdr)}
+.brand{display:flex; align-items:center; gap:11px; color:inherit; text-decoration:none; cursor:pointer}
+.brand:hover .wordmark{opacity:.85}
+.brand .logo{flex:none; display:block; width:40px; height:40px}
+.brand .logo .lg-eyes circle{filter:drop-shadow(0 0 2.5px #ff3b2d); animation:eyeflash 2.4s steps(1,end) infinite}
+.brandtext{display:flex; flex-direction:column; gap:3px; min-width:0}
+.wordmark{font-weight:800; font-size:19px; letter-spacing:-.01em; line-height:1; display:flex; align-items:center}
+.wordmark .tld{color:var(--accent); font-weight:600}
+.tagline{font-family:var(--mono); font-size:9px; letter-spacing:.2em; color:var(--ink); opacity:.82; font-weight:500; white-space:nowrap}
+.seg{display:flex; border:1px solid var(--hair2); border-radius:999px; overflow:hidden; background:var(--panel); flex:none}
+.seg button{font-family:var(--mono); font-size:9.5px; letter-spacing:.1em; padding:8px 14px; color:var(--muted); transition:background .15s,color .15s}
+.seg button.on{background:var(--ink); color:var(--ground)}
+.tbtn{width:34px; height:34px; border:1px solid var(--hair2); border-radius:999px; display:grid; place-items:center;
+  font-size:15px; color:var(--muted); background:var(--panel); flex:none}
+
+/* ---------- hero grid ---------- */
+main{display:block}
+.hero{display:grid; grid-template-columns:minmax(0,1fr); gap:20px; padding:20px 0 6px; align-items:start}
+.hcopy{min-width:0}
+
+/* ---------- gauge ---------- */
+.gaugebox{position:relative; width:min(92vw,520px); margin:0 auto}
+.gcanvas{position:relative; line-height:0}
+#gauge{display:block; width:100%; height:auto}
+.greadout{position:absolute; left:0; right:0; bottom:9%; text-align:center; pointer-events:none; line-height:1}
+.gnum{font-family:var(--mono); font-weight:700; font-size:clamp(52px,10vw,80px); letter-spacing:-.03em;
+  filter:drop-shadow(0 0 26px var(--accent-soft))}
+.gmeta{text-align:center; margin-top:6px; display:grid; justify-items:center; gap:6px}
+.gband{display:inline-block; font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.26em;
+  padding:7px 16px 7px 19px; border-radius:4px; color:var(--ground); background:var(--accent)}
+.grange{font-family:var(--mono); font-size:10px; letter-spacing:.06em; color:var(--muted)}
+.gcusp{font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; color:var(--b4)}
+.ghist{font-family:var(--mono); font-size:10.5px; color:var(--accent); letter-spacing:.14em}
+body.history .grange, body.history .gcusp{display:none}
+.ctlgroup{display:inline-flex; gap:4px; margin-top:4px}
+.printline{position:relative; overflow:hidden; display:inline-flex; font-family:var(--mono); font-size:9px; letter-spacing:.1em;
+  color:var(--muted); border:1px solid var(--hair2); border-radius:999px 0 0 999px; background:var(--panel)}
+.plc{display:inline-flex; align-items:center; gap:8px; padding:9px 16px 9px 18px; white-space:nowrap}
+.plfill{position:absolute; inset:0; background:var(--accent); color:var(--ground);
+  clip-path:inset(0 calc(100% - var(--pfill,0%)) 0 0); transition:clip-path .8s ease}
+.ttbtn{display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:9px; letter-spacing:.1em;
+  color:var(--muted); border:1px solid var(--hair2); border-radius:0 999px 999px 0; padding:9px 18px 9px 16px;
+  background:var(--panel); transition:color .2s,background .2s,border-color .2s}
+.ttbtn:hover,.printline:hover{color:var(--ink)}
+body.history .ttbtn{color:var(--ground); background:var(--accent); border-color:var(--accent)}
+body.history .ctlgroup .ttbtn svg{color:var(--ground)}
+
+/* ---------- hero copy ---------- */
+.hcopy h1{font-family:var(--serif); font-size:clamp(30px,4.6vw,46px); font-weight:600; line-height:1.06; letter-spacing:-.01em;
+  margin:0 0 12px; text-wrap:balance}
+.honest{color:var(--muted); font-size:15px; line-height:1.55; margin:0 0 16px}
+.honest b{color:var(--ink); font-weight:600}
+.honest a.scorelink,.scorelink{color:var(--accent); text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px; cursor:pointer}
+.honest a.scorelink:hover{opacity:.75}
+body.history .honest{color:var(--ink)}
+/* crisis card (replaces the verdict while time-travelling) */
+.hcard{display:grid; gap:8px; text-align:left}
+.hcard .hkind{font-family:var(--mono); font-size:8.5px; letter-spacing:.16em; color:var(--muted); justify-self:start;
+  border-bottom:1px solid var(--hair2); padding-bottom:1px}
+.hcard .hname{font-family:var(--serif); font-size:clamp(22px,3.2vw,30px); line-height:1.1; color:var(--ink); letter-spacing:-.01em}
+.hcard .hcause{font-size:14px; color:var(--muted); line-height:1.55; max-width:56ch; margin:0}
+.hcard .hstats{display:flex; flex-wrap:wrap; gap:6px; margin-top:2px}
+.hcard .hstats span{font-family:var(--mono); font-size:9px; letter-spacing:.1em; color:var(--muted);
+  border:1px solid var(--hair2); border-radius:8px; padding:6px 9px; background:var(--panel2)}
+.hcard .hstats b{color:var(--ink); font-size:11px; margin-left:5px; letter-spacing:0}
+
+/* ---------- time-travel panel ---------- */
+.ttpanel{background:var(--panel); border:1px solid var(--hair); border-radius:var(--r-lg); padding:14px 16px 12px;
+  box-shadow:var(--shadow); margin:0 0 18px; animation:ttdrop .28s cubic-bezier(.22,1,.36,1)}
+.tthint{display:none}
+#ttSpark{display:block; width:100%; height:104px}
+#ttSlider{display:none}   /* navigation is by crisis chip + replay; the slider remains as internal state only */
+#ttSpark{margin-bottom:6px}
+.ttrow{display:flex; align-items:center; gap:8px; margin-top:6px; flex-wrap:wrap}
+.ttdate{font-family:var(--mono); font-size:14px; font-weight:700; letter-spacing:.08em; white-space:nowrap}
+.ttact{display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:9px; letter-spacing:.12em;
+  border:1px solid var(--hair2); border-radius:999px; padding:8px 14px; color:var(--muted); background:var(--panel2);
+  transition:color .15s,background .15s,transform .15s; white-space:nowrap}
+.ttact:hover{color:var(--ink); transform:translateY(-1px)}
+.ttact.primary{background:var(--accent); color:var(--ground); border-color:var(--accent)}
+.livedot{width:7px; height:7px; border-radius:50%; background:var(--b1); flex:none; box-shadow:0 0 8px var(--b1);
+  animation:breathe 2.6s ease-in-out infinite}
+.evchips{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:7px; margin-top:14px}
+.evchip{display:inline-flex; align-items:center; gap:9px; font-family:var(--mono); font-size:10.5px; letter-spacing:.06em;
+  padding:10px 15px; border:1px solid var(--hair2); border-radius:10px; color:var(--ink); background:var(--panel2); font-weight:500;
+  transition:color .2s,background .2s,border-color .2s,transform .15s; text-align:left}
+.evchip i{width:7px; height:7px; border-radius:50%; flex:none}
+.evchip .dd{margin-left:auto; opacity:.75; font-size:9px; color:var(--muted)}
+.evchip:hover{border-color:var(--muted); transform:translateY(-1px)}
+.evchip.near{color:var(--ground); background:var(--accent); border-color:var(--accent)}
+.evchip.near .dd{opacity:.85; color:var(--ground)}
+.evchip.shock{border-style:dashed}
+.shockmark{width:auto; height:auto; color:var(--muted); display:inline-flex}
+.chiplegend{display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:12px; font-family:var(--mono); font-size:8px;
+  letter-spacing:.12em; color:var(--muted)}
+.chiplegend span{display:inline-flex; align-items:center; gap:7px}
+.lg-dot{width:7px; height:7px; border-radius:50%; background:var(--b4)}
+.lg-ring{width:7px; height:7px; border-radius:50%; border:1.6px solid var(--muted)}
+
+/* ---------- stat tiles ---------- */
+.statrow{display:flex; gap:12px; flex-wrap:wrap; margin:0 0 20px}
+.stat{flex:1 1 126px; display:flex; flex-direction:column; background:var(--panel); border:1px solid var(--hair);
+  border-left:3px solid var(--accent); border-radius:10px; padding:12px 14px; box-shadow:var(--shadow)}
+.stat.wide{flex:1.6 1 230px}
+.stat .eyebrow{font-size:8.5px; letter-spacing:.14em; white-space:nowrap; display:flex; align-items:center; gap:6px}
+.stat .v{font-family:var(--mono); font-weight:700; font-size:20px; margin:8px 0 10px; letter-spacing:-.02em; white-space:nowrap}
+.stat .v.word{font-family:var(--sans); letter-spacing:-.01em}
+.vrow{display:flex; align-items:center; gap:8px}
+.varrow{flex:none; transition:transform 1.1s cubic-bezier(.22,1,.36,1)}
+.stat .bar{height:6px; border-radius:99px; background:var(--hair); margin-top:auto; overflow:hidden; position:relative}
+.stat .bar i{display:block; height:100%; border-radius:99px; background:var(--accent); width:0; transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.vbar i{position:absolute; top:0; left:50%}
+.vbar em{position:absolute; left:50%; top:0; width:2px; height:100%; background:var(--muted); opacity:.6}
+.stat .s{font-size:11.5px; color:var(--muted); margin-top:8px}
+.tup{color:var(--b4); font-weight:700} .tdn{color:var(--b1); font-weight:700}
+.crashbar{position:relative; height:8px; border-radius:99px; background:var(--hair); margin-top:auto}
+.crashbar .zone{position:absolute; top:0; bottom:0; border-radius:99px; background:var(--b4); opacity:.75}
+.crashbar .me{position:absolute; top:-3px; width:3px; height:14px; border-radius:2px; background:var(--ink);
+  box-shadow:0 0 0 2px var(--panel); transform:translateX(-50%)}
+.crashv small{font-size:12px; color:var(--muted); font-weight:500; margin-left:8px; letter-spacing:.04em}
+.trsel{margin-left:auto; display:inline-flex; gap:3px; letter-spacing:0}
+.trsel button{font-family:var(--mono); font-size:8px; padding:3px 7px; border:1px solid var(--hair2); border-radius:999px; color:var(--muted)}
+.trsel button.on{background:var(--ink); color:var(--ground); border-color:var(--ink)}
+.tspark{display:block; width:100%; flex:1 1 44px; min-height:44px; margin-top:8px; color:var(--ink)}
+
+/* ---------- show the math ---------- */
+.mathbtn{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; color:var(--accent); border:1px solid var(--accent);
+  border-radius:999px; padding:9px 16px; background:var(--accent-soft)}
+.math{margin-top:14px; background:var(--panel); border:1px solid var(--hair); border-radius:var(--r); overflow:auto; box-shadow:var(--shadow)}
+.math table{width:100%; border-collapse:collapse; font-size:12.5px}
+.math th,.math td{text-align:left; padding:10px 14px; border-top:1px solid var(--hair)}
+.math thead th{border-top:0; font-family:var(--mono); font-size:8.5px; letter-spacing:.14em; color:var(--muted); font-weight:400; background:var(--panel2)}
+.math td.n{font-family:var(--mono); text-align:right; white-space:nowrap}
+.math tfoot td{font-weight:700}
+.math .fresh{font-family:var(--mono); font-size:10px; color:var(--muted)}
+.stale td{opacity:.45}
+
+/* ---------- sections ---------- */
+section{padding:36px 0; border-top:1px solid var(--hair)}
+.shead{display:flex; align-items:baseline; gap:14px; margin-bottom:18px; flex-wrap:wrap}
+.shead h2{font-family:var(--serif); font-size:24px; font-weight:600; letter-spacing:-.01em}
+.sub{font-size:12.5px; color:var(--muted)}
+.adv{display:none!important}
+body:not(.view-simple) .adv{display:revert!important}
+
+/* ---------- the Pulse ---------- */
+.pulsecard{background:var(--panel); border:1px solid var(--hair); border-radius:var(--r-lg); padding:22px; box-shadow:var(--shadow)}
+.phead{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:6px}
+.pbig{display:flex; align-items:center; gap:11px}
+.pbig b{font-family:var(--mono); font-size:24px; font-weight:700; letter-spacing:-.02em}
+.pdot{width:9px; height:9px; border-radius:50%; background:var(--b1); box-shadow:0 0 12px var(--b1); animation:breathe 5s ease-in-out infinite}
+.pbreath{font-family:var(--mono); font-size:9px; letter-spacing:.16em; color:var(--muted); border:1px solid var(--hair2); border-radius:999px; padding:6px 11px}
+#ekg{display:block; width:100%; height:80px; margin:10px 0 12px}
+.ticks{list-style:none; margin:0; padding:0; font-family:var(--mono); font-size:11px}
+.ticks li{display:grid; grid-template-columns:78px 120px 1fr auto; gap:14px; align-items:baseline; padding:8px 0; border-top:1px solid var(--hair); animation:tin .35s both}
+.ticks li:first-child{border-top:0}
+.ticks .d{color:var(--muted)} .ticks .tsrc{font-weight:700}
+.pnote{margin-top:14px; font-size:11.5px; color:var(--muted); line-height:1.6}
+.pnote a{color:var(--accent); text-decoration:none}
+
+/* ---------- pillars ---------- */
+.pillars{display:grid; gap:10px}
+.pill{background:var(--panel); border:1px solid var(--hair); border-radius:var(--r); box-shadow:var(--shadow); overflow:hidden}
+.prow{display:grid; grid-template-columns:150px minmax(0,1fr) 52px; gap:14px; align-items:center; width:100%; padding:15px 16px; text-align:left}
+.pname{font-size:13.5px; font-weight:500; display:flex; flex-direction:column; gap:3px}
+.pw{font-family:var(--mono); font-size:8px; letter-spacing:.12em; color:var(--muted)}
+.ptrack{position:relative; display:block; height:8px; border-radius:99px; background:var(--hair); overflow:hidden}
+.pfill{position:absolute; inset:0 auto 0 0; border-radius:99px; transition:width .9s cubic-bezier(.22,1,.36,1)}
+.pscore{font-family:var(--mono); font-weight:700; font-size:14px; text-align:right}
+.pdetail{padding:0 16px 15px; font-size:13px; color:var(--muted); display:grid; gap:6px; border-top:1px dashed var(--hair)}
+.pdetail b{color:var(--ink)}
+.shimmer .ptrack::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent); animation:sh .7s ease-out 1}
+
+/* ---------- what changed ---------- */
+.feed{display:grid; gap:10px}
+.fcard{background:var(--panel); border:1px solid var(--hair); border-radius:var(--r); padding:15px 18px; display:flex; gap:18px; align-items:baseline; flex-wrap:wrap; box-shadow:var(--shadow)}
+.fdelta{font-family:var(--mono); font-weight:700; font-size:16px; min-width:64px; letter-spacing:-.02em}
+.fbody{flex:1 1 260px; font-size:14.5px; font-weight:500}
+.fmove{font-family:var(--mono); font-size:10px; color:var(--muted); margin-top:4px; font-weight:400}
+.endcard{text-align:center; padding:18px; border:1px dashed var(--hair2); border-radius:var(--r); color:var(--muted); font-size:12.5px}
+
+/* ---------- history chart ---------- */
+.chartcard{background:var(--panel); border:1px solid var(--hair); border-radius:var(--r-lg); padding:22px; box-shadow:var(--shadow)}
+.chartscroll{overflow-x:auto}
+#history{display:block; width:100%; min-width:640px; height:420px}
+.tip{position:fixed; z-index:60; pointer-events:none; background:var(--panel2); border:1px solid var(--hair2); border-radius:8px;
+  padding:8px 11px; font-family:var(--mono); font-size:11px; box-shadow:var(--shadow); transform:translate(-50%,calc(-100% - 12px)); white-space:nowrap}
+.tip .tb{font-size:16px; font-weight:700} .tip .tm{color:var(--muted); font-size:9.5px; letter-spacing:.08em}
+
+/* ---------- case files ---------- */
+.cases{display:grid; grid-auto-flow:column; grid-auto-columns:min(78vw,280px); gap:12px; overflow-x:auto; padding-bottom:10px; scroll-snap-type:x mandatory}
+.case{scroll-snap-align:start; display:flex; flex-direction:column; background:var(--panel); border:1px solid var(--hair); border-top:3px solid var(--hair2);
+  border-radius:var(--r); padding:18px; box-shadow:var(--shadow)}
+.case .yr{font-family:var(--mono); font-size:9.5px; color:var(--muted); letter-spacing:.18em}
+.case h4{margin:7px 0 10px; font-size:16.5px; font-weight:600}
+.kindtag{display:inline-block; font-family:var(--mono); font-size:8px; letter-spacing:.14em; padding:3px 8px; border-radius:4px; margin:0 0 8px; justify-self:start; width:max-content}
+.kindtag.frag{background:var(--b4); color:var(--ground)}
+.kindtag.shock{border:1px dashed var(--hair2); color:var(--muted)}
+.kindnote{font-size:11px; color:var(--muted); font-style:italic; margin:0 0 10px; line-height:1.5}
+.case dl{margin:0 0 4px; font-size:12px; display:grid; grid-template-columns:1fr auto; gap:5px 10px}
+.case dt{color:var(--muted)} .case dd{margin:0; font-family:var(--mono); text-align:right}
+.case dd.peak{color:var(--b5); font-weight:700}
+.casejump{margin-top:auto; padding-top:14px; font-family:var(--mono); font-size:8.5px; letter-spacing:.14em; color:var(--accent); text-align:left}
+
+/* ---------- footer ---------- */
+footer{margin-top:24px; border-top:1px solid var(--hair); padding:40px 0 28px; background:var(--glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px)}
+.fgrid{display:grid; gap:30px}
+.fbrand p{margin:14px 0 0; font-size:13px; max-width:34ch; line-height:1.6; color:var(--muted)}
+.fhonest{font-family:var(--mono); font-size:9px; letter-spacing:.16em; color:var(--accent)}
+.fcol h4{font-family:var(--mono); font-size:9px; letter-spacing:.2em; color:var(--muted); font-weight:400; margin:4px 0 12px}
+.fcol a{display:block; color:var(--ink); text-decoration:none; font-size:13.5px; padding:5px 0; transition:color .15s}
+.fcol a:hover{color:var(--accent)}
+.fbar{display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between; margin-top:36px; padding-top:18px;
+  border-top:1px solid var(--hair); font-family:var(--mono); font-size:8.5px; letter-spacing:.1em; color:var(--muted)}
+
+/* ---------- pages (single-file build) ---------- */
+.pagev{background:var(--ground)}
+.pwrap{max-width:740px; margin:0 auto; padding:36px 20px 80px}
+.pback{font-family:var(--mono); font-size:9px; letter-spacing:.14em; color:var(--muted); border:1px solid var(--hair2); border-radius:999px; padding:9px 16px; background:var(--panel); margin-bottom:28px}
+.pwrap h2{font-family:var(--serif); font-size:clamp(28px,4.2vw,38px); margin:10px 0 18px; letter-spacing:-.01em; text-wrap:balance}
+.pwrap h3{font-size:17px; margin:30px 0 10px}
+.pwrap p{font-size:14.5px; color:var(--muted); line-height:1.7; margin:0 0 12px; max-width:64ch}
+.pwrap p b{color:var(--ink)}
+.ptablewrap{overflow-x:auto}
+.ptable{width:100%; border-collapse:collapse; font-size:11.5px; margin:14px 0 8px; font-family:var(--mono)}
+.ptable th,.ptable td{text-align:left; padding:9px 12px; border-top:1px solid var(--hair)}
+.ptable thead th{border-top:0; font-size:8.5px; letter-spacing:.14em; color:var(--muted); font-weight:400; background:var(--panel2)}
+.ptable td.n{text-align:right; white-space:nowrap; font-weight:700}
+.ptable .warn{color:var(--b4)} .ptable .hot{color:var(--b5)} .ptable .cool{color:var(--b1)}
+
+/* ---------- modal ---------- */
+.modal{position:fixed; inset:0; z-index:90; display:grid; place-items:center; padding:20px; background:rgba(0,0,0,.55); backdrop-filter:blur(6px)}
+.mbox{width:min(94vw,500px); background:var(--panel); border:1px solid var(--hair); border-radius:var(--r-lg); padding:28px; box-shadow:var(--shadow)}
+.mbox h3{font-family:var(--serif); font-size:24px; margin:0 0 14px}
+.mbox p{font-size:14px; color:var(--muted); line-height:1.6; margin:0 0 12px}
+.mbox p b{color:var(--ink)}
+.lockbtn{width:100%; margin-top:8px; background:var(--accent); color:var(--ground); border-radius:var(--r); padding:15px; font-weight:700; font-size:15px}
+.pm-note{font-family:var(--mono); font-size:10px; letter-spacing:.08em; color:var(--accent); border-top:1px solid var(--hair); padding-top:14px}
+
+/* ---------- replay countdown ---------- */
+.replaycd{position:fixed; top:calc(var(--hdr) + 10px); right:20px; z-index:70; display:flex; align-items:center; gap:11px;
+  background:var(--glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid var(--hair2);
+  border-radius:999px; padding:8px 16px 8px 8px; box-shadow:var(--shadow); animation:rcin .3s cubic-bezier(.22,1,.36,1)}
+.rc-ring{position:relative; flex:none; width:30px; height:30px; display:grid; place-items:center}
+.rc-ring svg{position:absolute; inset:0}
+.rc-ring circle{stroke:var(--accent); stroke-dasharray:94; stroke-dashoffset:0; transform:rotate(-90deg); transform-origin:center; animation:rcring 5s linear}
+.rc-n{position:relative; font-family:var(--mono); font-size:13px; font-weight:700; color:var(--accent)}
+.rc-label{font-family:var(--mono); font-size:9px; letter-spacing:.14em; color:var(--muted)}
+
+/* ---------- view modes ---------- */
+body.view-simple .hero{text-align:center; gap:16px}
+body.view-simple .hcopy h1{display:none}
+body.view-simple .honest{margin:0 auto 16px; max-width:70ch}
+body.view-simple .statrow{justify-content:center}
+body.view-simple .hcard{text-align:center; justify-items:center}
+body.view-simple .hcard .hkind{justify-self:center}
+body.view-simple .hcard .hstats{justify-content:center}
+body.view-simple .shead{justify-content:center; text-align:center}
+/* history mode: the crisis card replaces headline + verdict; today's tiles leave */
+body.history .hcopy h1{display:none}
+body.history .honest:not(.hascard){display:none}
+body.history .statrow, body.history .mathbtn, body.history .math{display:none!important}
+
+/* ---------- keyframes ---------- */
+@keyframes breathe{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes eyeflash{0%,44%{opacity:.35}48%,60%{opacity:1}64%,100%{opacity:.35}}
+@keyframes ttdrop{from{opacity:0; transform:translateY(-6px)}to{opacity:1; transform:none}}
+@keyframes tin{from{opacity:0; transform:translateX(-8px)}to{opacity:1; transform:none}}
+@keyframes sh{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+@keyframes rcin{from{opacity:0; transform:translateY(-10px)}to{opacity:1; transform:none}}
+@keyframes rcring{from{stroke-dashoffset:0}to{stroke-dashoffset:94}}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important; transition:none!important}
+}
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+/* desktop: dial left, copy right, both top-aligned */
+@media(min-width:880px){
+  .hero{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr); gap:44px; padding:26px 0 16px}
+  body:not(.view-simple) .hero .gaugebox{grid-column:1; grid-row:1; margin-top:2px}
+  body:not(.view-simple) .hero .hcopy{grid-column:2; grid-row:1}
+  .gaugebox{width:min(92vw,540px)}
+  body.view-simple .hero{grid-template-columns:minmax(0,1fr); gap:18px}
+  .pillars{grid-template-columns:1fr 1fr; gap:12px}
+  .fgrid{grid-template-columns:1.6fr 1fr 1fr; gap:48px}
+}
+/* phones */
+@media(max-width:720px){
+  :root{--hdr:48px}
+  .hbar{gap:8px; padding-top:0; padding-bottom:0}
+  .brand{gap:8px} .brand .logo{width:30px; height:30px} .wordmark{font-size:15px} .tagline{display:none}
+  .seg button{padding:6px 8px; font-size:7.5px; letter-spacing:.06em}
+  .tbtn{width:30px; height:30px}
+  .hero{gap:14px; padding-top:12px}
+  .gaugebox{width:min(94vw,470px)}
+  .gnum{font-size:clamp(48px,14vw,64px)}
+  .ctlgroup{margin-top:2px}
+  .plc{padding:8px 12px 8px 14px; font-size:8.5px} .ttbtn{padding:8px 14px 8px 12px; font-size:8.5px}
+  section{padding:28px 0}
+  .shead h2{font-size:22px}
+  #ttSpark{height:72px} #ttSpark .spl{display:none}
+  .ttpanel{padding:12px 14px 10px}
+  .ttrow{flex-wrap:nowrap} .ttdate{font-size:13px} .ttact{padding:8px 10px; font-size:8.5px; gap:5px}
+  .evchips{display:flex; overflow-x:auto; flex-wrap:nowrap; gap:6px; margin:10px -14px 0; padding:0 14px 4px; scrollbar-width:none; scroll-snap-type:x proximity}
+  .evchips::-webkit-scrollbar{display:none}
+  .evchip{flex:none; scroll-snap-align:start; padding:8px 11px; font-size:9.5px; border-radius:999px}
+  .evchip .dd{margin-left:6px}
+  .chiplegend{display:none}
+  .prow{grid-template-columns:1fr; gap:8px}
+  .pscore{text-align:left}
+  .ticks li{grid-template-columns:64px 1fr auto; gap:10px}
+  .ticks li span:nth-child(4){grid-column:1/-1; font-size:10px}
+  .pulsecard,.chartcard{padding:14px}
+  .fgrid{grid-template-columns:1fr 1fr; gap:22px 18px}
+  .fbrand{grid-column:1/-1} .fbrand p{max-width:none}
+  .fbar{flex-direction:column; align-items:center; text-align:center; gap:8px; margin-top:26px}
+  .fbar .fsrc{max-width:32ch; line-height:1.7}
+  .replaycd{right:10px}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"GlobalCrash.finance","url":"https://globalcrash.finance/","description":"The Global Crisis Index scores the financial system's fragility from 0 to 100 across 36 free, public indicators — credit, macro, valuation, housing, crypto, sentiment and geopolitics. Printed every Friday, graded in public against every crisis since 1990. Measures fragility, not timing.","inLanguage":"en","publisher":{"@type":"Organization","name":"GlobalCrash.finance","url":"https://globalcrash.finance/","logo":{"@type":"ImageObject","url":"https://globalcrash.finance/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Global Crisis Index (GCI)","description":"Weekly 0–100 composite of systemic financial fragility built from 36 free public indicators across seven pillars, with a reconstructed monthly history to 1990 and a public scorecard against every verified crisis.","url":"https://globalcrash.finance/","sameAs":"https://globalcrash.finance/#methodology","license":"https://creativecommons.org/licenses/by/4.0/","creator":{"@type":"Organization","name":"GlobalCrash.finance"},"temporalCoverage":"1990-01/..","dateModified":"2026-09-04","keywords":["global crisis index","financial crisis index","recession indicator","market crash index","financial stress index","systemic risk gauge","fear gauge","credit spreads","yield curve","VIX","CAPE","economic fragility","recession probability"],"distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://globalcrash.finance/gci.json"}],"variableMeasured":[{"@type":"PropertyValue","name":"Global Crisis Index","value":51.9,"unitText":"index points (0–100)"},{"@type":"PropertyValue","name":"Band","value":"Elevated"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"GlobalCrash.finance","url":"https://globalcrash.finance/","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"The Global Crisis Index scores the financial system's fragility from 0 to 100 across 36 free, public indicators — credit, macro, valuation, housing, crypto, sentiment and geopolitics. Printed every Friday, graded in public against every crisis since 1990. Measures fragility, not timing."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the Global Crisis Index?","acceptedAnswer":{"@type":"Answer","text":"A weekly 0–100 composite of systemic financial fragility built from 36 free public indicators across seven pillars (credit, macro, valuation, housing, crypto, sentiment, geopolitics). Higher means more dry tinder is stacked under the global economy."}},{"@type":"Question","name":"Does the index predict crashes?","acceptedAnswer":{"@type":"Answer","text":"No. It measures how fragile conditions are — how much fuel is stacked — not when a shock strikes. Every historical crisis is graded in public on the scorecard, misses included."}},{"@type":"Question","name":"How often is it updated?","acceptedAnswer":{"@type":"Answer","text":"The official print is published every Friday at 20:00 UTC from all 36 indicators at their weekly close. Between prints a live Pulse tracks market moves in real time."}},{"@type":"Question","name":"Where does the data come from?","acceptedAnswer":{"@type":"Answer","text":"Free, public sources only: FRED, the OFR Financial Stress Index, ECB CISS, CBOE, the NY Fed, NBER, Caldara–Iacoviello GPR, the EPU index, DefiLlama and Coin Metrics."}}]}</script>
+<script>window.ROUTES={"methodology": "/methodology", "scorecard": "/scorecard", "friday-print": "/friday-print"}</script>
+
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<canvas id="bgfx" aria-hidden="true"></canvas>
+<header>
+  <div class="wrap hbar">
+    <a class="brand" href="#" id="brandHome" aria-label="GlobalCrash.finance — home">
+      <svg class="logo" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+        <defs><clipPath id="lgClip"><circle cx="20" cy="20" r="18.5"/></clipPath>
+        <radialGradient id="lgEye"><stop offset="0" stop-color="#ff4d3d"/><stop offset="1" stop-color="#c01608"/></radialGradient></defs>
+        <circle cx="20" cy="20" r="19.2" fill="none" stroke="var(--hair2)" stroke-width="1.4"/>
+        <image href="data:image/jpeg;base64,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" x="1.5" y="1.5" width="37" height="37" clip-path="url(#lgClip)" preserveAspectRatio="xMidYMid slice"/>
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="#000" stroke-width="1" opacity=".25"/>
+        <g class="lg-eyes"><circle cx="13.84" cy="17.45" r="1.55" fill="url(#lgEye)"/><circle cx="26.23" cy="17.45" r="1.55" fill="url(#lgEye)"/></g>
+      </svg>
+      <div class="brandtext">
+        <span class="wordmark">GlobalCrash<span class="tld">.finance</span></span>
+        <span class="tagline mono">GLOBAL CRISIS INDEX · 36 INDICATORS · ONE NUMBER · WEEKLY</span>
+      </div>
+    </a>
+    <span class="hspace"></span>
+    <span class="seg" role="group" aria-label="View mode">
+      <button id="segSimple">SIMPLE</button>
+      <button id="segAdv" class="on">ADVANCED</button>
+    </span>
+    <button class="tbtn" id="themeBtn" aria-label="Toggle color theme" title="Theme">◐</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <div class="hero">
+    <div class="gaugebox">
+      <div class="gcanvas">
+        <canvas id="gauge" width="920" height="760" aria-label="Global Crisis Index gauge reading 58.2, Elevated band"></canvas>
+        <div class="greadout">
+          <div class="gnum mono" id="gnum">58.2</div>
+        </div>
+      </div>
+      <div class="gmeta">
+        <div><span class="gband" id="gband">ELEVATED</span></div>
+        <div class="grange">plausible range 55.9 – 60.5</div>
+        <div class="gcusp">1.8 pts below High-Stress</div>
+        <div class="ghist mono" id="ghist" hidden></div>
+        <div class="ctlgroup">
+          <button class="printline mono" id="printInfoBtn" aria-haspopup="dialog">
+            <span class="plc">
+              <svg viewBox="0 0 14 14" width="12" height="12" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="6.3" y="6" width="1.4" height="4.2" rx=".7" fill="currentColor"/><rect x="6.3" y="3.4" width="1.4" height="1.5" rx=".7" fill="currentColor"/></svg>
+              <span id="printCd">NEXT PRINT FRIDAY 20:00 UTC</span>
+            </span>
+            <span class="plfill" aria-hidden="true">
+              <span class="plc">
+                <svg viewBox="0 0 14 14" width="12" height="12" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="6.3" y="6" width="1.4" height="4.2" rx=".7" fill="currentColor"/><rect x="6.3" y="3.4" width="1.4" height="1.5" rx=".7" fill="currentColor"/></svg>
+                <span id="printCd2">NEXT PRINT FRIDAY 20:00 UTC</span>
+              </span>
+            </span>
+          </button>
+          <button class="ttbtn mono" id="ttToggle" aria-expanded="false">
+            <svg viewBox="0 0 14 14" width="12" height="12" aria-hidden="true"><path d="M2.6 8.9A4.8 4.8 0 1 0 3.4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M2.6 8.9 1.6 6.7M2.6 8.9l2.4-.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 4.7V7.2l1.9 1.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>TIME TRAVEL</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="hcopy">
+      <h1>How much dry tinder is stacked under the global economy, in one number.</h1>
+      <p class="honest" id="heroLine">A 0–100 score of <b>how fragile the financial system is</b> — the fuel, not the match.</p>
+      <div class="ttpanel" id="ttPanel" hidden>
+        <div class="eyebrow tthint">JUMP TO A CRISIS</div>
+        <svg id="ttSpark" role="img" aria-label="GCI history line with crisis markers"></svg>
+        <input type="range" id="ttSlider" min="0" max="355" value="355" aria-label="Scrub the gauge through history, 1997 to today">
+        <div class="ttrow">
+          <span class="mono ttdate" id="ttDate">SEP 2026</span>
+          <span class="hspace"></span>
+          <button class="ttact primary mono" id="ttPlay"></button>
+          <button class="ttact mono" id="ttLive"><i class="livedot"></i><span>BACK TO LIVE</span></button>
+        </div>
+      </div>
+      <div class="statrow">
+        <div class="stat" id="stVel">
+          <span class="eyebrow"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M1 9 5 5l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 3h3v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Direction</span>
+          <div class="v word vrow">
+            <svg class="varrow" viewBox="0 0 20 20" width="22" height="22" aria-hidden="true"><path d="M2.5 10h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M10.5 5.5 15.5 10l-5 4.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="vword">—</span>
+          </div>
+          <div class="bar vbar"><i></i><em></em></div>
+          <div class="s">over the last 13 weeks</div>
+        </div>
+        <div class="stat" id="stRank">
+          <span class="eyebrow"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><rect x="1" y="6" width="2.4" height="5" rx=".6" fill="currentColor"/><rect x="4.8" y="3" width="2.4" height="8" rx=".6" fill="currentColor"/><rect x="8.6" y="1" width="2.4" height="10" rx=".6" fill="currentColor"/></svg>Historical rank</span>
+          <div class="v mono">—</div>
+          <div class="bar"><i></i></div>
+          <div class="s">since 1990</div>
+        </div>
+        <div class="stat" id="stBreadth">
+          <span class="eyebrow"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><circle cx="6" cy="6" r="1.8" fill="currentColor"/><circle cx="6" cy="6" r="4.6" fill="none" stroke="currentColor" stroke-width="1.3" opacity=".6"/></svg>Correlation regime</span>
+          <div class="v word">—</div>
+          <div class="bar"><i></i></div>
+          <div class="s">across the seven pillars</div>
+        </div>
+        <div class="stat wide" id="stCrash">
+          <span class="eyebrow"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M1 9.5 4 6l2 2 4.5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 6V3h-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Where crashes began</span>
+          <div class="v mono crashv">—</div>
+          <div class="crashbar" aria-hidden="true"><i class="zone"></i><i class="me"></i></div>
+          <div class="s">historically, fragility crises started with the gauge inside this range</div>
+        </div>
+        <div class="stat wide" id="stTrend">
+          <span class="eyebrow"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><rect x="1.2" y="2.2" width="9.6" height="8.6" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M1.2 4.8h9.6M4 1.2v2M8 1.2v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span id="trendLabel">The trend</span><span class="trsel mono" role="group" aria-label="Trend range"><button data-r="1W">1W</button><button data-r="1M">1M</button><button data-r="1Y" class="on">1Y</button></span></span>
+          <svg class="tspark" aria-hidden="true"></svg>
+          <div class="s">—</div>
+        </div>
+      </div>
+      <button class="mathbtn adv" id="mathBtn" aria-expanded="false">SHOW THE MATH ↓</button>
+      <div class="math" id="mathBox" hidden>
+        <table>
+          <thead><tr><th>Pillar</th><th>Weight</th><th>Score</th><th>Contribution</th><th>As of</th></tr></thead>
+          <tbody>
+            <tr><td>Credit &amp; liquidity</td><td class="n">25%</td><td class="n">51</td><td class="n">12.75</td><td class="fresh">today 14:32 UTC</td></tr>
+            <tr><td>Macro cycle</td><td class="n">20%</td><td class="n">59</td><td class="n">11.80</td><td class="fresh">today 12:30 UTC</td></tr>
+            <tr><td>Valuation &amp; froth</td><td class="n">15%</td><td class="n">79</td><td class="n">11.85</td><td class="fresh">Aug print</td></tr>
+            <tr><td>Housing</td><td class="n">10%</td><td class="n">44</td><td class="n">4.40</td><td class="fresh">Aug print</td></tr>
+            <tr><td>Crypto</td><td class="n">10%</td><td class="n">64</td><td class="n">6.40</td><td class="fresh">live</td></tr>
+            <tr><td>Sentiment</td><td class="n">10%</td><td class="n">49</td><td class="n">4.90</td><td class="fresh">today 14:31 UTC</td></tr>
+            <tr class="stale"><td>Geopolitics</td><td class="n">10%</td><td class="n">61</td><td class="n">6.10</td><td class="fresh">carrying last value since Tue</td></tr>
+          </tbody>
+          <tfoot><tr><td>GCI</td><td></td><td></td><td class="n">58.20</td><td></td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PULSE ============ -->
+  <section id="pulse">
+    <div class="shead"><h2>The Pulse</h2><span class="sub">live nowcast between prints — breathing at market tempo</span></div>
+    <div class="pulsecard">
+      <div class="phead">
+        <div class="pbig">
+          <span class="pdot" id="pdot"></span>
+          <b class="mono" id="pulseNum">—</b>
+          <span class="eyebrow">GCI PULSE</span>
+        </div>
+        <span class="pbreath mono" id="pulseRate">BREATHING 12/MIN</span>
+      </div>
+      <canvas id="ekg" height="64" aria-hidden="true"></canvas>
+      <ul class="ticks" id="ticks"></ul>
+      <p class="pnote">The needle answers real markets — Bitcoin around the clock; credit, volatility and rates whenever exchanges trade. Nothing here is decorative: every movement traces to a market event, and the halo breathes at the market's own tempo — slow on quiet days, faster as stress builds. <a href="#" class="gomethod">How it works</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ PILLARS ============ -->
+  <section class="adv" id="pillars-sec">
+    <div class="shead"><h2>Seven pillars</h2><span class="sub">tap a pillar for what it measures — and what would make it fall</span></div>
+    <div class="pillars" id="pillars"></div>
+  </section>
+
+  <!-- ============ WHAT CHANGED ============ -->
+  <section class="adv" id="changed">
+    <div class="shead"><h2>What changed this week</h2><span class="sub">every input that moved the index</span></div>
+    <div class="feed" id="feed"></div>
+  </section>
+
+
+  <!-- ============ HISTORY ============ -->
+  <section class="adv" id="historySection">
+    <div class="shead"><h2>Three decades of stress</h2><span class="sub">reconstructed GCI, 1997 – today · hover to inspect</span></div>
+    <div class="chartcard">
+      <div class="chartscroll"><svg id="history" height="420" role="img" aria-label="GCI history 1990 to today with crisis annotations"></svg></div>
+    </div>
+  </section>
+
+  <!-- ============ CASE FILES ============ -->
+  <section class="adv" id="casefiles">
+    <div class="shead"><h2>Case files</h2><span class="sub">every crisis, opened and studied — not doomscrolled</span></div>
+    <div class="cases" id="cases"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <span class="wordmark">GlobalCrash<span class="tld">.finance</span></span>
+        <p>One number for how much dry tinder is stacked under the global economy — 36 indicators, seven pillars, printed every Friday at 20:00 UTC.</p>
+        <p class="mono fhonest">MEASURES FRAGILITY, NOT TIMING.</p>
+      </div>
+      <nav class="fcol" aria-label="The index">
+        <h4>THE INDEX</h4>
+        <a href="#pillars-sec">Seven pillars</a>
+        <a href="#changed">What changed this week</a>
+        <a href="#historySection">Three decades of stress</a>
+        <a href="/methodology" id="linkMethod">Methodology</a>
+        <a href="/scorecard" id="linkScore">Scorecard</a>
+      </nav>
+      <nav class="fcol" aria-label="Product">
+        <h4>PRODUCT</h4>
+        <a href="#pulse">The Pulse</a>
+        <a href="/friday-print" id="linkPrintExplain">The Friday print</a>
+        <a href="#casefiles">Case files</a>
+      </nav>
+    </div>
+    <div class="fbar mono">
+      <span>© 2026 GLOBALCRASH</span>
+      <span class="fsrc">DATA · FRED · OFR · ECB · CBOE · NBER · DEFILLAMA · COIN METRICS</span>
+      <span>NOT INVESTMENT ADVICE</span>
+    </div>
+  </div>
+</footer>
+
+<div class="replaycd" id="replayCd" hidden aria-live="polite">
+  <div class="rc-ring"><svg viewBox="0 0 36 36" width="30" height="30"><circle cx="18" cy="18" r="15" fill="none" stroke-width="2"/></svg><span class="rc-n mono">5</span></div>
+  <span class="rc-label mono">HOLDING ON CRISIS</span>
+</div>
+<div class="modal" id="printModal" hidden role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+  <div class="mbox">
+    <h3 id="pmTitle">The Friday Print</h3>
+    <p><b>One official reading a week.</b> GlobalCrash publishes its number of record — <i>the print</i> — every Friday at 20:00 UTC, computed from all 36 indicators at their weekly close. That's the number the history chart, the records, and the scorecard are built on.</p>
+    <p><b>Between prints, you're watching the Pulse.</b> The needle keeps moving in real time as markets trade — that's a live estimate breathing around the last official print. The print is the verdict; the Pulse is the preview.</p>
+    <p><b>Why weekly?</b> Most of the inputs (jobless claims, Fed stress indexes, housing data) update weekly or slower — a daily "official" number would just be noise wearing a suit. One settlement moment each week also makes the record auditable: every print is timestamped and graded against what followed.</p>
+    <p class="pm-note">The index measures how fragile conditions are, not when anything breaks.</p>
+    <button class="lockbtn" id="printModalClose">Got it</button>
+  </div>
+</div>
+<script>
+"use strict";
+/* ============ LIVE DATA (injected by doom-gauge/build_page.py) ============ */
+const LIVE=/*GCI_DATA*/{"generated":"2026-09-03T04:20:11+00:00","asof":"2026-09-04","gci":51.9,"band":"ELEVATED","band_index":2,"velocity13w":-4.3,"range_half":2.5,"breadth":0.38,"gci_systemic":31.9,"pillars":{"credit":{"weight":0.25,"score":48.9,"members":[{"key":"baa","label":"Baa credit spread (two-sided)","score":37.6,"asof":"2026-09-04","raw":1.58,"live":true,"stale":false},{"key":"nfci","label":"Chicago Fed NFCI","score":31.3,"asof":"2026-08-28","raw":-0.56,"live":true,"stale":false},{"key":"ofr","label":"OFR Financial Stress Index","score":23.3,"asof":"2026-09-04","raw":-2.77,"live":true,"stale":false},{"key":"netliq","label":"Net liquidity 26-wk drain","score":52.9,"asof":"2026-08-28","raw":0.94,"live":true,"stale":false},{"key":"m2","label":"M2 YoY (two-sided)","score":38.8,"asof":"2026-07-03","raw":5.41,"live":true,"stale":true},{"key":"funding","label":"OFR funding stress","score":57.8,"asof":"2026-09-04","raw":-0.12,"live":true,"stale":false},{"key":"safeassets","label":"OFR safe-asset demand","score":12.8,"asof":"2026-09-04","raw":-0.32,"live":true,"stale":false},{"key":"ciss_us","label":"US CISS (ECB, two-sided)","score":34.9,"asof":"2026-08-28","raw":0.02,"live":true,"stale":false},{"key":"nfcilev","label":"NFCI nonfinancial leverage (two-sided)","score":83.3,"asof":"2026-08-28","raw":-0.36,"live":true,"stale":false},{"key":"stlfsi","label":"St. Louis Fed FSI","score":4.4,"asof":"2026-08-28","raw":-0.85,"live":true,"stale":false},{"key":"sloos","label":"SLOOS C&I tightening","score":52.3,"asof":"2026-07-03","raw":0.0,"live":true,"stale":true}]},"macro":{"weight":0.2,"score":42.9,"members":[{"key":"curve","label":"10y\u20133m curve (inverted)","score":62.1,"asof":"2026-09-04","raw":0.87,"live":true,"stale":false},{"key":"resteep","label":"Curve re-steepening velocity","score":50.0,"asof":"2026-09-04","raw":0.1,"live":true,"stale":false},{"key":"sahm","label":"Sahm rule","score":36.5,"asof":"2026-07-03","raw":-0.03,"live":true,"stale":true},{"key":"claims","label":"Jobless claims 4-wk YoY","score":30.2,"asof":"2026-08-28","raw":-9.87,"live":true,"stale":false},{"key":"recprob","label":"NY Fed recession probability (12m)","score":15.2,"asof":"2026-07-03","raw":15.19,"live":true,"stale":true},{"key":"breakeven","label":"Inflation de-anchoring |10y BE \u2212 2|","score":63.1,"asof":"2026-09-04","raw":2.34,"live":true,"stale":false}]},"valuation":{"weight":0.15,"score":98.0,"members":[{"key":"cape","label":"Shiller CAPE","score":96.1,"asof":"2026-09-04","raw":41.93,"live":true,"stale":false},{"key":"erp","label":"Equity risk premium (thin)","score":100.0,"asof":"2026-09-04","raw":-0.06,"live":true,"stale":false}]},"housing":{"weight":0.1,"score":49.3,"members":[{"key":"cs","label":"Case-Shiller YoY","score":34.4,"asof":"2026-06-05","raw":1.53,"live":true,"stale":true},{"key":"mtg","label":"Mortgage spread","score":62.6,"asof":"2026-08-28","raw":1.93,"live":true,"stale":false},{"key":"permits","label":"Building permits YoY (inverted)","score":50.8,"asof":"2026-07-03","raw":2.36,"live":true,"stale":true}]},"crypto":{"weight":0.1,"score":51.3,"members":[{"key":"mvrv","label":"BTC MVRV","score":33.0,"asof":"2026-05-29","raw":1.41,"live":false,"stale":true},{"key":"stables","label":"Stablecoin supply 13-wk (stall = risk)","score":59.4,"asof":"2026-09-04","raw":4.6,"live":true,"stale":false},{"key":"tvl","label":"DeFi TVL 13-wk trend (inverted)","score":46.4,"asof":"2026-09-04","raw":17.85,"live":true,"stale":false},{"key":"funding_perp","label":"BTC perp funding 30d (two-sided)","score":48.0,"asof":"2026-09-04","raw":0.01,"live":true,"stale":false}]},"sentiment":{"weight":0.1,"score":30.6,"members":[{"key":"vix","label":"VIX (two-sided)","score":44.0,"asof":"2026-09-04","raw":16.34,"live":true,"stale":false},{"key":"vixterm","label":"VIX term structure (backwardation)","score":33.1,"asof":"2026-09-04","raw":0.92,"live":true,"stale":false},{"key":"skew","label":"CBOE SKEW (complacency-side)","score":14.8,"asof":"2026-09-04","raw":144.12,"live":true,"stale":false}]},"geo":{"weight":0.1,"score":46.2,"members":[{"key":"gpr","label":"Geopolitical Risk index (Caldara-Iacoviello)","score":77.6,"asof":"2026-08-07","raw":117.92,"live":true,"stale":false},{"key":"ciss_ea","label":"Euro-area CISS (ECB)","score":21.2,"asof":"2026-08-28","raw":0.02,"live":true,"stale":false},{"key":"em_stress","label":"OFR emerging-market stress","score":5.3,"asof":"2026-09-04","raw":-0.55,"live":true,"stale":false},{"key":"adv_stress","label":"OFR other-advanced-economies stress","score":39.9,"asof":"2026-09-04","raw":-0.89,"live":true,"stale":false},{"key":"epu","label":"Economic Policy Uncertainty 13-wk","score":90.6,"asof":"2026-09-04","raw":302.47,"live":true,"stale":false},{"key":"oil","label":"Brent 13-wk shock","score":42.5,"asof":"2026-09-04","raw":-1.31,"live":true,"stale":false}]}},"movers":[{"key":"vixterm","label":"VIX term structure (backwardation)","impact":0.79,"from_":9.4,"to":33.1},{"key":"vix","label":"VIX (two-sided)","impact":0.48,"from_":29.5,"to":44.0},{"key":"breakeven","label":"Inflation de-anchoring |10y BE \u2212 2|","impact":0.31,"from_":53.8,"to":63.1},{"key":"skew","label":"CBOE SKEW (complacency-side)","impact":0.26,"from_":6.9,"to":14.8},{"key":"ciss_us","label":"US CISS (ECB, two-sided)","impact":-0.14,"from_":41.2,"to":34.9},{"key":"netliq","label":"Net liquidity 26-wk drain","impact":0.11,"from_":47.9,"to":52.9},{"key":"adv_stress","label":"OFR other-advanced-economies stress","impact":0.11,"from_":33.4,"to":39.9},{"key":"ofr","label":"OFR Financial Stress Index","impact":0.1,"from_":18.8,"to":23.3}],"history":[[1990.042,48.5],[1990.125,49.0],[1990.208,48.3],[1990.292,50.8],[1990.375,52.8],[1990.458,51.5],[1990.542,52.3],[1990.625,55.5],[1990.708,56.2],[1990.792,59.0],[1990.875,62.5],[1990.958,63.2],[1991.042,62.5],[1991.125,61.4],[1991.208,57.8],[1991.292,53.2],[1991.375,48.2],[1991.458,47.6],[1991.542,49.3],[1991.625,49.8],[1991.708,49.8],[1991.792,47.5],[1991.875,47.7],[1991.958,48.2],[1992.042,46.3],[1992.125,43.9],[1992.208,42.5],[1992.292,41.8],[1992.375,41.8],[1992.458,43.5],[1992.542,44.6],[1992.625,45.9],[1992.708,46.6],[1992.792,45.6],[1992.875,45.6],[1992.958,44.2],[1993.042,45.6],[1993.125,44.6],[1993.208,44.6],[1993.292,46.2],[1993.375,46.0],[1993.458,46.9],[1993.542,45.9],[1993.625,43.8],[1993.708,43.2],[1993.792,46.4],[1993.875,41.5],[1993.958,40.5],[1994.042,41.8],[1994.125,44.6],[1994.208,41.9],[1994.292,41.9],[1994.375,43.5],[1994.458,45.6],[1994.542,44.9],[1994.625,44.6],[1994.708,44.6],[1994.792,42.6],[1994.875,45.3],[1994.958,45.1],[1995.042,48.3],[1995.125,48.1],[1995.208,52.8],[1995.292,53.7],[1995.375,53.3],[1995.458,55.8],[1995.542,53.6],[1995.625,52.7],[1995.708,51.2],[1995.792,50.4],[1995.875,51.2],[1995.958,54.7],[1996.042,56.1],[1996.125,56.9],[1996.208,55.4],[1996.292,53.2],[1996.375,51.5],[1996.458,52.1],[1996.542,52.4],[1996.625,50.6],[1996.708,51.9],[1996.792,50.9],[1996.875,51.6],[1996.958,53.2],[1997.042,53.3],[1997.125,51.2],[1997.208,51.9],[1997.292,50.4],[1997.375,51.5],[1997.458,52.6],[1997.542,54.7],[1997.625,56.3],[1997.708,54.7],[1997.792,53.6],[1997.875,52.3],[1997.958,52.2],[1998.042,53.5],[1998.125,53.7],[1998.208,53.7],[1998.292,51.9],[1998.375,52.8],[1998.458,53.5],[1998.542,55.1],[1998.625,61.5],[1998.708,67.2],[1998.792,69.2],[1998.875,68.9],[1998.958,67.3],[1999.042,66.7],[1999.125,67.3],[1999.208,68.5],[1999.292,66.7],[1999.375,63.5],[1999.458,62.1],[1999.542,61.8],[1999.625,63.7],[1999.708,65.4],[1999.792,64.0],[1999.875,61.0],[1999.958,61.1],[2000.042,60.9],[2000.125,65.8],[2000.208,66.7],[2000.292,67.7],[2000.375,70.8],[2000.458,71.5],[2000.542,71.0],[2000.625,69.5],[2000.708,69.4],[2000.792,71.4],[2000.875,70.9],[2000.958,74.6],[2001.042,75.8],[2001.125,76.3],[2001.208,79.1],[2001.292,75.6],[2001.375,72.1],[2001.458,72.2],[2001.542,69.2],[2001.625,66.9],[2001.708,73.8],[2001.792,72.3],[2001.875,69.0],[2001.958,67.0],[2002.042,67.1],[2002.125,67.0],[2002.208,65.2],[2002.292,64.8],[2002.375,63.2],[2002.458,64.6],[2002.542,66.5],[2002.625,67.1],[2002.708,68.6],[2002.792,66.5],[2002.875,64.2],[2002.958,64.9],[2003.042,66.5],[2003.125,68.1],[2003.208,68.1],[2003.292,62.8],[2003.375,63.2],[2003.458,63.4],[2003.542,61.5],[2003.625,57.1],[2003.708,57.7],[2003.792,51.0],[2003.875,48.1],[2003.958,45.7],[2004.042,42.2],[2004.125,41.9],[2004.208,42.3],[2004.292,40.8],[2004.375,40.5],[2004.458,39.3],[2004.542,41.4],[2004.625,42.0],[2004.708,42.1],[2004.792,45.2],[2004.875,46.4],[2004.958,44.5],[2005.042,41.6],[2005.125,42.0],[2005.208,43.4],[2005.292,45.6],[2005.375,45.3],[2005.458,45.6],[2005.542,45.8],[2005.625,45.2],[2005.708,49.4],[2005.792,50.2],[2005.875,49.8],[2005.958,51.0],[2006.042,48.4],[2006.125,47.4],[2006.208,48.0],[2006.292,49.3],[2006.375,50.3],[2006.458,50.0],[2006.542,52.2],[2006.625,51.2],[2006.708,49.0],[2006.792,50.4],[2006.875,51.7],[2006.958,50.9],[2007.042,52.5],[2007.125,54.5],[2007.208,52.6],[2007.292,51.9],[2007.375,51.7],[2007.458,56.6],[2007.542,61.9],[2007.625,64.8],[2007.708,64.3],[2007.792,66.0],[2007.875,66.6],[2007.958,66.5],[2008.042,66.6],[2008.125,67.1],[2008.208,67.2],[2008.292,65.5],[2008.375,64.9],[2008.458,66.9],[2008.542,65.8],[2008.625,62.6],[2008.708,63.2],[2008.792,63.1],[2008.875,63.8],[2008.958,65.7],[2009.042,63.6],[2009.125,63.1],[2009.208,64.9],[2009.292,63.9],[2009.375,58.4],[2009.458,57.4],[2009.542,56.1],[2009.625,51.8],[2009.708,50.3],[2009.792,48.5],[2009.875,46.3],[2009.958,40.6],[2010.042,39.5],[2010.125,38.4],[2010.208,35.6],[2010.292,37.2],[2010.375,42.9],[2010.458,43.6],[2010.542,42.3],[2010.625,45.9],[2010.708,43.7],[2010.792,43.4],[2010.875,44.0],[2010.958,41.7],[2011.042,38.6],[2011.125,38.0],[2011.208,40.1],[2011.292,38.3],[2011.375,38.4],[2011.458,40.4],[2011.542,41.6],[2011.625,44.9],[2011.708,48.8],[2011.792,46.1],[2011.875,47.7],[2011.958,46.8],[2012.042,44.4],[2012.125,43.4],[2012.208,42.6],[2012.292,43.7],[2012.375,44.2],[2012.458,44.2],[2012.542,44.4],[2012.625,42.3],[2012.708,39.7],[2012.792,38.9],[2012.875,39.4],[2012.958,39.6],[2013.042,38.1],[2013.125,38.4],[2013.208,38.4],[2013.292,36.6],[2013.375,34.5],[2013.458,37.6],[2013.542,37.5],[2013.625,36.3],[2013.708,35.5],[2013.792,34.9],[2013.875,34.1],[2013.958,34.5],[2014.042,35.5],[2014.125,33.5],[2014.208,35.2],[2014.292,33.4],[2014.375,33.5],[2014.458,32.7],[2014.542,33.9],[2014.625,32.7],[2014.708,32.8],[2014.792,31.6],[2014.875,33.3],[2014.958,35.3],[2015.042,40.9],[2015.125,37.8],[2015.208,40.2],[2015.292,38.3],[2015.375,37.5],[2015.458,37.4],[2015.542,40.8],[2015.625,41.6],[2015.708,44.1],[2015.792,44.0],[2015.875,45.5],[2015.958,48.4],[2016.042,49.8],[2016.125,52.2],[2016.208,49.1],[2016.292,49.5],[2016.375,50.1],[2016.458,54.6],[2016.542,51.0],[2016.625,51.0],[2016.708,49.0],[2016.792,47.5],[2016.875,47.1],[2016.958,47.8],[2017.042,45.4],[2017.125,46.9],[2017.208,43.1],[2017.292,43.6],[2017.375,44.8],[2017.458,45.4],[2017.542,45.7],[2017.625,46.7],[2017.708,47.3],[2017.792,44.8],[2017.875,45.4],[2017.958,45.5],[2018.042,46.4],[2018.125,44.7],[2018.208,46.0],[2018.292,44.4],[2018.375,42.1],[2018.458,43.3],[2018.542,42.2],[2018.625,42.4],[2018.708,39.7],[2018.792,44.4],[2018.875,43.6],[2018.958,48.0],[2019.042,47.4],[2019.125,47.0],[2019.208,46.8],[2019.292,42.6],[2019.375,49.9],[2019.458,52.6],[2019.542,49.1],[2019.625,52.6],[2019.708,50.8],[2019.792,47.8],[2019.875,45.0],[2019.958,44.3],[2020.042,46.0],[2020.125,47.6],[2020.208,56.0],[2020.292,60.5],[2020.375,60.9],[2020.458,59.4],[2020.542,56.8],[2020.625,56.6],[2020.708,56.0],[2020.792,58.2],[2020.875,56.1],[2020.958,52.0],[2021.042,51.0],[2021.125,49.0],[2021.208,46.6],[2021.292,39.9],[2021.375,37.6],[2021.458,37.8],[2021.542,38.2],[2021.625,38.5],[2021.708,39.6],[2021.792,39.8],[2021.875,43.4],[2021.958,43.6],[2022.042,47.4],[2022.125,50.7],[2022.208,52.1],[2022.292,55.6],[2022.375,58.7],[2022.458,58.8],[2022.542,59.7],[2022.625,60.4],[2022.708,60.8],[2022.792,63.3],[2022.875,61.4],[2022.958,61.3],[2023.042,57.4],[2023.125,59.5],[2023.208,59.2],[2023.292,57.3],[2023.375,57.3],[2023.458,57.7],[2023.542,60.1],[2023.625,61.6],[2023.708,63.1],[2023.792,65.0],[2023.875,61.2],[2023.958,58.5],[2024.042,57.5],[2024.125,60.2],[2024.208,61.1],[2024.292,63.3],[2024.375,60.6],[2024.458,59.7],[2024.542,60.0],[2024.625,58.8],[2024.708,59.7],[2024.792,60.9],[2024.875,60.0],[2024.958,60.6],[2025.042,60.4],[2025.125,61.1],[2025.208,60.2],[2025.292,61.4],[2025.375,60.3],[2025.458,59.4],[2025.542,57.8],[2025.625,57.4],[2025.708,58.2],[2025.792,58.7],[2025.875,59.1],[2025.958,56.7],[2026.042,58.3],[2026.125,57.2],[2026.208,60.3],[2026.292,58.4],[2026.375,55.9],[2026.458,55.3],[2026.542,52.8],[2026.625,51.1],[2026.708,51.9]],"history_w":[[2021.5175,37.4],[2021.5366,37.5],[2021.5558,37.7],[2021.5749,38.2],[2021.5941,38.1],[2021.6133,38.1],[2021.6324,38.5],[2021.6516,38.5],[2021.6708,38.8],[2021.6899,39.4],[2021.7091,39.7],[2021.7283,39.6],[2021.7474,40.2],[2021.7666,40.2],[2021.7858,39.8],[2021.8049,39.5],[2021.8241,39.8],[2021.8433,40.6],[2021.8624,40.7],[2021.8816,41.6],[2021.9008,43.4],[2021.9199,45.0],[2021.9391,44.7],[2021.9582,44.9],[2021.9774,44.0],[2021.9966,43.6],[2022.0164,43.7],[2022.0356,44.7],[2022.0548,46.0],[2022.0739,47.4],[2022.0931,47.5],[2022.1123,48.4],[2022.1314,49.4],[2022.1506,50.7],[2022.1697,51.9],[2022.1889,52.4],[2022.2081,52.3],[2022.2272,52.1],[2022.2464,52.7],[2022.2656,53.1],[2022.2847,53.7],[2022.3039,54.5],[2022.3231,55.6],[2022.3422,56.4],[2022.3614,57.6],[2022.3806,58.5],[2022.3997,58.7],[2022.4189,57.8],[2022.4381,57.8],[2022.4572,58.4],[2022.4764,58.8],[2022.4956,60.0],[2022.5147,60.4],[2022.5339,60.2],[2022.553,60.0],[2022.5722,59.7],[2022.5914,59.9],[2022.6105,59.6],[2022.6297,59.8],[2022.6489,60.4],[2022.668,60.4],[2022.6872,60.1],[2022.7064,60.2],[2022.7255,60.7],[2022.7447,60.8],[2022.7639,61.1],[2022.783,61.9],[2022.8022,63.0],[2022.8214,63.3],[2022.8405,64.0],[2022.8597,63.9],[2022.8789,63.4],[2022.898,61.4],[2022.9172,60.8],[2022.9363,60.7],[2022.9555,60.5],[2022.9747,60.9],[2022.9938,61.3],[2023.0137,60.3],[2023.0329,58.8],[2023.052,58.0],[2023.0712,57.4],[2023.0903,56.9],[2023.1095,57.5],[2023.1287,58.2],[2023.1478,59.5],[2023.167,60.3],[2023.1862,60.0],[2023.2053,59.9],[2023.2245,59.7],[2023.2437,59.2],[2023.2628,59.5],[2023.282,58.7],[2023.3012,58.0],[2023.3203,57.3],[2023.3395,57.4],[2023.3587,57.0],[2023.3778,57.1],[2023.397,57.3],[2023.4162,57.1],[2023.4353,57.0],[2023.4545,57.3],[2023.4736,57.5],[2023.4928,57.7],[2023.512,58.9],[2023.5311,59.2],[2023.5503,59.5],[2023.5695,60.1],[2023.5886,60.9],[2023.6078,61.2],[2023.627,61.7],[2023.6461,61.6],[2023.6653,61.2],[2023.6845,61.3],[2023.7036,61.3],[2023.7228,62.2],[2023.742,63.1],[2023.7611,63.4],[2023.7803,63.7],[2023.7995,64.6],[2023.8186,65.0],[2023.8378,63.8],[2023.8569,62.8],[2023.8761,62.0],[2023.8953,61.2],[2023.9144,60.9],[2023.9336,60.7],[2023.9528,59.6],[2023.9719,59.1],[2023.9911,58.5],[2024.011,58.2],[2024.0301,57.9],[2024.0493,57.6],[2024.0684,57.5],[2024.0876,58.1],[2024.1068,58.7],[2024.1259,59.8],[2024.1451,60.2],[2024.1643,60.4],[2024.1834,60.7],[2024.2026,61.3],[2024.2218,61.3],[2024.2409,61.1],[2024.2601,61.8],[2024.2793,62.7],[2024.2984,63.6],[2024.3176,63.3],[2024.3368,62.8],[2024.3559,62.2],[2024.3751,61.5],[2024.3943,60.9],[2024.4134,60.6],[2024.4326,60.2],[2024.4517,59.4],[2024.4709,59.3],[2024.4901,59.7],[2024.5092,59.3],[2024.5284,58.7],[2024.5476,59.4],[2024.5667,60.0],[2024.5859,60.6],[2024.6051,61.0],[2024.6242,60.0],[2024.6434,59.6],[2024.6626,58.8],[2024.6817,59.2],[2024.7009,59.4],[2024.7201,59.5],[2024.7392,59.7],[2024.7584,59.7],[2024.7775,60.4],[2024.7967,60.5],[2024.8159,60.9],[2024.835,61.3],[2024.8542,61.0],[2024.8734,60.8],[2024.8925,60.7],[2024.9117,60.0],[2024.9309,59.7],[2024.95,59.7],[2024.9692,60.4],[2024.9884,60.6],[2025.0055,60.5],[2025.0246,60.9],[2025.0438,60.9],[2025.063,60.4],[2025.0821,60.4],[2025.1013,60.6],[2025.1205,60.3],[2025.1396,60.6],[2025.1588,61.1],[2025.178,61.6],[2025.1971,61.7],[2025.2163,60.7],[2025.2355,60.2],[2025.2546,60.3],[2025.2738,61.0],[2025.293,61.3],[2025.3121,61.4],[2025.3313,61.3],[2025.3504,61.4],[2025.3696,60.5],[2025.3888,60.7],[2025.4079,60.3],[2025.4271,59.6],[2025.4463,59.7],[2025.4654,60.1],[2025.4846,59.4],[2025.5038,59.5],[2025.5229,58.9],[2025.5421,58.4],[2025.5613,57.8],[2025.5804,58.5],[2025.5996,57.9],[2025.6188,57.4],[2025.6379,57.1],[2025.6571,57.4],[2025.6762,57.4],[2025.6954,57.3],[2025.7146,57.5],[2025.7337,58.2],[2025.7529,58.6],[2025.7721,59.1],[2025.7912,58.9],[2025.8104,58.4],[2025.8296,58.7],[2025.8487,59.2],[2025.8679,59.5],[2025.8871,59.9],[2025.9062,59.1],[2025.9254,58.3],[2025.9446,58.0],[2025.9637,57.5],[2025.9829,56.7],[2026.0027,56.7],[2026.0219,57.0],[2026.0411,57.3],[2026.0602,57.6],[2026.0794,58.3],[2026.0986,58.0],[2026.1177,57.9],[2026.1369,57.7],[2026.1561,57.2],[2026.1752,58.3],[2026.1944,59.1],[2026.2136,59.6],[2026.2327,60.3],[2026.2519,60.2],[2026.271,59.2],[2026.2902,58.4],[2026.3094,58.4],[2026.3285,57.9],[2026.3477,57.3],[2026.3669,56.8],[2026.386,56.3],[2026.4052,55.9],[2026.4244,56.2],[2026.4435,55.8],[2026.4627,55.1],[2026.4819,55.3],[2026.501,53.8],[2026.5202,52.9],[2026.5394,53.2],[2026.5585,53.0],[2026.5777,52.8],[2026.5969,52.1],[2026.616,51.4],[2026.6352,51.3],[2026.6543,51.1],[2026.6735,51.9]],"events":[[1990.7775,"Gulf War '90",59.0],[1998.7885,"LTCM",69.2],[2002.794,"Dot-com",66.5],[2008.794,"Lehman",63.1],[2011.6105,"Euro debt",44.9],[2018.95,"Q4 2018",48.0],[2020.1971,"COVID",56.0],[2022.783,"2022 bear",63.3],[2022.8789,"FTX",61.4]],"events_all":[{"t":1990.7775,"key":"early90s","short":"Gulf War '90","name":"Early-1990s Recession / Gulf War Bear","v":59.0,"badge":"BEAR + NBER RECESSION","dd":-19.9,"vix":36.5,"nber":true,"window":"1990-07 \u2013 1991-03","desc":"Iraq's invasion of Kuwait spiked oil while the US slipped into recession; S&P 500 \u221219.9% in 87 days. A genuine credit crunch (NFCI 0.52).","fact":"EARLY-1990S RECESSION / GULF WAR BEAR \u00b7 S&P -19.9% \u00b7 VIX 36.5","kind":"shock"},{"t":1997.7912,"key":"asia97","short":"Asia '97","name":"Asian Financial Crisis","v":53.6,"badge":"CORRECTION","dd":-10.8,"vix":38.2,"nber":false,"window":"1997-07 \u2013 1998-01","desc":"East Asian currency collapses culminated in the Oct 27, 1997 mini-crash: Dow \u22127.2%, first-ever NYSE circuit breakers.","fact":"ASIAN FINANCIAL CRISIS \u00b7 S&P -10.8% \u00b7 VIX 38.2","kind":"shock"},{"t":1998.7885,"key":"ltcm98","short":"LTCM","name":"Russia Default / LTCM Crisis","v":69.2,"badge":"BEAR","dd":-19.3,"vix":45.7,"nber":false,"window":"1998-07 \u2013 1998-10","desc":"Russia's Aug 1998 default plus the LTCM collapse dislocated credit and swap markets worldwide; a NY Fed-brokered rescue stabilized markets.","fact":"RUSSIA DEFAULT / LTCM CRISIS \u00b7 S&P -19.3% \u00b7 VIX 45.7","kind":"fragility"},{"t":2002.794,"key":"dotcom","short":"Dot-com","name":"Dot-Com Bust","v":66.5,"badge":"SEVERE BEAR + NBER RECESSION","dd":-49.1,"vix":45.1,"nber":true,"window":"2000-03 \u2013 2002-10","desc":"The tech bubble burst March 2000: S&P 500 \u221249.1% over 929 days, Nasdaq \u221277.9%. The S&P did not regain its peak until 2007.","fact":"DOT-COM BUST \u00b7 S&P -49.1% \u00b7 VIX 45.1","kind":"fragility"},{"t":2001.7009,"key":"sept11","short":"9/11","name":"9/11 Market Shock","v":73.8,"badge":"CORRECTION + NBER RECESSION","dd":-11.6,"vix":49.4,"nber":true,"window":"2001-09 \u2013 2001-10","desc":"The attacks closed US markets four days, the longest halt since 1933; \u221211.6% over the reopening week, recovered within a month.","fact":"9/11 MARKET SHOCK \u00b7 S&P -11.6% \u00b7 VIX 49.4","kind":"shock"},{"t":2008.794,"key":"gfc08","short":"Lehman","name":"Global Financial Crisis / Lehman","v":63.1,"badge":"SEVERE BEAR + NBER RECESSION + LV SYSTEMIC","dd":-56.8,"vix":80.9,"nber":true,"window":"2007-10 \u2013 2009-03","desc":"Subprime collapse and the Sep 15, 2008 Lehman bankruptcy: S&P 500 \u221256.8% over 517 days; VIX record close 80.86; OFR FSI all-time high 29.32. IMF-classified US systemic banking crisis 2007\u20132011.","fact":"GLOBAL FINANCIAL CRISIS / LEHMAN \u00b7 S&P -56.8% \u00b7 VIX 80.9","kind":"fragility"},{"t":2010.3641,"key":"flash10","short":"Flash Crash","name":"Flash Crash / First Greek Crisis","v":42.9,"badge":"CORRECTION","dd":-16.0,"vix":45.8,"nber":false,"window":"2010-04 \u2013 2010-07","desc":"May 6, 2010: amid Greek-default fears an algorithmic sell program erased ~$1T intraday; broader European-debt correction \u221216%.","fact":"FLASH CRASH / FIRST GREEK CRISIS \u00b7 S&P -16.0% \u00b7 VIX 45.8","kind":"shock"},{"t":2011.6105,"key":"euro11","short":"Euro debt","name":"US Downgrade / Euro Debt Crisis","v":44.9,"badge":"BEAR","dd":-19.4,"vix":48.0,"nber":false,"window":"2011-05 \u2013 2011-10","desc":"S&P's first-ever US sovereign downgrade plus Italian/Spanish debt fears: Black Monday Aug 8, 2011 saw the S&P \u22126.66%.","fact":"US DOWNGRADE / EURO DEBT CRISIS \u00b7 S&P -19.4% \u00b7 VIX 48.0","kind":"shock"},{"t":2015.616,"key":"china15","short":"China '15","name":"China Devaluation Scare","v":41.6,"badge":"CORRECTION","dd":-14.2,"vix":40.7,"nber":false,"window":"2015-06 \u2013 2016-02","desc":"China's surprise yuan devaluation: Aug 24, 2015 the S&P plunged up to 5.3% intraday; extended by the early-2016 oil/EM rout.","fact":"CHINA DEVALUATION SCARE \u00b7 S&P -14.2% \u00b7 VIX 40.7","kind":"shock"},{"t":2018.1259,"key":"volmageddon","short":"Volmageddon","name":"Volmageddon","v":44.7,"badge":"CORRECTION","dd":-10.2,"vix":37.3,"nber":false,"window":"2018-01 \u2013 2018-02","desc":"Feb 5, 2018: the VIX's largest-ever one-day jump (+115%); short-volatility products destroyed (XIV \u221297% in a day).","fact":"VOLMAGEDDON \u00b7 S&P -10.2% \u00b7 VIX 37.3","kind":"fragility"},{"t":2018.95,"key":"q42018","short":"Q4 2018","name":"Q4 2018 Selloff","v":48.0,"badge":"BEAR","dd":-19.8,"vix":36.1,"nber":false,"window":"2018-09 \u2013 2018-12","desc":"Fed tightening, QT fears and the trade war: \u221219.8% to Christmas Eve \u2014 the worst December since 1931.","fact":"Q4 2018 SELLOFF \u00b7 S&P -19.8% \u00b7 VIX 36.1","kind":"shock"},{"t":2019.6982,"key":"repo19","short":"Repo '19","name":"September 2019 Repo Spasm","v":50.8,"badge":"STRESS EVENT","dd":-4.1,"vix":null,"nber":false,"window":"2019-09 \u2013 2019-10","desc":"Overnight repo rates spiked to 10% as reserves ran scarce, forcing $75B NY Fed injections; acute money-market fragility exposed.","fact":"SEPTEMBER 2019 REPO SPASM \u00b7 S&P -4.1%","kind":"fragility"},{"t":2020.1971,"key":"covid20","short":"COVID","name":"COVID-19 Crash","v":56.0,"badge":"SEVERE BEAR + NBER RECESSION","dd":-33.9,"vix":82.7,"nber":true,"window":"2020-02 \u2013 2020-04","desc":"The fastest bear market on record: \u221233.9% in 33 days; VIX all-time record close 82.69; the shortest recession NBER ever dated.","fact":"COVID-19 CRASH \u00b7 S&P -33.9% \u00b7 VIX 82.7","kind":"shock"},{"t":2022.3614,"key":"terra22","short":"Terra","name":"Terra/LUNA Collapse","v":58.7,"badge":"CORRECTION","dd":-18.7,"vix":null,"nber":false,"window":"2022-05 \u2013 2022-06","desc":"The May 2022 TerraUSD death spiral cost crypto ~$18B that month and seeded the contagion (3AC, Celsius) that later felled FTX.","fact":"TERRA/LUNA COLLAPSE \u00b7 S&P -18.7%","kind":"fragility"},{"t":2022.783,"key":"bear22","short":"2022 bear","name":"2022 Rate-Shock Bear Market","v":63.3,"badge":"BEAR","dd":-25.4,"vix":36.5,"nber":false,"window":"2022-01 \u2013 2022-10","desc":"The fastest Fed hiking cycle in four decades against generational inflation: \u221225.4% over nine months. No recession followed.","fact":"2022 RATE-SHOCK BEAR MARKET \u00b7 S&P -25.4% \u00b7 VIX 36.5","kind":"fragility"},{"t":2022.8789,"key":"ftx22","short":"FTX","name":"FTX Collapse","v":61.4,"badge":"BEAR","dd":-22.4,"vix":null,"nber":false,"window":"2022-11 \u2013 2022-12","desc":"FTX's bankruptcy wiped ~$200B more of crypto value, capping a 12-month $2.2T (\u221273%) collapse in total crypto capitalization.","fact":"FTX COLLAPSE \u00b7 S&P -22.4%","kind":"fragility"},{"t":2023.2053,"key":"svb23","short":"SVB","name":"SVB / Regional Banking Crisis","v":59.2,"badge":"STRESS EVENT","dd":-7.8,"vix":26.5,"nber":false,"window":"2023-03 \u2013 2023-05","desc":"A $42B one-day run collapsed SVB \u2014 the second-largest US bank failure ever \u2014 followed by Signature and the UBS takeover of Credit Suisse. IMF: not systemic.","fact":"SVB / REGIONAL BANKING CRISIS \u00b7 S&P -7.8% \u00b7 VIX 26.5","kind":"fragility"},{"t":2024.6242,"key":"yen24","short":"Yen carry","name":"Yen Carry-Trade Unwind","v":58.8,"badge":"STRESS EVENT","dd":-8.5,"vix":38.6,"nber":false,"window":"2024-07 \u2013 2024-08","desc":"A hawkish BOJ surprise forced a violent carry unwind on Aug 5, 2024: Nikkei \u221212.4% (worst day ever); VIX spiked to 65.7 intraday.","fact":"YEN CARRY-TRADE UNWIND \u00b7 S&P -8.5% \u00b7 VIX 38.6","kind":"shock"},{"t":2025.293,"key":"tariff25","short":"Tariffs '25","name":"2025 Tariff Shock","v":61.4,"badge":"CORRECTION","dd":-18.9,"vix":52.3,"nber":false,"window":"2025-02 \u2013 2025-04","desc":"Sweeping tariffs announced Apr 2, 2025 triggered back-to-back \u22124.8% and \u22126.0% days; a 90-day pause ignited a 9.5% one-day rally.","fact":"2025 TARIFF SHOCK \u00b7 S&P -18.9% \u00b7 VIX 52.3","kind":"shock"},{"t":2025.8679,"key":"ai25","short":"AI scare","name":"November 2025 AI-Valuation Scare","v":59.1,"badge":"STRESS EVENT","dd":-5.1,"vix":27.8,"nber":false,"window":"2025-11","desc":"Doubts about AI-capex returns hit megacap tech: \u22125.1% in three weeks; VIX up ~50% on the month. November still closed positive.","fact":"NOVEMBER 2025 AI-VALUATION SCARE \u00b7 S&P -5.1% \u00b7 VIX 27.8","kind":"fragility"},{"t":2026.1944,"key":"iran26","short":"Iran '26","name":"March 2026 Iran War Selloff","v":60.3,"badge":"STRESS EVENT","dd":-9.1,"vix":null,"nber":false,"window":"2026-02 \u2013 2026-03","desc":"US-Israeli strikes on Iran and Strait-of-Hormuz fears drove Brent above $80; \u22129.1%, stopping just short of correction. New highs by summer.","fact":"MARCH 2026 IRAN WAR SELLOFF \u00b7 S&P -9.1%","kind":"shock"}],"source_status":{"T10Y3M":"ok (11170 obs, last 2026-09-02)","SAHMREALTIME":"ok (799 obs, last 2026-07-01)","ICSA":"ok (3112 obs, last 2026-08-22)","BAA10Y":"ok (10167 obs, last 2026-09-01)","NFCI":"ok (2904 obs, last 2026-08-28)","WALCL":"ok (1237 obs, last 2026-08-26)","WTREGEN":"ok (1237 obs, last 2026-08-26)","RRPONTSYD":"ok (3318 obs, last 2026-09-02)","M2SL":"ok (811 obs, last 2026-07-01)","CSUSHPINSA":"ok (474 obs, last 2026-06-01)","PERMIT":"ok (799 obs, last 2026-07-01)","MORTGAGE30US":"ok (2892 obs, last 2026-08-27)","DGS10":"ok (16152 obs, last 2026-09-01)","VIXCLS":"ok (9264 obs, last 2026-09-01)","DCOILBRENTEU":"ok (9967 obs, last 2026-09-01)","DFII10":"ok (5921 obs, last 2026-09-01)","NFCINONFINLEVERAGE":"ok (2904 obs, last 2026-08-28)","NFCIRISK":"ok (2904 obs, last 2026-08-28)","STLFSI4":"ok (1705 obs, last 2026-08-28)","T10YIE":"ok (5922 obs, last 2026-09-02)","DRTSCILM":"ok (146 obs, last 2026-07-01)","OFR_FSI":"ok (6748 obs, last 2026-08-31)","OFR_FUNDING":"ok (6748 obs, last 2026-08-31)","OFR_SAFE":"ok (6748 obs, last 2026-08-31)","OFR_EM":"ok (6748 obs, last 2026-08-31)","OFR_ADV":"ok (6748 obs, last 2026-08-31)","CISS_US":"ok (9573 obs, last 2026-08-28)","CISS_EA":"ok (9573 obs, last 2026-08-28)","VIX3M":"ok (4265 obs, last 2026-09-02)","SKEW":"ok (9219 obs, last 2026-09-02)","GPR":"ok (500 obs, last 2026-08-01)","RECPROB":"ok (811 obs, last 2026-07-01)","FUNDINGRATE":"ok (7650 obs, last 2026-09-03)","STABLES":"ok (3201 obs, last 2026-09-03)","TVL":"ok (3264 obs, last 2026-09-03)","MVRV":"ok (5789 obs, last 2026-05-23)","EPU":"ok (15220 obs, last 2026-09-02)","CAPE":"ok (1867 obs, last 2026-09-02)"},"note":"Weekly composite; percentile method per design doc; pillars renormalize over available indicators; crypto active from ~2015."}/*END_GCI_DATA*/;
+/* ============ STATE ============ */
+const GCI = LIVE?LIVE.gci:58.2, BAND_BOUNDS=[0,20,40,60,80,100];
+let mode='live';
+const BANDS=["CALM","NORMAL","ELEVATED","HIGH-STRESS","CRITICAL"];
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const bandColors = () => [css('--b1'),css('--b2'),css('--b3'),css('--b4'),css('--b5')];
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+function countUp(el, to, dur, fmt){
+  if(!el) return;
+  if(reduced){ el.textContent=fmt(to); return; }
+  const t0=performance.now();
+  (function st(n){
+    const p=Math.min((n-t0)/dur,1), e=1-Math.pow(1-p,5);
+    el.textContent=fmt(to*e);
+    if(p<1) requestAnimationFrame(st);
+  })(t0);
+}
+
+/* ============ THEME TOGGLE ============ */
+const themeBtn=document.getElementById('themeBtn');
+let theme=null;
+try{ theme=localStorage.getItem('dg-theme'); }catch(e){}
+if(theme) document.documentElement.setAttribute('data-theme',theme);
+themeBtn.addEventListener('click',()=>{
+  // flip against the EFFECTIVE theme so every press visibly changes something
+  const attr=document.documentElement.getAttribute('data-theme');
+  const effLight = attr ? attr==='light' : matchMedia('(prefers-color-scheme: light)').matches;
+  const next = effLight ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme',next);
+  try{ localStorage.setItem('dg-theme',next); }catch(e){}
+});
+// The inline per-band accent is theme-specific, so it must be recomputed on EVERY
+// theme change (button, system, or programmatic) — otherwise the old theme's accent
+// sticks and only a reload fixes it. One observer covers all paths.
+new MutationObserver(()=>{
+  requestAnimationFrame(()=>{
+    if(typeof mode!=='undefined' && mode==='history'){
+      const v=parseFloat(document.getElementById('gnum').textContent)||GCI, bi=Math.floor(Math.min(v,99.9)/20), c=css('--b'+(bi+1));
+      document.documentElement.style.setProperty('--accent',c);
+      document.documentElement.style.setProperty('--accent-soft',hexA0(c,.13));
+    } else if(typeof applyLiveAccent==='function') applyLiveAccent();
+    if(typeof drawChart==='function') drawChart();
+    if(typeof drawSpark==='function') drawSpark();
+  });
+}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+/* ============ SIMPLE / ADVANCED VIEW ============ */
+const segS=document.getElementById('segSimple'), segA=document.getElementById('segAdv');
+function setView(v){
+  document.body.classList.toggle('view-simple', v==='simple');
+  if(window.HERO_LIVE_SIMPLE && (typeof mode==='undefined' || mode!=='history')){
+    window.HERO_LIVE = v==='simple'?window.HERO_LIVE_SIMPLE:window.HERO_LIVE_ADV;
+    const hl=document.getElementById('heroLine'); if(hl){ hl.innerHTML=window.HERO_LIVE; if(typeof wireHeroScoreLink==='function') wireHeroScoreLink(); }
+  }
+  segS.classList.toggle('on', v==='simple');
+  segA.classList.toggle('on', v!=='simple');
+  try{ localStorage.setItem('dg-view',v); }catch(e){}
+  if(typeof drawChart==='function') drawChart();
+  
+}
+segS.addEventListener('click',()=>setView('simple'));
+segA.addEventListener('click',()=>setView('adv'));
+// Simple is the default view; Advanced is remembered once chosen
+(function(){ let v='simple'; try{ v=localStorage.getItem('dg-view')||'simple'; }catch(e){}
+  const s=(v!=='adv');   // apply the class directly — the chart isn't built yet, so no redraw here
+  document.body.classList.toggle('view-simple',s); segS.classList.toggle('on',s); segA.classList.toggle('on',!s); })();
+
+/* ============ LIVE DATA BOOT ============ */
+const BI=Math.floor(Math.min(GCI,99.9)/20);
+const hexA0=(h,a)=>{const n=parseInt(h.slice(1),16);return `rgba(${n>>16&255},${n>>8&255},${n&255},${a})`;};
+function applyLiveAccent(){
+  const col=css('--b'+(BI+1));
+  document.documentElement.style.setProperty('--accent',col);
+  document.documentElement.style.setProperty('--accent-soft',hexA0(col,.13));
+}
+applyLiveAccent();
+if(LIVE){
+  countUp(document.getElementById('gnum'), GCI, 1400, v=>v.toFixed(1));
+  document.getElementById('gband').textContent=LIVE.band;
+  const h=LIVE.range_half;
+  document.querySelector('.grange').textContent=`plausible range ${(GCI-h).toFixed(1)} – ${(GCI+h).toFixed(1)}`;
+  const cuspEl=document.querySelector('.gcusp');
+  const nb=BAND_BOUNDS.find(b=>b>GCI), dist=nb?nb-GCI:99;
+  if(nb && dist<=2.0 && BI<4) cuspEl.textContent=`${dist.toFixed(1)} pts below ${BANDS[BI+1]}`;
+  else cuspEl.hidden=true;
+  const chipEl=document.querySelector('.chip.demo');
+  if(chipEl) chipEl.remove();
+  // rebuild the show-the-math table from real pillar scores
+  const tb=document.querySelector('#mathBox tbody');
+  if(tb){
+    tb.innerHTML=''; let total=0;
+    const NAMES={credit:'Credit & liquidity',macro:'Macro cycle',valuation:'Valuation & froth',housing:'Housing',crypto:'Crypto',sentiment:'Sentiment',geo:'Geopolitics'};
+    for(const p of ['credit','macro','valuation','housing','crypto','sentiment','geo']){
+      const pd=LIVE.pillars[p]; if(!pd||pd.score==null) continue;
+      const contrib=pd.score*pd.weight; total+=contrib;
+      const stale=pd.members.length&&pd.members.every(m=>m.stale);
+      const asof=pd.members.map(m=>m.asof).sort().slice(-1)[0]||'—';
+      tb.insertAdjacentHTML('beforeend',
+        `<tr${stale?' class="stale"':''}><td>${NAMES[p]}</td><td class="n">${Math.round(pd.weight*100)}%</td><td class="n">${pd.score.toFixed(1)}</td><td class="n">${contrib.toFixed(2)}</td><td class="fresh">${stale?'carrying last value':asof}</td></tr>`);
+    }
+    const tf=document.querySelector('#mathBox tfoot td.n'); if(tf) tf.textContent=total.toFixed(2);
+  }
+  // hero readout tiles: momentum, historical rank, systemic breadth, 12-month trend
+  if(LIVE.history && LIVE.history.length>24){
+    const H=LIVE.history;
+    const MOB=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    const fy=t=>{const yr=Math.floor(t);return MOB[Math.min(11,Math.round((t-yr)*12))]+" '"+String(yr).slice(2);};
+    const at=m=>H[Math.max(0,H.length-1-m)][1];
+    let hi=H[0]; H.forEach(p=>{ if(p[1]>hi[1]) hi=p; });
+    const pctHist=Math.round(H.filter(p=>p[1]<=GCI).length/H.length*100);
+    const ordn=n=>n+(n%10===1&&n%100!==11?'st':n%10===2&&n%100!==12?'nd':n%10===3&&n%100!==13?'rd':'th');
+
+    const vel=LIVE.velocity13w;
+    const sv=document.querySelector('#stVel .v');
+    const vw = vel>=8?['Surging','hot']:vel>=1.5?['Rising','hot']:vel<=-8?['Falling fast','cool']
+             :vel<=-1.5?['Cooling','cool']:['Steady','flat'];
+    document.querySelector('#stVel .vword').textContent=vw[0]; sv.classList.add(vw[1]);
+    const deg=Math.max(-45,Math.min(45,-vel*5));   // rising tilts up, cooling tilts down
+    const vfill=document.querySelector('#stVel .vbar i');
+    vfill.style.background=vw[1]==='hot'?'var(--b4)':vw[1]==='cool'?'var(--b1)':'var(--muted)';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      document.querySelector('#stVel .varrow').style.transform=`rotate(${deg.toFixed(1)}deg)`;
+      const wmag=Math.min(1,Math.abs(vel)/15)*50;
+      vfill.style.width=Math.max(wmag,2)+'%';
+      vfill.style.left=(vel>=0?50:50-Math.max(wmag,2))+'%';
+    }));
+    document.querySelector('#stVel .s').textContent=
+      `${vel>=0?'+':''}${vel.toFixed(1)} points over 13 weeks`;
+
+    const ratio = pctHist>=90?'9 of 10':pctHist>=80?'4 of 5':pctHist>=75?'3 of 4':pctHist>=66?'2 of 3'
+                :pctHist>=60?'3 of 5':pctHist>=50?'half':pctHist>=33?'1 of 3':pctHist>=25?'1 of 4':'few';
+    const rankEl=document.querySelector('#stRank .v');
+    countUp(rankEl, pctHist, 1400, v=>String(Math.round(v)));
+    setTimeout(()=>{ rankEl.textContent=ordn(pctHist); }, reduced?0:1450);
+    document.querySelector('#stRank .s').textContent=
+      ratio==='half' ? `tenser than half of all months since ${Math.floor(H[0][0])}`
+                     : `tenser than ${ratio} months since ${Math.floor(H[0][0])}`;
+    /* The verdict: one computed sentence — persistence, historical precedent, direction, and the
+       conditional base rate of a verified crisis following readings like today's (Kaminsky–Reinhart
+       signal-frequency logic; the final 12 months are excluded because their outcome is unknown). */
+    window.HERO_LIVE=(function(){
+      const Y0=Math.floor(H[0][0]), nowT=H[H.length-1][0];
+      // persistence against the scorecard's warning line (50), not the band — 40–60 is the historical norm
+      const above=GCI>=50, side=p=>(p[1]>=50)===above;
+      let run=0; for(let i=H.length-1;i>=0&&side(H[i]);i--) run++;
+      // precedent: the last earlier run on the same side at least this long, if it's a real precedent (2y+ ago)
+      let runs=[], cur=null;
+      H.forEach(p=>{ const s=p[1]>=50; if(cur&&cur.s===s){cur.n++; cur.end=p[0];} else { if(cur) runs.push(cur); cur={s,n:1,end:p[0]}; } });
+      if(cur) runs.push(cur);
+      const prior=runs.slice(0,-1).filter(r=>r.s===above&&r.n>=run).pop();
+      const precedent=(prior&&nowT-prior.end>=2)?` (the longest since ${Math.floor(prior.end)})`:(!prior&&run>=12?` (the longest on record)`:'');
+      // direction from 13-week velocity
+      const vel=LIVE.velocity13w||0;
+      const dir = vel<=-2?`cooling (${vel.toFixed(1)} in 13 weeks)` : vel>=2?`building (+${vel.toFixed(1)} in 13 weeks)` : 'holding steady';
+      // conditional odds: P(bear market within 12m | reading within ±3 of today) vs the unconditional base rate.
+      // Bear = S&P −20% or worse, the universal definition. The last 12 months are excluded (outcome unknown).
+      const EV=(LIVE.events_all||[]).filter(e=>/BEAR/.test(e.badge||'')), T_end=nowT-1;
+      const followed=t=>EV.some(e=>e.t>t&&e.t<=t+1);
+      const near=H.filter(p=>p[0]<=T_end&&Math.abs(p[1]-GCI)<=3), all=H.filter(p=>p[0]<=T_end);
+      const pc=near.length>=12?Math.round(100*near.filter(p=>followed(p[0])).length/near.length):null;
+      const pa=Math.round(100*all.filter(p=>followed(p[0])).length/all.length);
+      const runTxt = run>=24 ? `${Math.floor(run/12)} straight years` : `${run} straight months`;
+      const odds = pc!=null
+        ? `at readings near ${Math.round(GCI)}, a bear market followed within a year <b>${pc}%</b> of the time, against ${pa}% for all months`
+        : `${ordn(pctHist)} percentile of every print since ${Y0}`;
+      // two registers of the same facts: full in Advanced, plain-spoken in Simple
+      const adv = `<b>${GCI.toFixed(1)}</b> — ${ordn(pctHist)} percentile since ${Y0}, <b>${above?'above':'below'} 50 for ${runTxt}</b>${precedent}, and <b>${dir}</b>: ${odds}. `
+        +`<a class="scorelink" id="heroScoreLink">See the track record</a>.`;
+      const dirPlain = vel<=-2?'easing' : vel>=2?'rising' : 'steady';
+      const yrs = Math.floor(run/12);
+      const longTxt = run>=24 ? `for ${yrs} years now` : `for ${run} months now`;
+      const oddsPlain = pc!=null
+        ? `Historically, readings like this were followed by a crash within a year <b>about ${pc===pa?'as often as any other month':pc>pa?'1 in '+Math.max(2,Math.round(100/pc))+' times':'less often than average'}</b>`
+        : `Tenser than ${pctHist}% of the past`;
+      const simple = `<b>Tenser than ${pctHist}% of the last ${nowT-Y0|0} years</b>, ${above?'and it has stayed on the tense side':'though on the calm side'} ${longTxt}${precedent?', a stretch not seen since '+precedent.match(/\d{4}/)[0]:''}. `
+        +`Right now the pressure is <b>${dirPlain}</b>. ${oddsPlain}${pc!=null?` (${pc}% vs ${pa}% for all months)`:''}. `
+        +`<a class="scorelink" id="heroScoreLink">See the track record</a>.`;
+      window.HERO_LIVE_SIMPLE=simple; window.HERO_LIVE_ADV=adv;
+      return document.body.classList.contains('view-simple')?simple:adv;
+    })();
+    const hl=document.getElementById('heroLine');
+    if(hl){ hl.innerHTML=window.HERO_LIVE; wireHeroScoreLink(); }
+    requestAnimationFrame(()=>{ document.querySelector('#stRank .bar i').style.width=pctHist+'%'; });
+
+    if(LIVE.breadth!=null){
+      const bpc=Math.round(LIVE.breadth*100);
+      const bv=document.querySelector('#stBreadth .v');
+      const bw = LIVE.breadth<0.34?['Narrow','flat']:LIVE.breadth<0.67?['Clustering','hot']:['Broad','danger'];
+      bv.textContent=bw[0]; bv.classList.add(bw[1]);
+      document.querySelector('#stBreadth .s').textContent=
+        `${bpc}% of stress moving in sync — a coincident read, not a comfort`;
+      requestAnimationFrame(()=>{ document.querySelector('#stBreadth .bar i').style.width=bpc+'%'; });
+      document.getElementById('stBreadth').title='CISS-style correlation weighting (ECB WP 1426): how broad-based stress is across the seven pillars.';
+    }
+
+    // trend tile with range selector — weekly resolution, default 1Y
+    const HW=(LIVE.history_w&&LIVE.history_w.length>10)?LIVE.history_w:H;
+    const RANGES={'1W':{n:2,label:'the past week'},'1M':{n:5,label:'the past month'},'1Y':{n:53,label:'the past year'}};
+    const dseg=(d,lab)=>`<b class="${d>=0?'tup':'tdn'}">${d>=0?'+':''}${d.toFixed(1)} ${lab}</b>`;
+    function renderTrend(rk){
+      const cfg=RANGES[rk];
+      const pts=HW.slice(-Math.min(cfg.n,HW.length));
+      const lo=Math.min(...pts.map(p=>p[1])), hx=Math.max(...pts.map(p=>p[1]));
+      const sp=document.querySelector('#stTrend .tspark');
+      const tw=sp.clientWidth||300, th=Math.max(38, sp.clientHeight||38);   // fills the tile's height
+      const SY=v=>4+(1-(v-lo)/Math.max(1e-6,hx-lo))*(th-10);
+      const SXp=i=>5+i*((tw-10)/(pts.length-1));
+      let dd='M'+SXp(0).toFixed(1)+' '+SY(pts[0][1]).toFixed(1);
+      pts.forEach((p,i)=>{ if(i) dd+=' L'+SXp(i).toFixed(1)+' '+SY(p[1]).toFixed(1); });
+      const area=dd+` L${SXp(pts.length-1).toFixed(1)} ${th} L${SXp(0).toFixed(1)} ${th} Z`;
+      sp.setAttribute('viewBox',`0 0 ${tw} ${th}`);
+      sp.innerHTML=`<defs><linearGradient id="tsfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>`
+        +`<path d="${area}" fill="url(#tsfill)"/>`
+        +`<path d="${dd}" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity=".85"/>`
+        +`<circle cx="${SXp(pts.length-1)}" cy="${SY(pts[pts.length-1][1])}" r="3.5" fill="var(--accent)"/>`;
+      const dw=GCI-pts[0][1];
+      document.getElementById('trendLabel').textContent=cfg.label.replace(/^./,c=>c.toUpperCase());
+      document.querySelector('#stTrend .s').innerHTML=
+        `${dseg(dw,`over ${cfg.label}`)} · ranged ${lo.toFixed(1)}–${hx.toFixed(1)}`;
+    }
+    document.querySelectorAll('.trsel button').forEach(b=>b.addEventListener('click',()=>{
+      document.querySelectorAll('.trsel button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on'); renderTrend(b.dataset.r);
+    }));
+    renderTrend('1Y');
+    // the tile's height settles after the row lays out — re-fit then, and on resize
+    const curRange=()=>(document.querySelector('.trsel button.on')||{}).dataset?.r||'1Y';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>renderTrend(curRange())));
+    addEventListener('load',()=>renderTrend(curRange()));
+    let trT; addEventListener('resize',()=>{ clearTimeout(trT); trT=setTimeout(()=>renderTrend(curRange()),120); });
+  }
+}
+
+/* ============ GAUGE (canvas: arc + spring needle + breathing halo) ============ */
+const cv=document.getElementById('gauge'), cx=cv.getContext('2d');
+const A0=-Math.PI*1.25, A1=Math.PI*0.25;             // 270° sweep
+const val2ang=v=>A0+(A1-A0)*(v/100);
+let angle=val2ang(40), vel=0, target=GCI, halo=0;
+const K=120, ZETA=0.85, C=2*ZETA*Math.sqrt(K);
+let breathHz=12/60;                                   // cycles/sec (12 cpm)
+let last=performance.now();
+
+function drawGauge(now){
+  const dt=Math.min((now-last)/1000,.05); last=now;
+  // spring integration
+  const ta=val2ang(target);
+  if(reduced){ angle=ta; }
+  else{ const acc=K*(ta-angle)-C*vel; vel+=acc*dt; angle+=vel*dt; }
+  halo+=dt*breathHz*Math.PI*2;
+
+  const W=cv.width,H=cv.height,cxp=W/2,cyp=H*0.56,R=W*0.36;
+  cx.clearRect(0,0,W,H);
+  const cols=bandColors(), ink=css('--ink'), hair=css('--hair2'), muted=css('--muted');
+
+  // breathing halo (frequency = the only channel; amplitude constant)
+  const b=(Math.sin(halo)+1)/2;
+  const bi=Math.floor(Math.min(target,99.9)/20);
+  cx.beginPath(); cx.arc(cxp,cyp,R+34+b*6,A0,A1);
+  cx.strokeStyle=cols[bi]; cx.globalAlpha=.14+b*.16; cx.lineWidth=18; cx.lineCap="round"; cx.stroke();
+  cx.globalAlpha=1;
+
+  // recessed full track behind the bands
+  cx.beginPath(); cx.arc(cxp,cyp,R,A0,A1);
+  cx.strokeStyle=hair; cx.globalAlpha=.5; cx.lineWidth=26; cx.lineCap="round"; cx.stroke();
+  cx.globalAlpha=1;
+
+  // band arc segments; active segment saturated + glowing, siblings solid but quiet
+  for(let i=0;i<5;i++){
+    const gap=.014;
+    cx.beginPath();
+    cx.arc(cxp,cyp,R,val2ang(BAND_BOUNDS[i]*1)+gap,val2ang(BAND_BOUNDS[i+1])-gap);
+    if(i===bi){ cx.shadowColor=cols[i]; cx.shadowBlur=34; }
+    cx.strokeStyle=cols[i]; cx.globalAlpha=(i===bi)?1:.45; cx.lineWidth=22; cx.lineCap="butt"; cx.stroke();
+    cx.shadowBlur=0;
+  }
+  cx.globalAlpha=1;
+
+  // value trail: bright arc from zero to the needle
+  cx.beginPath(); cx.arc(cxp,cyp,R+18,A0,angle);
+  cx.strokeStyle=cols[bi]; cx.shadowColor=cols[bi]; cx.shadowBlur=12;
+  cx.globalAlpha=.9; cx.lineWidth=5; cx.lineCap="round"; cx.stroke();
+  cx.shadowBlur=0; cx.globalAlpha=1;
+
+  // uncertainty arc around the live reading
+  const UH=LIVE?LIVE.range_half:2.3;
+  cx.beginPath(); cx.arc(cxp,cyp,R-24,val2ang(Math.max(0,GCI-UH)),val2ang(Math.min(100,GCI+UH)));
+  cx.strokeStyle=cols[bi]; cx.globalAlpha=.30; cx.lineWidth=7; cx.lineCap="round"; cx.stroke(); cx.globalAlpha=1;
+
+  // cusp: illuminate the next band boundary only when within 2 points of it
+  const NEXTB=BAND_BOUNDS.find(b=>b>GCI);
+  const cuspOn=NEXTB!==undefined && NEXTB<100+1 && (NEXTB-GCI)<=2.0 && Math.floor(GCI/20)<4;
+  if(cuspOn){
+    const ca=val2ang(NEXTB);
+    cx.beginPath();
+    cx.moveTo(cxp+Math.cos(ca)*(R-16),cyp+Math.sin(ca)*(R-16));
+    cx.lineTo(cxp+Math.cos(ca)*(R+18),cyp+Math.sin(ca)*(R+18));
+    cx.strokeStyle=cols[Math.min(bi+1,4)]; cx.lineWidth=5; cx.lineCap="round"; cx.stroke();
+  }
+
+  // minor ticks every 10
+  cx.strokeStyle=hair; cx.lineWidth=2;
+  for(let v=0;v<=100;v+=10){ if(cuspOn && v===NEXTB)continue;
+    const a=val2ang(v);
+    cx.beginPath();
+    cx.moveTo(cxp+Math.cos(a)*(R-16),cyp+Math.sin(a)*(R-16));
+    cx.lineTo(cxp+Math.cos(a)*(R-26),cyp+Math.sin(a)*(R-26));
+    cx.stroke();
+  }
+  // scale numerals
+  cx.fillStyle=muted; cx.font="500 26px 'Geist Mono', monospace"; cx.textAlign="center"; cx.textBaseline="middle";
+  [0,20,40,60,80,100].forEach(v=>{
+    const a=val2ang(v);
+    cx.fillText(v, cxp+Math.cos(a)*(R+52), cyp+Math.sin(a)*(R+52));
+  });
+
+  // needle: tapered blade with counterweight tail and band-colored hub
+  const nx=Math.cos(angle), ny=Math.sin(angle), px=-ny, py=nx;
+  cx.beginPath();
+  cx.moveTo(cxp+px*8-nx*R*0.16, cyp+py*8-ny*R*0.16);
+  cx.lineTo(cxp-px*8-nx*R*0.16, cyp-py*8-ny*R*0.16);
+  cx.lineTo(cxp+nx*(R-32), cyp+ny*(R-32));
+  cx.closePath();
+  cx.fillStyle=ink; cx.shadowColor='rgba(0,0,0,.45)'; cx.shadowBlur=10; cx.fill(); cx.shadowBlur=0;
+  cx.beginPath(); cx.arc(cxp,cyp,13,0,7); cx.fillStyle=ink; cx.fill();
+  cx.beginPath(); cx.arc(cxp,cyp,5.5,0,7); cx.fillStyle=cols[bi]; cx.fill();
+
+  requestAnimationFrame(drawGauge);
+}
+requestAnimationFrame(drawGauge);
+
+/* ============ PILLARS ============ */
+const PILLARS=[
+ ["Credit & liquidity",25,51,"Corporate bond spreads, funding stress, central-bank liquidity.","Spreads tightening and net liquidity rising would pull this down."],
+ ["Macro cycle",20,59,"Yield curve, jobless claims, the Sahm rule.","Claims falling and the curve normalising without recession."],
+ ["Valuation & froth",15,79,"CAPE, equity risk premium, margin debt.","Earnings growing into prices, leverage unwinding gently."],
+ ["Housing",10,44,"Price-to-income, mortgage spreads, permits.","Affordability improving while construction holds."],
+ ["Crypto",10,64,"On-chain valuation, stablecoin flows, leverage.","Funding rates cooling, stablecoin supply growing steadily."],
+ ["Sentiment",10,49,"VIX and its term structure, positioning.","A middling, boring VIX. Extremes either way raise it."],
+ ["Geopolitics",10,61,"Geopolitical-risk index, energy shocks, conflict data.","De-escalation and calmer energy prices."],
+];
+let PLIVE=null;
+if(LIVE){
+  const order=['credit','macro','valuation','housing','crypto','sentiment','geo'];
+  order.forEach((p,i)=>{ const pd=LIVE.pillars[p]; if(pd&&pd.score!=null) PILLARS[i][2]=Math.round(pd.score); });
+  PLIVE=order.map(p=>{ const pd=LIVE.pillars[p];
+    return pd?[pd.members.filter(m=>m.live!==false).length, pd.members.length]:null; });
+}
+const pilBox=document.getElementById('pillars');
+const cols5=()=>bandColors();
+PILLARS.forEach((p,i)=>{
+  const bi=Math.floor(p[2]/20);
+  const el=document.createElement('div'); el.className='pill'; el.id='pil'+i;
+  el.innerHTML=`
+   <button class="prow" aria-expanded="false">
+     <span class="pname">${p[0]}<span class="pw">WEIGHT ${p[1]}%${PLIVE&&PLIVE[i]?` · ${PLIVE[i][0]}/${PLIVE[i][1]} LIVE`:''}</span></span>
+     <span class="ptrack"><span class="pfill" style="width:0%; background:var(--b${bi+1})"></span></span>
+     <span class="pscore">${p[2]}</span>
+   </button>
+   <div class="pdetail" hidden>
+     <span><b>Measures:</b> ${p[3]}</span>
+     <span><b>What would make it fall:</b> ${p[4]}</span>
+   </div>`;
+  pilBox.appendChild(el);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{ el.querySelector('.pfill').style.width=p[2]+'%'; }));
+  const btn=el.querySelector('.prow'), det=el.querySelector('.pdetail');
+  btn.addEventListener('click',()=>{ det.hidden=!det.hidden; btn.setAttribute('aria-expanded',String(!det.hidden)); });
+});
+
+/* ============ SHOW THE MATH ============ */
+const mathBtn=document.getElementById('mathBtn'), mathBox=document.getElementById('mathBox');
+mathBtn.addEventListener('click',()=>{
+  mathBox.hidden=!mathBox.hidden;
+  mathBtn.setAttribute('aria-expanded',String(!mathBox.hidden));
+  mathBtn.textContent=mathBox.hidden?'SHOW THE MATH ↓':'HIDE THE MATH ↑';
+});
+
+/* ============ SIMULATED TICKS (labeled demo) ============ */
+const SOURCES=[["BTC",4],["HY credit ETF",0],["VIX",5],["Brent",6],["ETH funding",4],["10y–3m",1]];
+const tickList=document.getElementById('ticks');
+const pulseNum=document.getElementById('pulseNum'), pulseRate=document.getElementById('pulseRate');
+
+/* Pulse oscilloscope: a continuous scrolling trace of the live nowcast.
+   The line flows right-to-left at constant speed; each tick injects a decaying
+   deflection so real events read as heartbeats riding a smooth baseline. */
+const ekgBlips=[];      // {t: seconds-ago at spawn, m: magnitude, up: bool} — kept for API
+let ekgKick=0, ekgKickV=0;    // spring-driven deflection the incoming samples ride
+const EKG_SPAN=14;      // seconds of history shown across the strip
+(function(){
+  const ek=document.getElementById('ekg'); if(!ek) return;
+  const g2=ek.getContext('2d');
+  const dpr=Math.min(devicePixelRatio||1,2);
+  let Wk=0, Hk=0, lt=performance.now(), acc=0;
+  const buf=[];          // {age, y} samples, y in [-1,1]
+  for(let a=EKG_SPAN;a>0;a-=0.016){ const n=-a*1000; buf.push({age:a, y:Math.sin(n*0.004)*0.05+(Math.sin(n*0.017)+Math.sin(n*0.031))*0.02}); }
+  function rs(){ const w=ek.clientWidth||800, h=ek.clientHeight||64;
+    ek.width=w*dpr; ek.height=h*dpr; g2.setTransform(dpr,0,0,dpr,0,0); Wk=w; Hk=h; }
+  rs(); addEventListener('resize',rs);
+  function frame(n){
+    const dt=Math.min((n-lt)/1000,.05); lt=n;
+    // spring settle of the tick deflection
+    ekgKickV += (-ekgKick*70 - ekgKickV*11)*dt;
+    ekgKick  += ekgKickV*dt;
+    // sample the current amplitude ~60/s; noise floor keeps a living idle wobble
+    acc+=dt;
+    while(acc>0.016){ acc-=0.016;
+      buf.forEach(p=>p.age+=0.016);
+      const idle=Math.sin(n*0.004)*0.05 + (Math.sin(n*0.017)+Math.sin(n*0.031))*0.02;
+      buf.push({age:0, y:Math.max(-1,Math.min(1, ekgKick + idle))});
+      while(buf.length>1000 || (buf.length && buf[0].age>EKG_SPAN)) buf.shift();
+    }
+    g2.clearRect(0,0,Wk,Hk);
+    const mid=Hk*0.52, amp=Hk*0.40, ink=css('--ink'), muted=css('--muted');
+    const up=ekgKick<=0;                       // deflection sign colours the trace
+    const col= Math.abs(ekgKick)<0.03 ? muted : (up?css('--b1'):css('--b4'));
+    // baseline
+    g2.strokeStyle=css('--hair2'); g2.globalAlpha=.5; g2.lineWidth=1;
+    g2.beginPath(); g2.moveTo(0,mid); g2.lineTo(Wk,mid); g2.stroke(); g2.globalAlpha=1;
+    if(buf.length<2){ if(!reduced) requestAnimationFrame(frame); return; }
+    const X=a=>Wk-(a/EKG_SPAN)*Wk;             // age 0 = right edge (now)
+    const Y=y=>mid - y*amp;
+    // filled area
+    g2.beginPath(); g2.moveTo(X(buf[0].age), mid);
+    buf.forEach(p=>g2.lineTo(X(p.age), Y(p.y)));
+    g2.lineTo(X(buf[buf.length-1].age), mid); g2.closePath();
+    const grad=g2.createLinearGradient(0,0,0,Hk);
+    grad.addColorStop(0, col); grad.addColorStop(1, 'transparent');
+    g2.globalAlpha=.14; g2.fillStyle=grad; g2.fill(); g2.globalAlpha=1;
+    // the trace
+    g2.beginPath(); g2.moveTo(X(buf[0].age), Y(buf[0].y));
+    buf.forEach(p=>g2.lineTo(X(p.age), Y(p.y)));
+    g2.strokeStyle=col; g2.lineWidth=1.8; g2.lineJoin='round'; g2.lineCap='round';
+    g2.shadowColor=col; g2.shadowBlur=Math.abs(ekgKick)>0.05?8:0; g2.stroke(); g2.shadowBlur=0;
+    // glowing leading edge (the "now" cursor)
+    const last=buf[buf.length-1];
+    g2.beginPath(); g2.arc(Wk-1.5, Y(last.y), 3.2, 0, 7); g2.fillStyle=col; g2.fill();
+    if(!reduced) requestAnimationFrame(frame);
+  }
+  if(reduced){ rs(); } else requestAnimationFrame(frame);
+})();
+let pulse=GCI;
+function fmtT(d){ return d.toTimeString().slice(0,8); }
+function tick(){
+  const s=SOURCES[Math.floor(Math.random()*SOURCES.length)];
+  const mv=(Math.random()-0.48)*0.5;
+  const dP=mv*0.18;
+  pulse=Math.max(GCI-1.6,Math.min(GCI+1.6,pulse+dP));
+  if(mode==='live') target=pulse;
+  pulseNum.textContent=pulse.toFixed(2);
+  pulseRate.textContent=`BREATHING ${Math.round(breathHz*60)}/MIN`;
+  ekgKick += (dP>=0?-1:1)*Math.min(0.9, Math.abs(dP)*16+0.28);   // heartbeat deflection
+  const cls=dP>=0?'tup':'tdn';
+  const li=document.createElement('li');
+  li.innerHTML=`<span class="d">${fmtT(new Date())}</span>`
+    +`<span class="tsrc">${s[0].toUpperCase()}</span>`
+    +`<span class="tmv ${cls}">${mv>=0?'+':''}${mv.toFixed(2)}%</span>`
+    +`<span class="${cls}">Pulse ${dP>=0?'+':''}${dP.toFixed(2)}</span>`;
+  tickList.prepend(li);
+  while(tickList.children.length>5) tickList.removeChild(tickList.lastChild);
+  // 1px shimmer on sourcing pillar — real event only
+  const pil=document.getElementById('pil'+s[1]);
+  if(pil && !reduced){ pil.classList.remove('shimmer'); void pil.offsetWidth; pil.classList.add('shimmer'); }
+  setTimeout(tick, 1800+Math.random()*3600);
+}
+pulseNum.textContent=GCI.toFixed(2);
+setTimeout(tick,1200);
+
+/* ============ FEED ============ */
+const FEED=[
+ ["+1.9","up","High-yield spreads widened","HY OAS 3.1% → 3.4% · 61st → 74th percentile"],
+ ["+0.8","up","Margin debt printed a new high","+4.1% m/m · 88th percentile of 20-yr range"],
+ ["+0.6","up","Curve re-steepening accelerated","10y–3m +12bp on falling short rates"],
+ ["−0.5","dn","Stablecoin supply resumed growth","+$4.2B over 13 weeks"],
+ ["−0.4","dn","Jobless claims eased","4-wk avg −3.1% YoY"],
+ ["+0.2","up","Oil shock measure crept up","Brent +6.4% over 13 weeks"],
+];
+if(LIVE && LIVE.movers && LIVE.movers.length){
+  FEED.length=0;
+  LIVE.movers.slice(0,6).forEach(m=>{
+    FEED.push([`${m.impact>0?'+':''}${m.impact.toFixed(1)}`, m.impact>0?'up':'dn',
+               m.label, `percentile ${m.from_} → ${m.to} · weekly move`]);
+  });
+}
+const feedBox=document.getElementById('feed');
+FEED.forEach(f=>{
+  const el=document.createElement('div'); el.className='fcard';
+  el.innerHTML=`<span class="fdelta mono ${f[1]}">${f[0]}</span><span class="fbody">${f[2]}<div class="fmove">${f[3]}</div></span>`;
+  feedBox.appendChild(el);
+});
+const end=document.createElement('div'); end.className='endcard';
+end.textContent="That's everything that moved the index this week.";
+feedBox.appendChild(end);
+
+
+/* ============ HISTORY CHART ============ */
+const KEY=[[1997,32],[1997.7,49],[1998.2,44],[1998.7,72],[1999.2,46],[2000.2,74],[2000.9,66],[2001.7,58],[2002.6,52],[2003.4,38],[2004.5,32],[2005.5,30],[2006.5,36],[2007.6,58],[2008.2,66],[2008.75,91],[2009.4,68],[2010.1,44],[2010.9,52],[2011.6,69],[2012.4,50],[2013.2,37],[2014.3,30],[2015.7,45],[2016.5,37],[2017.5,28],[2018.2,34],[2018.95,49],[2019.6,40],[2020.15,83],[2020.6,52],[2021.2,36],[2021.9,45],[2022.4,76],[2022.85,69],[2023.2,64],[2023.8,46],[2024.5,39],[2025.2,45],[2025.9,52],[2026.67,58.2]];
+const EVENTS=(LIVE&&LIVE.events&&LIVE.events.length)?LIVE.events:[[1998.7,"LTCM",72],[2000.2,"Dot-com",74],[2008.75,"Lehman",91],[2011.6,"Euro debt",69],[2020.15,"COVID",83],[2022.4,"Crypto winter",76],[2023.2,"SVB",64]];
+function series(){
+  const pts=[];
+  for(let t=1997;t<=2026.67;t+=1/12){
+    let i=0; while(i<KEY.length-1 && KEY[i+1][0]<t) i++;
+    const [x0,y0]=KEY[i],[x1,y1]=KEY[Math.min(i+1,KEY.length-1)];
+    const f=x1===x0?0:(t-x0)/(x1-x0);
+    const base=y0+(y1-y0)*(f<.5?2*f*f:1-Math.pow(-2*f+2,2)/2);
+    const noise=Math.sin(t*37.7)*1.1+Math.sin(t*11.3)*0.8;
+    pts.push([t,Math.max(6,Math.min(97,base+noise))]);
+  }
+  pts[pts.length-1][1]=GCI;
+  return pts;
+}
+const EVD=(LIVE&&LIVE.events_all&&LIVE.events_all.length)?LIVE.events_all:null;
+const DATA=(LIVE&&LIVE.history&&LIVE.history.length>24)?LIVE.history:series();
+const T0=DATA[0][0], T1=DATA[DATA.length-1][0];
+
+/* "Where crashes began": the middle half (IQR) of gauge readings at the onset of
+   every fragility crisis on record — shocks excluded, the gauge doesn't lead those. */
+(function(){
+  const card=document.getElementById('stCrash'); if(!card||!EVD) return;
+  const vals=EVD.filter(e=>(e.kind||'fragility')==='fragility'&&e.v!=null).map(e=>e.v).sort((a,b)=>a-b);
+  if(vals.length<4){ card.hidden=true; return; }
+  const q=p=>{ const i=(vals.length-1)*p, lo=Math.floor(i), hi=Math.ceil(i); return vals[lo]+(vals[hi]-vals[lo])*(i-lo); };
+  const q1=q(.25), q3=q(.75);
+  const hist=DATA.map(r=>r[1]).sort((a,b)=>a-b);
+  const pct=v=>Math.round(100*hist.filter(x=>x<=v).length/hist.length);
+  const ordn=n=>n+(n%10===1&&n%100!==11?'st':n%10===2&&n%100!==12?'nd':n%10===3&&n%100!==13?'rd':'th');
+  const pos = GCI<q1 ? 'below it today' : GCI>q3 ? 'above it today' : 'inside it today';
+  card.querySelector('.crashv').innerHTML=`${q1.toFixed(0)}–${q3.toFixed(0)}<small>INDEX POINTS</small>`;
+  card.querySelector('.s').textContent=
+    `the middle half of the ${vals.length} fragility crises since ${Math.floor(T0)} began with the gauge in this range — `
+    +`the ${ordn(pct(q1))}–${ordn(pct(q3))} percentile of all prints. At ${GCI.toFixed(1)}, we sit ${pos}.`;
+  const z=card.querySelector('.crashbar .zone'), me=card.querySelector('.crashbar .me');
+  z.style.left=q1+'%'; z.style.width=(q3-q1)+'%'; me.style.left=Math.max(0,Math.min(100,GCI))+'%';
+})();
+const idxAt=t=>{ let b=0; for(let i=0;i<DATA.length;i++) if(Math.abs(DATA[i][0]-t)<Math.abs(DATA[b][0]-t)) b=i; return b; };
+const svg=document.getElementById('history');
+let tip=null;
+function drawChart(){
+  const Wc=Math.max(svg.clientWidth||800,640), Hc=420, padL=34,padR=56,padT=50,padB=30;
+  svg.setAttribute('viewBox',`0 0 ${Wc} ${Hc}`); svg.setAttribute('width',Wc);
+  const X=t=>padL+(t-T0)/(T1-T0)*(Wc-padL-padR);
+  const Y=v=>padT+(1-v/100)*(Hc-padT-padB);
+  const ink=css('--ink'), muted=css('--muted'), hair=css('--hair'), cols=bandColors(), panel=css('--panel');
+  let s='';
+  // severity gradients: the line and fill are colored by ALTITUDE — calm teal in the
+  // depths, amber through Elevated, red at crisis peaks (y-mapped, userSpaceOnUse)
+  const stops=(op)=>`
+    <stop offset="0" stop-color="${cols[4]}" stop-opacity="${op[0]}"/>
+    <stop offset="${(Y(80)-padT)/(Hc-padT-padB)}" stop-color="${cols[4]}" stop-opacity="${op[1]}"/>
+    <stop offset="${(Y(60)-padT)/(Hc-padT-padB)}" stop-color="${cols[3]}" stop-opacity="${op[2]}"/>
+    <stop offset="${(Y(40)-padT)/(Hc-padT-padB)}" stop-color="${cols[2]}" stop-opacity="${op[3]}"/>
+    <stop offset="${(Y(20)-padT)/(Hc-padT-padB)}" stop-color="${cols[1]}" stop-opacity="${op[4]}"/>
+    <stop offset="1" stop-color="${cols[0]}" stop-opacity="${op[5]}"/>`;
+  s+=`<defs>
+    <linearGradient id="gciLine" x1="0" y1="${padT}" x2="0" y2="${Hc-padB}" gradientUnits="userSpaceOnUse">${stops([1,1,1,1,1,1])}</linearGradient>
+    <linearGradient id="gciFill" x1="0" y1="${padT}" x2="0" y2="${Hc-padB}" gradientUnits="userSpaceOnUse">${stops([.4,.34,.26,.16,.08,.03])}</linearGradient>
+  </defs>`;
+  // band guide lines, tinted by their band
+  [20,40,60,80].forEach((v,i)=>{
+    s+=`<line x1="${padL}" x2="${Wc-padR}" y1="${Y(v)}" y2="${Y(v)}" stroke="${cols[i+1]}" stroke-width="1" opacity=".18"/>`;
+    s+=`<text x="${padL-8}" y="${Y(v)+3}" text-anchor="end" font-family="Geist Mono,monospace" font-size="9" fill="${muted}">${v}</text>`;
+  });
+  // x labels every 5 years across the real range
+  for(let yr=Math.ceil(T0/5)*5; yr<T1; yr+=5){
+    s+=`<line x1="${X(yr)}" x2="${X(yr)}" y1="${padT}" y2="${Hc-padB}" stroke="${hair}" stroke-width="1" opacity=".35"/>`;
+    s+=`<text x="${X(yr)}" y="${Hc-8}" text-anchor="middle" font-family="Geist Mono,monospace" font-size="9" fill="${muted}">${yr}</text>`;
+  }
+  // area + line, severity-colored
+  let d='M'+X(DATA[0][0]).toFixed(1)+' '+Y(DATA[0][1]).toFixed(1);
+  DATA.forEach(p=>{ d+=' L'+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1); });
+  s+=`<path d="${d} L${X(T1)} ${Y(0)} L${X(T0)} ${Y(0)} Z" fill="url(#gciFill)" stroke="none"/>`;
+  s+=`<path d="${d}" fill="none" stroke="url(#gciLine)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`;
+  // crisis annotations: glowing markers + leader ticks, alternating label rows
+  EVENTS.forEach((e,i)=>{
+    const bx=X(e[0]), by=Y(e[2]), bi=Math.floor(e[2]/20);
+    const ly=i%2? by-34 : by-20;
+    s+=`<line x1="${bx}" x2="${bx}" y1="${by-6}" y2="${ly+2}" stroke="${muted}" stroke-width="1" opacity=".4"/>`;
+    s+=`<circle cx="${bx}" cy="${by}" r="8" fill="${cols[bi]}" opacity=".22"/>`;
+    s+=`<circle cx="${bx}" cy="${by}" r="4.5" fill="${cols[bi]}" stroke="${panel}" stroke-width="2"/>`;
+    s+=`<text x="${bx}" y="${ly-2}" text-anchor="middle" font-family="Geist Mono,monospace" font-size="9.5" font-weight="500" fill="${ink}" opacity=".85">${e[1].toUpperCase()}</text>`;
+  });
+  // emphasized live endpoint
+  const eb=Math.floor(GCI/20);
+  s+=`<circle cx="${X(T1)}" cy="${Y(GCI)}" r="9" fill="${cols[eb]}" opacity=".25"/>`;
+  s+=`<circle cx="${X(T1)}" cy="${Y(GCI)}" r="5" fill="${cols[eb]}" stroke="${panel}" stroke-width="2"/>`;
+  s+=`<text x="${X(T1)+11}" y="${Y(GCI)+4}" font-family="Geist Mono,monospace" font-size="13" font-weight="700" fill="${ink}">${GCI}</text>`;
+  // hover crosshair layer
+  s+=`<line id="xh" x1="0" x2="0" y1="${padT}" y2="${Hc-padB}" stroke="${muted}" stroke-width="1" opacity="0"/>`;
+  s+=`<circle id="xhd" r="4" fill="${ink}" opacity="0"/>`;
+  s+=`<rect x="${padL}" y="${padT}" width="${Wc-padL-padR}" height="${Hc-padT-padB}" fill="transparent" id="hitzone"/>`;
+  svg.innerHTML=s;
+  const hz=svg.querySelector('#hitzone'), xh=svg.querySelector('#xh'), xhd=svg.querySelector('#xhd');
+  function onMove(ev){
+    const r=svg.getBoundingClientRect();
+    const px=(ev.touches?ev.touches[0].clientX:ev.clientX)-r.left;
+    const t=T0+((px-padL)/(Wc-padL-padR))*(T1-T0);
+    let best=DATA[0]; for(const p of DATA){ if(Math.abs(p[0]-t)<Math.abs(best[0]-t)) best=p; }
+    const bx=X(best[0]), by=Y(best[1]);
+    xh.setAttribute('x1',bx); xh.setAttribute('x2',bx); xh.setAttribute('opacity',.5);
+    xhd.setAttribute('cx',bx); xhd.setAttribute('cy',by); xhd.setAttribute('opacity',1);
+    if(!tip){ tip=document.createElement('div'); tip.className='tip'; document.body.appendChild(tip); }
+    const yr=Math.floor(best[0]), mo=Math.round((best[0]-yr)*12)+1;
+    const bi=Math.floor(Math.min(best[1],99)/20);
+    tip.innerHTML=`<div class="tb">${best[1].toFixed(1)}</div><div class="tm">${String(mo).padStart(2,'0')}/${yr} · ${BANDS[bi]}</div>`;
+    const sr=svg.getBoundingClientRect();
+    tip.style.left=(sr.left+bx)+'px'; tip.style.top=(sr.top+by)+'px';
+  }
+  function onOut(){ xh.setAttribute('opacity',0); xhd.setAttribute('opacity',0); if(tip){tip.remove();tip=null;} }
+  hz.addEventListener('mousemove',onMove); hz.addEventListener('touchmove',onMove,{passive:true});
+  hz.addEventListener('mouseleave',onOut); hz.addEventListener('touchend',onOut);
+}
+drawChart();
+addEventListener('resize',()=>{
+  drawChart();
+  if(typeof drawSpark==='function' && !document.getElementById('ttPanel').hidden){
+    drawSpark();
+    const i=+document.getElementById('ttSlider').value;
+    if(DATA[i]) movePlayhead(DATA[i][0],DATA[i][1]);
+  }
+});
+
+/* ============ TIME TRAVEL ============ */
+const ttToggle=document.getElementById('ttToggle'), ttPanel=document.getElementById('ttPanel'),
+      ttSlider=document.getElementById('ttSlider'), ttDate=document.getElementById('ttDate'),
+      ttPlay=document.getElementById('ttPlay'), ttLive=document.getElementById('ttLive'),
+      ghist=document.getElementById('ghist'), gnumEl=document.getElementById('gnum'),
+      gbandEl=document.getElementById('gband');
+ttSlider.max=DATA.length-1; ttSlider.value=DATA.length-1;
+let playTimer=null;
+const MO=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+const fmtDate=t=>{ const yr=Math.floor(t); return MO[Math.min(11,Math.round((t-yr)*12))]+' '+yr; };
+const hexA=(h,a)=>{ const n=parseInt(h.slice(1),16); return `rgba(${n>>16&255},${n>>8&255},${n&255},${a})`; };
+
+/* sparkline map: the line, dots where crashes really happened, draggable playhead */
+const spark=document.getElementById('ttSpark');
+let SW=700,SH=104;
+const SP=10, SLX=30;                            // left gutter for the value axis
+const sX=t=>SLX+(t-T0)/(T1-T0)*(SW-SLX-SP);
+const sY=v=>12+(1-v/100)*(SH-30);
+function drawSpark(){
+  SW=spark.clientWidth||700; SH=spark.clientHeight||104;  // 1:1 units — dots stay round
+  const cols=bandColors(), muted=css('--muted'), ink=css('--ink'), hair=css('--hair');
+  let s='';
+  // value axis: band-boundary gridlines with labels, so crash levels are readable
+  [20,40,60,80].forEach((v,i)=>{
+    s+=`<line x1="${SLX}" x2="${SW-SP}" y1="${sY(v).toFixed(1)}" y2="${sY(v).toFixed(1)}" stroke="${cols[i+1]}" stroke-width="1" opacity=".16"/>`;
+    s+=`<text class="spl" x="${SLX-7}" y="${(sY(v)+3).toFixed(1)}" text-anchor="end" font-family="Geist Mono,monospace" font-size="8.5" fill="${muted}">${v}</text>`;
+  });
+  let d='M'+sX(DATA[0][0]).toFixed(1)+' '+sY(DATA[0][1]).toFixed(1);
+  DATA.forEach(p=>{ d+=' L'+sX(p[0]).toFixed(1)+' '+sY(p[1]).toFixed(1); });
+  s+=`<path d="${d}" fill="none" stroke="${muted}" stroke-width="1.5" stroke-linejoin="round"/>`;
+  if(EVD) EVD.forEach(e=>{                      // every verified episode: small marker
+    s+=`<circle cx="${sX(e.t).toFixed(1)}" cy="${sY(e.v).toFixed(1)}" r="1.8" fill="${muted}" opacity=".55"/>`;
+  });
+  let lastLx=-99;
+  const kindOf=t=>{ if(!EVD)return'fragility'; let b=EVD[0]; EVD.forEach(e=>{if(Math.abs(e.t-t)<Math.abs(b.t-t))b=e;}); return b.kind||'fragility'; };
+  EVENTS.forEach(e=>{                           // major bears: landmark dot + its reading
+    const bi=Math.floor(e[2]/20), ex=sX(e[0]), ey=sY(e[2]);
+    if(kindOf(e[0])==='shock'){                 // exogenous shock: hollow ring
+      s+=`<circle cx="${ex.toFixed(1)}" cy="${ey.toFixed(1)}" r="3.4" fill="${css('--panel')}" stroke="${cols[bi]}" stroke-width="1.6"/>`;
+    }else{                                        // fragility crisis: solid dot
+      s+=`<circle cx="${ex.toFixed(1)}" cy="${ey.toFixed(1)}" r="3.4" fill="${cols[bi]}"/>`;
+    }
+    if(ex-lastLx>26){
+      s+=`<text class="spl" x="${ex.toFixed(1)}" y="${(ey-7).toFixed(1)}" text-anchor="middle" font-family="Geist Mono,monospace" font-size="8.5" font-weight="700" fill="${ink}" opacity=".85">${e[2].toFixed(0)}</text>`;
+      lastLx=ex;
+    }
+  });
+  s+=`<line id="ttPh" x1="${sX(T1)}" x2="${sX(T1)}" y1="2" y2="${SH-2}" stroke="${ink}" stroke-width="1.5"/>`;
+  s+=`<circle id="ttPhd" cx="${sX(T1)}" cy="${sY(GCI)}" r="3.5" fill="${ink}"/>`;
+  spark.setAttribute('viewBox',`0 0 ${SW} ${SH}`);
+  spark.innerHTML=s;
+}
+drawSpark();
+ttDate.textContent=fmtDate(T1);
+function movePlayhead(t,v){
+  const ph=spark.querySelector('#ttPh'), pd=spark.querySelector('#ttPhd');
+  if(!ph) return;
+  ph.setAttribute('x1',sX(t)); ph.setAttribute('x2',sX(t));
+  pd.setAttribute('cx',sX(t)); pd.setAttribute('cy',sY(v));
+}
+function sparkScrub(ev){
+  const r=spark.getBoundingClientRect();
+  const cxp=ev.touches?ev.touches[0].clientX:ev.clientX;
+  const f=Math.max(0,Math.min(1,(cxp-r.left)/r.width));
+  const i=Math.round(f*(DATA.length-1));
+  if(mode!=='history') enterHistory(i); else applyHist(i);
+}
+spark.addEventListener('pointerdown',e=>{ try{spark.setPointerCapture(e.pointerId);}catch(x){} sparkScrub(e); });
+spark.addEventListener('pointermove',e=>{ if(e.buttons) sparkScrub(e); });
+const heroLine=document.getElementById('heroLine');
+function wireHeroScoreLink(){
+  const l=document.getElementById('heroScoreLink');
+  if(l) l.addEventListener('click',()=>{ if(window.ROUTES&&window.ROUTES.scorecard){ location.href=window.ROUTES.scorecard; return; } if(typeof openPage==='function'&&pages&&pages.score){ buildScore&&buildScore(); openPage(pages.score,'scorecard'); } });
+}
+// the hero line morphs to describe the crisis you scrub to, then back to live
+function updHint(ne){
+  if(!heroLine) return;
+  // in the past with no crisis under the needle: say nothing (the live verdict is about today)
+  if(ne==null){
+    if(typeof mode!=='undefined' && mode==='history'){ heroLine.classList.remove('hascard'); return; }
+    heroLine.classList.remove('hascard');
+    if(window.HERO_LIVE){ heroLine.innerHTML=window.HERO_LIVE; wireHeroScoreLink(); }
+    return;
+  }
+  heroLine.classList.add('hascard');
+  const nev=NEAREV[ne];
+  const full=EVD ? EVD.find(e=>e.t===nev.t) : null;
+  const isShock=(nev.kind==='shock');
+  const nm=full?full.name:nev.label, gv=full?full.v:null;
+  // one short cause — the first clause of the sourced description; the full text lives in Case files
+  const cause = (full&&full.desc) ? full.desc.split(/[:;]/)[0].replace(/\.$/,'')+'.' : '';
+  const dd=full?full.dd:nev.dd, vix=full?full.vix:null;
+  heroLine.innerHTML=`<div class="hcard">`
+    +`<span class="hkind">${isShock?'EXOGENOUS SHOCK':'FRAGILITY CRISIS'}</span>`
+    +`<span class="hname">${nm}</span>`
+    +(cause?`<p class="hcause">${cause}</p>`:'')
+    +`<div class="hstats">`
+    +(gv!=null?`<span>GAUGE<b>${gv}</b></span>`:'')
+    +(dd!=null?`<span>S&amp;P<b>${dd}%</b></span>`:'')
+    +(vix!=null?`<span>VIX<b>${vix}</b></span>`:'')
+    +`</div></div>`;
+}
+function applyHist(i){
+  i=Math.max(0,Math.min(DATA.length-1,i)); ttSlider.value=i;
+  const t=DATA[i][0], v=DATA[i][1], bi=Math.floor(Math.min(v,99.9)/20);
+  target=v;
+  gnumEl.textContent=v.toFixed(1); gbandEl.textContent=BANDS[bi];
+  const col=css('--b'+(bi+1));
+  document.documentElement.style.setProperty('--accent',col);
+  document.documentElement.style.setProperty('--accent-soft',hexA(col,.13));
+  const ne=nearestEvent(t);
+  ghist.hidden=false;
+  if(ne!=null){
+    const ev=NEAREV[ne];
+    ghist.textContent=`${fmtDate(t)} · ${ev.label.toUpperCase()}`;
+    ghist.title=ev.fact;
+  }else{
+    ghist.textContent=fmtDate(t)+' · RECONSTRUCTED'; ghist.title='';
+  }
+  updHint(ne);
+  evChips.forEach((c,i)=>c.classList.toggle('near', ne!=null && chipSrc[i].t===NEAREV[ne].t));
+  ttDate.textContent=fmtDate(t);
+  breathHz=(10+(v/100)*20)/60;   // historical tension sets the breath
+  movePlayhead(t,v);
+}
+function enterHistory(i){
+  mode='history'; document.body.classList.add('history'); 
+  ttPanel.hidden=false; ttToggle.setAttribute('aria-expanded','true');
+  drawSpark();                       // real dimensions only exist once visible
+  applyHist(i);
+}
+function stopPlay(){ if(playTimer){clearTimeout(playTimer); clearInterval(playTimer); playTimer=null;}
+  if(typeof replayCdTimer!=='undefined'&&replayCdTimer){clearInterval(replayCdTimer); replayCdTimer=null;}
+  const rc=document.getElementById('replayCd'); if(rc) rc.hidden=true;
+  ttPlay.innerHTML=ICON_PLAY+'<span>REPLAY 30 YEARS</span>'; }
+function backToLive(){
+  mode='live'; stopPlay(); document.body.classList.remove('history'); 
+  document.documentElement.style.removeProperty('--accent');
+  document.documentElement.style.removeProperty('--accent-soft');
+  ghist.hidden=true; target=pulse;
+  gnumEl.textContent=GCI.toFixed(1); gbandEl.textContent=LIVE?LIVE.band:'ELEVATED';
+  updHint(null);
+  evChips.forEach(c=>c.classList.remove('near'));
+  applyLiveAccent();
+  breathHz=12/60;
+  ttSlider.value=DATA.length-1; ttDate.textContent=fmtDate(T1);
+  movePlayhead(T1,GCI);
+}
+/* transport glyphs: inline SVG, never emoji */
+const ICON_PLAY='<svg viewBox="0 0 10 12" width="9" height="11" aria-hidden="true"><path d="M1 1l8 5-8 5z" fill="currentColor"/></svg>';
+const ICON_STOP='<svg viewBox="0 0 10 10" width="9" height="9" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1.5" fill="currentColor"/></svg>';
+ttPlay.innerHTML=ICON_PLAY+'<span>REPLAY 30 YEARS</span>';
+
+/* event chips: verified crash landmarks — severity-dotted, named, clickable */
+const NEAREV = EVD ? EVD.map(e=>({t:e.t, label:e.short, fact:e.fact, dd:e.dd, kind:e.kind||'fragility'}))
+                   : EVENTS.map(e=>({t:e[0], label:e[1], fact:e[1], dd:null}));
+const sevVar=b=>{ b=b||''; return b.indexOf('SEVERE')>=0?'--b5':b.indexOf('BEAR')>=0?'--b4':'--b3'; };
+const chipSrc = EVD ? EVD.filter(e=>(e.badge||'').indexOf('BEAR')>=0)
+                        .map(e=>({t:e.t, label:e.short, fact:e.fact, dd:e.dd, sev:sevVar(e.badge), kind:e.kind||'fragility'}))
+                    : NEAREV.map(e=>({...e, sev:'--b4', kind:'fragility'}));
+const SHOCK_SVG='<svg viewBox="0 0 10 12" width="8" height="9" aria-hidden="true"><path d="M6 1 1 7h3l-1 4 5-6H5z" fill="currentColor"/></svg>';
+const chipRow=document.createElement('div'); chipRow.className='evchips';
+const evChips=chipSrc.map(e=>{
+  const b=document.createElement('button'); b.className='evchip'+(e.kind==='shock'?' shock':''); b.title=e.fact+(e.kind==='shock'?' · exogenous shock — the index can\'t lead this':' · fragility crisis — the index should read elevated first');
+  b.innerHTML=(e.kind==='shock'
+      ? `<i class="shockmark">${SHOCK_SVG}</i>`
+      : `<i style="background:var(${e.sev}); box-shadow:0 0 6px var(${e.sev})"></i>`)
+    +`<span>${e.label.toUpperCase()}</span>`
+    +(e.dd!=null?`<span class="dd">${e.dd}%</span>`:'');
+  b.addEventListener('click',()=>enterHistory(idxAt(e.t)));
+  chipRow.appendChild(b); return b;
+});
+ttPanel.appendChild(chipRow);
+const chipLegend=document.createElement('div'); chipLegend.className='chiplegend mono';
+chipLegend.innerHTML=`<span><i class="lg-dot"></i>FRAGILITY CRISIS · the gauge should lead it</span><span><i class="lg-ring"></i>EXOGENOUS SHOCK · calm beforehand is correct</span>`;
+ttPanel.appendChild(chipLegend);
+function nearestEvent(t){
+  let best=null,bd=0.3;
+  NEAREV.forEach((e,i)=>{ const d=Math.abs(e.t-t); if(d<bd){bd=d; best=i;} });
+  return best;
+}
+ttToggle.addEventListener('click',()=>{
+  if(ttPanel.hidden){ enterHistory(+ttSlider.value);
+    // phones: bring the whole panel into view
+    if(innerWidth<880) requestAnimationFrame(()=>ttPanel.scrollIntoView({block:'end', behavior:reduced?'auto':'smooth'})); }
+  else{ backToLive(); ttPanel.hidden=true; ttToggle.setAttribute('aria-expanded','false'); }
+});
+ttSlider.addEventListener('input',()=>{ if(mode!=='history') enterHistory(+ttSlider.value); else applyHist(+ttSlider.value); });
+// replay pauses 5s on each crash, with a minimal countdown card that names the
+// crisis, what caused it, and its damage
+const CRASH_STOPS=new Map();
+EVENTS.forEach(e=>{ const full=EVD?EVD.find(x=>x.t===e[0]):null;
+  CRASH_STOPS.set(idxAt(e[0]), full||{name:e[1], v:e[2]}); });
+let replayCdTimer=null;
+const replayCd=document.getElementById('replayCd');
+function showCd(ev, secs, done){
+  let n=secs;
+  // the crisis details already render in the dynamic hero line; this is just the timer
+  replayCd.querySelector('.rc-label').textContent='HOLDING ON '+(ev.short||ev.name||'CRISIS').toUpperCase();
+  replayCd.querySelector('.rc-n').textContent=n;
+  replayCd.hidden=false;
+  const ring=replayCd.querySelector('.rc-ring circle');   // restart the ring sweep
+  if(ring && !reduced){ ring.style.animation='none'; void ring.offsetWidth; ring.style.animation=''; }
+  replayCdTimer=setInterval(()=>{
+    n--; if(n<=0){ clearInterval(replayCdTimer); replayCdTimer=null; replayCd.hidden=true; done(); return; }
+    replayCd.querySelector('.rc-n').textContent=n;
+  },1000);
+}
+function playStep(){
+  const i=+ttSlider.value+1;
+  if(i>=DATA.length){ stopPlay(); return; }
+  applyHist(i);
+  if(CRASH_STOPS.has(i)){
+    showCd(CRASH_STOPS.get(i), 5, ()=>{ playTimer=setTimeout(playStep, reduced?120:45); });
+  }else{
+    playTimer=setTimeout(playStep, reduced?120:45);
+  }
+}
+ttPlay.addEventListener('click',()=>{
+  if(playTimer||replayCdTimer){ stopPlay(); return; }
+  applyHist(0); ttPlay.innerHTML=ICON_STOP+'<span>STOP</span>';
+  playStep();
+});
+ttLive.addEventListener('click',()=>{ backToLive(); ttPanel.hidden=true; ttToggle.setAttribute('aria-expanded','false'); });
+
+/* ============ CASE FILES ============ */
+const CASES=[
+ ["1997–98","Asia & LTCM","External-funding fragility, then leverage.","Credit",72,"14 mo",1998.7],
+ ["2000","Dot-com","Valuation froth flashed two years early.","Valuation",74,"31 mo",2000.2],
+ ["2008","Lehman","The curve inverted 18 months before.","Housing",91,"17 mo",2008.75],
+ ["2011","Euro debt","Sovereign spreads ground wider for a year.","Credit",69,"12 mo",2011.6],
+ ["2020","COVID","The index read low. Exogenous shocks are invisible — fragility isn't.","—",83,"5 mo",2020.15],
+ ["2022","Crypto winter","Stablecoin growth stalled months before Terra.","Crypto",76,"13 mo",2022.4],
+ ["2023","SVB","The losses sat in public filings for a year.","Credit",64,"7 mo",2023.2],
+];
+const caseBox=document.getElementById('cases');
+function addCase(win,name,desc,rows,badge,t,peakV,kind){
+  const el=document.createElement('div'); el.className='case';
+  el.style.borderTopColor=`var(--b${Math.floor(Math.min(peakV,99)/20)+1})`;
+  const kindTag = kind==='shock'
+    ? `<div class="kindtag shock">EXOGENOUS SHOCK</div>`
+    : kind==='fragility' ? `<div class="kindtag frag">FRAGILITY CRISIS</div>` : '';
+  const kindNote = kind==='shock'
+    ? `<p class="kindnote">Struck from outside the financial system — the index was not meant to read elevated first, and a calm pre-reading here is correct.</p>`
+    : kind==='fragility' ? `<p class="kindnote">Grew from inside the system — the kind of crisis the gauge is built to see building.</p>` : '';
+  el.innerHTML=`<div class="yr">${win}</div><h4>${name}</h4>
+   ${kindTag}
+   ${badge?`<div class="mono" style="font-size:8.5px; letter-spacing:.1em; color:var(--accent); margin:2px 0 8px">${badge}</div>`:''}
+   <p style="font-size:12.5px; color:var(--muted); margin:0 0 10px">${desc}</p>
+   ${kindNote}
+   <dl>${rows}</dl>
+   <button class="casejump">SET THE GAUGE HERE →</button>`;
+  el.querySelector('.casejump').addEventListener('click',()=>{
+    enterHistory(idxAt(t));
+    document.querySelector('.gaugebox').scrollIntoView({behavior:reduced?'auto':'smooth',block:'center'});
+  });
+  caseBox.appendChild(el);
+}
+if(EVD){
+  EVD.forEach(e=>{
+    let rows=`<dt>S&amp;P 500 drawdown</dt><dd class="peak">${e.dd}%</dd>`;
+    if(e.vix!=null) rows+=`<dt>VIX peak (close)</dt><dd>${e.vix}</dd>`;
+    rows+=`<dt>Peak GCI reading</dt><dd>${e.v}</dd>`;
+    if(e.nber) rows+=`<dt>NBER recession</dt><dd>yes</dd>`;
+    addCase(e.window,e.name,e.desc,rows,e.badge,e.t,e.v,e.kind);
+  });
+}else{
+  CASES.forEach(c=>{
+    const rows=`<dt>First pillar to move</dt><dd>${c[3]}</dd><dt>Peak GCI</dt><dd class="peak">${c[4]}</dd><dt>Back to Normal in</dt><dd>${c[5]}</dd>`;
+    addCase(c[0],c[1],c[2],rows,null,c[6],c[4]);
+  });
+}
+
+/* ============ SCROLL REVEAL + CHART DRAW-IN ============ */
+(function(){
+  const targets=document.querySelectorAll('.pulsecard,.pill,.fcard,.endcard,.pred,.chartcard,.case,.printbtn');
+  targets.forEach(el=>el.classList.add('rv'));
+  if(reduced){ targets.forEach(el=>el.classList.add('in')); return; }
+  let chartDrawn=false;
+  function drawInChart(){
+    if(chartDrawn) return; chartDrawn=true;
+    const line=document.querySelectorAll('#history path')[1];
+    if(!line || !line.getTotalLength) return;
+    try{
+      const L=line.getTotalLength();
+      line.style.strokeDasharray=L; line.style.strokeDashoffset=L;
+      line.getBoundingClientRect();
+      line.style.transition='stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1)';
+      line.style.strokeDashoffset='0';
+      setTimeout(()=>{ line.style.strokeDasharray=''; line.style.strokeDashoffset=''; line.style.transition=''; },2000);
+    }catch(e){}
+  }
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(!en.isIntersecting) return;
+      const el=en.target;
+      const sibs=[...el.parentElement.children].filter(s=>s.classList.contains('rv'));
+      el.style.transitionDelay=(Math.max(0,sibs.indexOf(el))%6)*70+'ms';
+      el.classList.add('in');
+      if(el.classList.contains('pill')){
+        const ps=el.querySelector('.pscore'), v=parseFloat(ps&&ps.textContent);
+        if(!isNaN(v)) countUp(ps, v, 900, x=>String(Math.round(x)));
+      }
+      if(el.classList.contains('chartcard')) drawInChart();
+      io.unobserve(el);
+    });
+  },{threshold:.15});
+  targets.forEach(el=>io.observe(el));
+})();
+
+const WASH_MOODS=[
+ {src:'/img/mood-746aaf7e58.webp',w:800,h:961},
+ {src:'/img/mood-7ac4230e57.webp',w:800,h:961},
+ {src:'/img/mood-f4afc0793e.webp',w:800,h:961},
+ {src:'/img/mood-75dbdd6a70.webp',w:800,h:961}
+];
+/* ============ AMBIENT BACKDROP: the many moods of the man from the dollar ============ */
+(function(){
+  const c=document.getElementById('bgfx'), g=c.getContext('2d');
+  let Wb=0, Hb=0, wPhase=0;
+  const imgs=WASH_MOODS.map(m=>{ const im=new Image(); im.decoding='async'; im.src=m.src; return {im, w:m.w, h:m.h, ready:false}; });
+  imgs.forEach(o=>{ o.im.onload=()=>{ o.ready=true; if(reduced) draw(0); }; });
+  let cur=1, prev=1, fade=1, pending=1, pendingSince=0, gDark=true, aTick=0;
+  // George reacts to the reading the gauge is showing (incl. time travel).
+  // Thresholds are EMPIRICAL quantiles of the real history — fixed cut-offs (40/60/70)
+  // left him stoic 85% of the time because only 3% of prints ever reach 70.
+  // Smile = calmest quarter of history · stoic = middle · sad = tensest 30% · shock = tensest 10%
+  let MOOD_CUTS=[40,60,70];
+  (function(){ try{
+    const src=(typeof DATA!=='undefined'&&DATA)||(LIVE&&LIVE.history)||null; if(!src) return;
+    const v=src.map(r=>r[1]).filter(x=>x!=null).sort((a,b)=>a-b); if(v.length<50) return;
+    const q=p=>v[Math.round(p*(v.length-1))];
+    MOOD_CUTS=[q(.25), q(.70), q(.90)];
+  }catch(e){} })();
+  const moodFor=v=> v<MOOD_CUTS[0]?0 : v<MOOD_CUTS[1]?1 : v<MOOD_CUTS[2]?2 : 3;
+  function drawOne(o, alpha){
+    if(!o.ready||alpha<=0.004) return;
+    const scale=Math.max(Wb/o.w, Hb/o.h)*(1.06+0.03*Math.sin(wPhase));
+    const iw=o.w*scale, ih=o.h*scale;
+    const x=(Wb-iw)/2 + Math.sin(wPhase*0.7)*12;
+    const y=(Hb-ih)*0.28;
+    g.save(); g.filter='grayscale(1)'; g.globalAlpha=alpha; g.drawImage(o.im,x,y,iw,ih); g.restore();
+  }
+  function draw(dt){
+    g.clearRect(0,0,Wb,Hb);
+    wPhase+=dt*0.12;
+    // follow the sprung needle (smooth), never the raw target (jumps during replay)
+    const shown=(typeof angle==='number')?((angle-A0)/(A1-A0))*100:(typeof target==='number'?target:56);
+    const want=moodFor(shown);
+    if(want!==pending){ pending=want; pendingSince=0; } else pendingSince+=dt;
+    // switch only when the last fade has fully finished AND the mood held ≥1s —
+    // replay sweeps change expression calmly instead of thrashing mid-blend
+    if(fade>=1 && pending!==cur && pendingSince>=1.0){ prev=cur; cur=pending; fade=0; }
+    if(fade<1) fade=Math.min(1,fade+dt/1.0);
+    const e=fade*fade*fade*(fade*(fade*6-15)+10);   // smootherstep: fully fluid in and out
+    if(--aTick<=0){ aTick=120;
+      const g0=css('--ground');
+      if(/^#/.test(g0)){ const n=parseInt(g0.slice(1),16);
+        gDark=((n>>16&255)*.299+(n>>8&255)*.587+(n&255)*.114)<128; }
+    }
+    // the engraving's light paper washes a dark ground — keep it quieter there
+    // phones get a stronger wallpaper (less UI over him); desktop keeps the quieter wash
+    const A=(Wb<720) ? (gDark?.075:.115) : (gDark?.05:.085);
+    drawOne(imgs[prev], A*(1-e));
+    drawOne(imgs[cur], A*e);
+  }
+  function resize(){ Wb=c.width=innerWidth; Hb=c.height=innerHeight; if(reduced) draw(0); }
+  resize(); addEventListener('resize',resize);
+  if(!reduced){
+    let lt=performance.now();
+    // wallpaper at ~30fps: its motions are seconds-long fades and a slow breath, so half the
+    // frames is visually identical and halves the largest per-frame drawImage cost on the page
+    (function loop(n){ const dt=Math.min((n-lt)/1000,.07); if(dt>=0.03){ lt=n; draw(dt); } requestAnimationFrame(loop); })(lt);
+  }
+})();
+
+/* ============ PRINT COUNTDOWN + EXPLAINER DIALOG ============ */
+function nextPrint(){
+  const now=new Date();
+  const d=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate(),20,0,0));
+  let addD=(5-d.getUTCDay()+7)%7;                 // 5 = Friday
+  if(addD===0 && now>=d) addD=7;
+  d.setUTCDate(d.getUTCDate()+addD);
+  return d;
+}
+function updCd(){
+  const ms=nextPrint()-new Date();
+  const dd=Math.floor(ms/86400000), hh=Math.floor(ms%86400000/3600000), mm=Math.floor(ms%3600000/60000);
+  const s=dd>0?`${dd}D ${hh}H`:`${hh}H ${mm}M`;
+  const txt=`NEXT PRINT IN ${s}`;
+  document.getElementById('printCd').textContent=txt;
+  const c2=document.getElementById('printCd2'); if(c2) c2.textContent=txt;
+  // the pill doubles as the week's progress bar toward the print
+  const week=7*86400000, p=Math.min(100,Math.max(0,(week-ms)/week*100));
+  document.getElementById('printInfoBtn').style.setProperty('--pfill',p.toFixed(2)+'%');
+}
+updCd(); setInterval(updCd,30000);
+const pm=document.getElementById('printModal');
+const openPM=()=>{ pm.hidden=false; document.getElementById('printModalClose').focus(); };
+const closePM=()=>{ pm.hidden=true; if(location.hash==='#friday-print'){ try{history.replaceState(null,'',location.pathname+location.search);}catch(e){} } };
+document.getElementById('printInfoBtn').addEventListener('click',openPM);
+document.getElementById('printModalClose').addEventListener('click',closePM);
+pm.addEventListener('click',e=>{ if(e.target===pm) closePM(); });
+addEventListener('keydown',e=>{ if(e.key==='Escape'&&!pm.hidden) closePM(); });
+
+/* ============ OVERLAY PAGES: methodology + scorecard ============ */
+const pages={method:document.getElementById('pageMethod'), score:document.getElementById('pageScore')};
+let scoreBuilt=false;
+function buildScore(){
+  if(scoreBuilt||!EVD) return; scoreBuilt=true;
+  const tb=document.querySelector('#scoreTable tbody');
+  let warned=0, majors=0;
+  EVD.forEach(e=>{
+    const before=DATA[idxAt(e.t-0.5)][1], peak=e.v;
+    const major=(e.badge||'').indexOf('BEAR')>=0;
+    if(major){ majors++; if(before>=50) warned++; }
+    const cls=before>=60?'hot':before>=50?'warn':'cool';
+    tb.insertAdjacentHTML('beforeend',
+      `<tr><td>${e.short}${/'\d\d/.test(e.short)?'':`<span style="color:var(--muted)"> '${String(Math.floor(e.t)).slice(2)}</span>`}</td>`
+      +`<td class="n ${cls}">${before.toFixed(1)}</td><td class="n">${peak.toFixed(1)}</td>`
+      +`<td class="n">${e.dd}%</td></tr>`);
+  });
+  document.getElementById('scoreSummary').innerHTML=
+    `<b>${warned} of the ${majors} bear-market episodes</b> since 1990 had this index at 50 or higher six months before peak stress — computed live from the same series on the chart, re-graded at every print.`;
+  // base rates + false alarms: the Kaminsky-Reinhart discipline, stated against ourselves
+  const months=DATA.length, ge50=DATA.filter(p=>p[1]>=50).length;
+  let ge60=0, fa60=0;
+  DATA.forEach(p=>{ if(p[1]>=60){ ge60++; if(!EVD.some(e=>e.t>=p[0]&&e.t<=p[0]+1)) fa60++; } });
+  document.getElementById('scoreStats').innerHTML=
+    `<b>Base rates, against ourselves.</b> ${Math.round(ge50/months*100)}% of ALL months since 1990 read 50 or higher — so "above 50" alone is weak evidence, and the table above should be read with that in mind. `
+    +`Of the ${ge60} months at 60+, ${ge60?Math.round(fa60/ge60*100):0}% were false alarms — no anchored episode within the following 12 months. That is the noise-to-signal trade-off (Kaminsky &amp; Reinhart) every early-warning system pays; we publish ours instead of hiding it. Monthly granularity.`;
+}
+const PAGE_ROUTES={methodology:'method', scorecard:'score'};
+function setHash(h){ try{ history.replaceState(null,'',h?('#'+h):location.pathname+location.search); }catch(e){} }
+// pages replace <main> (the header and footer stay), so they read like real routes
+(function(){ const f=document.querySelector('footer'); Object.values(pages).forEach(p=>{ if(p&&f) f.before(p); }); })();
+function openPage(p, route){ if(!p) return; if(p===pages.score) buildScore(); document.querySelector('main').hidden=true; p.hidden=false; window.scrollTo({top:0}); if(route) setHash(route); }
+function closePages(){ Object.values(pages).forEach(p=>{ if(p) p.hidden=true; }); document.querySelector('main').hidden=false; if(PAGE_ROUTES[location.hash.slice(1)]||location.hash==='#friday-print') setHash(''); }
+// When the site build provides real routes (window.ROUTES), links navigate to real
+// pages; in the single-file build they open the in-page overlays instead.
+const ROUTES=window.ROUTES||null;
+const go=(key)=>{ if(ROUTES&&ROUTES[key]){ location.href=ROUTES[key]; return true; } return false; };
+document.getElementById('linkMethod').addEventListener('click',e=>{ if(ROUTES) return; e.preventDefault(); openPage(pages.method,'methodology');});
+document.getElementById('linkScore').addEventListener('click',e=>{ if(ROUTES) return; e.preventDefault(); openPage(pages.score,'scorecard');});
+document.querySelectorAll('.pback').forEach(b=>b.addEventListener('click',closePages));
+const gs=document.querySelector('.goscore');
+if(gs) gs.addEventListener('click',e=>{ if(go('scorecard')) return; e.preventDefault(); closePages(); openPage(pages.score,'scorecard');});
+document.querySelectorAll('.gomethod').forEach(a=>a.addEventListener('click',e=>{ if(go('methodology')) return; e.preventDefault(); closePages(); openPage(pages.method,'methodology');}));
+const lpe=document.getElementById('linkPrintExplain');
+if(lpe) lpe.addEventListener('click',e=>{ if(ROUTES) return; e.preventDefault(); openPM(); setHash('friday-print');});
+addEventListener('keydown',e=>{ if(e.key==='Escape') closePages(); });
+
+// In-page section links: sections marked .adv are hidden in Simple view, so a
+// footer click would do nothing — switch to Advanced first, then scroll.
+document.querySelectorAll('footer a[href^="#"], .brand a[href^="#"]').forEach(a=>{
+  const id=a.getAttribute('href').slice(1); if(!id||PAGE_ROUTES[id]||id==='friday-print') return;
+  a.addEventListener('click',e=>{
+    const t=document.getElementById(id); if(!t) return;
+    e.preventDefault();
+    if(document.body.classList.contains('view-simple') && (t.classList.contains('adv')||t.closest('.adv'))) setView('adv');
+    requestAnimationFrame(()=>{ t.scrollIntoView({behavior:reduced?'auto':'smooth', block:'start'}); setHash(id); });
+  });
+});
+// Deep links: /#methodology, /#scorecard, /#friday-print open the right page on load
+function routeFromHash(){
+  if(ROUTES){ const h=location.hash.slice(1); if(ROUTES[h]){ location.replace(ROUTES[h]); } return; }
+  const h=location.hash.slice(1);
+  if(PAGE_ROUTES[h]) openPage(pages[PAGE_ROUTES[h]], h);
+  else if(h==='friday-print') openPM();
+  else if(h){ const t=document.getElementById(h); if(t){ if(document.body.classList.contains('view-simple')&&(t.classList.contains('adv')||t.closest('.adv'))) setView('adv'); setTimeout(()=>t.scrollIntoView({block:'start'}),50); } }
+}
+addEventListener('hashchange',routeFromHash);
+routeFromHash();
+// Logo / title / subtitle = home: default (Simple) view, top of page, overlays closed
+document.getElementById('brandHome').addEventListener('click',e=>{
+  e.preventDefault(); closePages(); if(typeof closePM==='function') closePM();
+  if(typeof mode!=='undefined' && mode==='history') backToLive();
+  setView('simple'); setHash('');
+  window.scrollTo({top:0, behavior:reduced?'auto':'smooth'});
+});
+</script>
+</body>
+</html>
