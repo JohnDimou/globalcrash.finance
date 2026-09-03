@@ -1480,9 +1480,13 @@ ttPanel.appendChild(chipRow);
 const chipLegend=document.createElement('div'); chipLegend.className='chiplegend mono';
 chipLegend.innerHTML=`<span><i class="lg-dot"></i>FRAGILITY CRISIS · the gauge should lead it</span><span><i class="lg-ring"></i>EXOGENOUS SHOCK · calm beforehand is correct</span>`;
 ttPanel.appendChild(chipLegend);
+// While Replay is running only the major crashes (the dotted ones it pauses on) count —
+// otherwise the 21-episode chronology flashes minor stress events past as the needle sweeps.
+const MAJOR_T=new Set(EVENTS.map(e=>e[0]));
 function nearestEvent(t){
+  const replaying = (typeof playTimer!=='undefined'&&playTimer) || (typeof replayCdTimer!=='undefined'&&replayCdTimer);
   let best=null,bd=0.3;
-  NEAREV.forEach((e,i)=>{ const d=Math.abs(e.t-t); if(d<bd){bd=d; best=i;} });
+  NEAREV.forEach((e,i)=>{ if(replaying && !MAJOR_T.has(e.t)) return; const d=Math.abs(e.t-t); if(d<bd){bd=d; best=i;} });
   return best;
 }
 ttToggle.addEventListener('click',()=>{
