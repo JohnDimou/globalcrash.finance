@@ -4,7 +4,7 @@
 
 # GlobalCrash.finance
 
-**The Global Crisis Index** — a live 0–100 reading of how much dry tinder is stacked under the global economy.
+**The Global Financial Crisis Index** — a live 0–100 reading of how much dry tinder is stacked under the global economy.
 
 Built from 36 free public indicators across seven pillars. Printed every Friday. Graded in public against every crisis since 1990.
 
