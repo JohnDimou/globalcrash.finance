@@ -11,7 +11,7 @@ Built from 36 free public indicators across seven pillars. Printed every Friday.
 *Measures fragility, not timing.*
 
 [![Live site](https://img.shields.io/badge/live-globalcrash.finance-E0A83C?style=for-the-badge&logo=vercel&logoColor=white)](https://globalcrash.finance)
-[![Friday print](https://img.shields.io/github/actions/workflow/status/JohnDimou/globalcrash.finance/weekly-print.yml?branch=main&style=for-the-badge&label=friday%20print&logo=githubactions&logoColor=white)](https://github.com/JohnDimou/globalcrash.finance/actions/workflows/weekly-print.yml)
+[![Friday print](https://img.shields.io/github/actions/workflow/status/JohnDimou/globalcrash.finance/weekly-print.yml?branch=main&style=for-the-badge&label=friday%20print&logo=githubactions&logoColor=white&cacheSeconds=600)](https://github.com/JohnDimou/globalcrash.finance/actions/workflows/weekly-print.yml)
 [![JSON API](https://img.shields.io/badge/API-%2Fgci.json-37C4AC?style=for-the-badge&logo=json&logoColor=white)](https://globalcrash.finance/gci.json)
 
 ![Python 3.12](https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white)
